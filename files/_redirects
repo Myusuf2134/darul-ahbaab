@@ -1,0 +1,2 @@
+# Redirect www to non-www (update domain once registered)
+https://www.darulahbaab.com/* https://darulahbaab.com/:splat 301!

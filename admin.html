@@ -96,8 +96,16 @@ body{
 </div>
 
 <script type="module">
-// PASTE CONFIG HERE
-const firebaseConfig = {};
+const firebaseConfig = {
+  apiKey: "AIzaSyCFYefcLGmUtU65hofHSR1LP_Vp3yOG7Mc",
+  authDomain: "darul-ahbaab.firebaseapp.com",
+  databaseURL: "https://darul-ahbaab-default-rtdb.firebaseio.com",
+  projectId: "darul-ahbaab",
+  storageBucket: "darul-ahbaab.firebasestorage.app",
+  messagingSenderId: "316363661915",
+  appId: "1:316363661915:web:7c9b7802642a5e4e15157e",
+  measurementId: "G-45CEKYFWFL"
+};
 
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js';
 import { getDatabase, ref, set, onValue } from 'https://www.gstatic.com/firebasejs/10.7.0/firebase-database.js';

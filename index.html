@@ -240,9 +240,12 @@ footer{padding:var(--s8) 0 var(--s6);border-top:1px solid rgba(212,169,62,.12)}
 .foot-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:var(--s5);font-size:var(--t-xs);color:rgba(244,239,226,.45);flex-wrap:wrap;gap:var(--s3)}
 .foot-bottom .arabic{font-size:var(--t-md);color:var(--gold-500)}
 
-.mobile-menu{position:fixed;inset:0;z-index:120;background:linear-gradient(160deg,#081310,#164034);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:var(--s6);opacity:0;pointer-events:none;transition:opacity .4s var(--ease)}
-.mobile-menu.open{opacity:1;pointer-events:auto}
-.mobile-menu a{color:var(--cream);font-family:'Cormorant';font-size:var(--t-xl);font-weight:500}
+.mobile-menu{position:fixed;inset:0;z-index:120;background:linear-gradient(160deg,#081310,#164034);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:var(--s6);opacity:0;pointer-events:none;transform:scale(.96) translateY(-20px);transition:opacity .35s var(--ease),transform .35s var(--ease)}
+.mobile-menu.open{opacity:1;pointer-events:auto;transform:scale(1) translateY(0)}
+.mobile-menu a{color:var(--cream);font-family:'Cormorant';font-size:var(--t-xl);font-weight:500;transition:color .3s}
+.mobile-menu a:hover{color:var(--gold-400)}
+.mobile-menu a.nav-cta{padding:10px 20px;border-radius:100px;background:var(--gold-500);color:var(--green-950);font-weight:600;box-shadow:0 4px 16px rgba(212,169,62,.4);transition:all .3s var(--ease);font-family:'Manrope';font-size:var(--t-base)}
+.mobile-menu a.nav-cta:hover{background:var(--gold-400);transform:translateY(-1px);box-shadow:0 8px 24px rgba(212,169,62,.55)}
 .mobile-menu .close{position:absolute;top:var(--s5);right:var(--s5);color:var(--cream);font-size:2rem;cursor:pointer;background:none;border:none}
 
 @media(max-width:900px){
@@ -999,17 +1002,21 @@ c9 -14 25 -63 36 -108 12 -53 33 -105 59 -148 44 -73 43 -91 -4 -115 -35 -19
       <span>Darul Ahbaab<small>Columbus · OH</small></span>
     </a>
     <div class="navlinks">
-      <a href="#about">About</a><a href="#programs">Programs</a><a href="#expect">Community</a><a href="#schedule">Schedule</a>
-      <a href="#contact" class="nav-cta">Visit us</a>
+      <a href="https://www.darulahbaab.com/#about">About</a><a href="https://www.darulahbaab.com/#programs">Programs</a><a href="live.html">Qasidah</a><a href="https://www.darulahbaab.com/#expect">Community</a><a href="https://www.darulahbaab.com/#schedule">Schedule</a>
+      <a href="https://www.darulahbaab.com/#contact" class="nav-cta">Visit us</a>
     </div>
     <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
   </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="close" id="closeBtn" aria-label="Close menu">&times;</button>
+    <a href="https://www.darulahbaab.com/#about">About</a>
+    <a href="https://www.darulahbaab.com/#programs">Programs</a>
+    <a href="live.html">Qasidah</a>
+    <a href="https://www.darulahbaab.com/#expect">Community</a>
+    <a href="https://www.darulahbaab.com/#schedule">Schedule</a>
+    <a href="https://www.darulahbaab.com/#contact" class="nav-cta">Visit us</a>
+  </div>
 </header>
-
-<div class="mobile-menu" id="mobileMenu">
-  <button class="close" id="closeMenu" aria-label="Close menu">&times;</button>
-  <a href="#about">About</a><a href="#programs">Programs</a><a href="#expect">Community</a><a href="#schedule">Schedule</a><a href="#contact">Visit us</a>
-</div>
 
 <main>
 <!-- HERO -->
@@ -1277,7 +1284,7 @@ buildThread();
 addEventListener('scroll',updateThread,{passive:true});
 
 /* mobile menu */
-const burger=document.getElementById('burger'),menu=document.getElementById('mobileMenu'),cm=document.getElementById('closeMenu');
+const burger=document.getElementById('burger'),menu=document.getElementById('mobileMenu'),cm=document.getElementById('closeBtn');
 burger.addEventListener('click',()=>menu.classList.add('open'));
 cm.addEventListener('click',()=>menu.classList.remove('open'));
 menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));

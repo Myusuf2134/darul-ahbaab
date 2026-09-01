@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live Qasidah Display — Darul Ahbaab</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Amiri:ital,wght@0,400;0,700;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green-950:#081310;--green-900:#0B1C15;--green-800:#0F2A1F;--green-700:#164034;
+  --green-600:#1F5942;--green-500:#2E7D57;
+  --gold-500:#D4A93E;--gold-400:#E3C265;--gold-300:#F0D68C;
+  --cream:#F4EFE2;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Manrope',system-ui,sans-serif;color:var(--cream);line-height:1.6;font-size:1.06rem;
+  -webkit-font-smoothing:antialiased;
+  background:linear-gradient(160deg,#081310,#164034);
+  min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
+  padding:2rem;text-align:center;
+}
+.container{max-width:1200px;width:100%;display:flex;flex-direction:column;gap:3rem;align-items:center}
+.waiting-screen{display:flex;flex-direction:column;gap:2rem;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .6s var(--ease)}
+.waiting-screen.show{opacity:1}
+.waiting-screen h1{font-family:'Cormorant',serif;font-size:4rem;font-weight:600;color:var(--gold-400)}
+.waiting-screen p{font-size:1.5rem;color:rgba(244,239,226,.7)}
+.qasidah-display{display:flex;flex-direction:column;align-items:center;gap:2.5rem;opacity:0;pointer-events:none;transition:opacity .6s var(--ease);min-height:60vh}
+.qasidah-display.show{opacity:1;pointer-events:auto}
+.qasidah-header{width:100%;margin-bottom:1rem}
+.qasidah-title{font-family:'Amiri',serif;font-size:clamp(2.4rem,6vw,3.8rem);color:var(--cream);font-weight:700;line-height:1.1;margin-bottom:1rem}
+.qasidah-subtitle{font-family:'Cormorant',serif;font-size:clamp(1.4rem,3vw,2rem);color:var(--gold-300);font-weight:500;font-style:italic}
+.couplet-block{width:100%;max-width:900px;display:flex;flex-direction:column;gap:1.5rem;opacity:0;pointer-events:none;transform:translateY(20px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
+.couplet-block.show{opacity:1;pointer-events:auto;transform:translateY(0)}
+.couplet-section{display:flex;flex-direction:column;gap:1.2rem}
+.arabic-lines{font-family:'Amiri',serif;font-size:clamp(1.8rem,5vw,2.8rem);font-weight:700;line-height:1.4;color:var(--cream);direction:rtl;text-align:right;letter-spacing:.02em}
+.transliteration-lines{font-family:'Manrope',system-ui,sans-serif;font-size:clamp(0.95rem,2.5vw,1.2rem);font-style:italic;color:rgba(244,239,226,.72);line-height:1.6;opacity:var(--trans-opacity,1);transition:opacity .3s var(--ease)}
+.translation-lines{font-family:'Manrope',system-ui,sans-serif;font-size:clamp(1rem,2.5vw,1.3rem);color:rgba(244,239,226,.8);line-height:1.65;opacity:var(--trans-opacity,1);transition:opacity .3s var(--ease)}
+.line{margin:.3rem 0}
+.controls{position:fixed;bottom:2rem;right:2rem;display:flex;gap:1rem;z-index:10}
+.toggle-btn{padding:12px 20px;border-radius:100px;background:rgba(212,169,62,.15);border:1px solid rgba(212,169,62,.35);color:var(--cream);font-family:'Manrope';font-size:.9rem;font-weight:600;cursor:pointer;transition:all .3s var(--ease)}
+.toggle-btn:hover{background:rgba(212,169,62,.28);border-color:rgba(212,169,62,.55)}
+.toggle-btn.active{background:var(--gold-500);color:var(--green-950);border-color:var(--gold-500)}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="waiting-screen show" id="waitingScreen">
+    <h1>Qasidah Display</h1>
+    <p>Awaiting content...</p>
+  </div>
+  <div class="qasidah-display" id="qasidahDisplay">
+    <div class="qasidah-header">
+      <div class="qasidah-title" id="qasidahTitle"></div>
+      <div class="qasidah-subtitle" id="qasidahSubtitle"></div>
+    </div>
+    <div class="couplet-block" id="coupletBlock">
+      <div class="couplet-section">
+        <div class="arabic-lines" id="arabicLines"></div>
+        <div class="transliteration-lines" id="transliterationLines"></div>
+        <div class="translation-lines" id="translationLines"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="controls">
+  <button class="toggle-btn active" id="transToggle">Show Layers</button>
+</div>
+
+<script type="module">
+// PASTE CONFIG HERE
+const firebaseConfig = {};
+
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js';
+import { getDatabase, ref, onValue } from 'https://www.gstatic.com/firebasejs/10.7.0/firebase-database.js';
+
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+
+// Data: array of qasidahs with couplets
+const qasidahs = [
+  {
+    title: 'Qasidah Al-Burda',
+    englishTitle: 'The Poem of the Mantle',
+    couplets: [
+      {
+        arabic: ['أَمِنْ تَذَكُّرِ جِيرَانٍ بِذِي سَلَمِ', 'مَزَجْتَ جِيرَاناً بِصَبٍّ وَتَرَقْرُقِ'],
+        transliteration: ['Amin tazakkuri jiran bi-dhi-salam', 'Mazajta jiranan bi-sabbi wa-taraqqruq'],
+        translation: ['Do you remember the neighbors at Dhul-Salam', 'Mixing your heart with longing and sorrow'],
+        isRefrain: false
+      },
+      {
+        arabic: ['نَعَمْتَ بِقُرْبِ الْحَبِيبِ وَالدِّيَارِ', 'وَلَمْ تَعْجَلِ الْفِرَاقَ مِنْ هَوَاكَا'],
+        transliteration: ['Naʿamta bi-qurbi al-habib wa-al-diyar', 'Wa-lam taʿjal al-firaq min hawaka'],
+        translation: ['You enjoyed the beloved\'s closeness and abode', 'Yet did not hasten separation from your desire'],
+        isRefrain: true
+      }
+    ]
+  }
+];
+
+const waitingScreen = document.getElementById('waitingScreen');
+const qasidahDisplay = document.getElementById('qasidahDisplay');
+const qasidahTitle = document.getElementById('qasidahTitle');
+const qasidahSubtitle = document.getElementById('qasidahSubtitle');
+const coupletBlock = document.getElementById('coupletBlock');
+const arabicLines = document.getElementById('arabicLines');
+const transliterationLines = document.getElementById('transliterationLines');
+const translationLines = document.getElementById('translationLines');
+const transToggle = document.getElementById('transToggle');
+
+let showLayers = true;
+
+transToggle.addEventListener('click', () => {
+  showLayers = !showLayers;
+  transToggle.classList.toggle('active', showLayers);
+  updateLayersVisibility();
+});
+
+function updateLayersVisibility() {
+  const opacity = showLayers ? 1 : 0;
+  coupletBlock.style.setProperty('--trans-opacity', opacity);
+}
+
+function renderCouplet(qasidahIndex, coupletIndex) {
+  if (qasidahIndex < 0 || qasidahIndex >= qasidahs.length) {
+    waitingScreen.classList.add('show');
+    qasidahDisplay.classList.remove('show');
+    return;
+  }
+
+  const qasidah = qasidahs[qasidahIndex];
+  if (coupletIndex < 0 || coupletIndex >= qasidah.couplets.length) {
+    waitingScreen.classList.add('show');
+    qasidahDisplay.classList.remove('show');
+    return;
+  }
+
+  waitingScreen.classList.remove('show');
+  qasidahDisplay.classList.add('show');
+
+  qasidahTitle.textContent = qasidah.title;
+  qasidahSubtitle.textContent = qasidah.englishTitle;
+
+  const couplet = qasidah.couplets[coupletIndex];
+  arabicLines.innerHTML = couplet.arabic.map(line => `<div class="line">${line}</div>`).join('');
+  transliterationLines.innerHTML = couplet.transliteration.map(line => `<div class="line">${line}</div>`).join('');
+  translationLines.innerHTML = couplet.translation.map(line => `<div class="line">${line}</div>`).join('');
+
+  coupletBlock.classList.remove('show');
+  setTimeout(() => {
+    coupletBlock.classList.add('show');
+  }, 10);
+}
+
+// Listen for changes from Firebase
+onValue(ref(db, 'mawlid/qasidahIndex'), (snap) => {
+  const qasidahIndex = snap.val() ?? -1;
+  const coupletIndex = coupletIndexVal ?? -1;
+  renderCouplet(qasidahIndex, coupletIndex);
+});
+
+onValue(ref(db, 'mawlid/coupletIndex'), (snap) => {
+  const coupletIndex = snap.val() ?? -1;
+  const qasidahIndex = qasidahIndexVal ?? -1;
+  renderCouplet(qasidahIndex, coupletIndex);
+});
+
+let qasidahIndexVal = -1, coupletIndexVal = -1;
+onValue(ref(db, 'mawlid'), (snap) => {
+  const data = snap.val() || {};
+  qasidahIndexVal = data.qasidahIndex ?? -1;
+  coupletIndexVal = data.coupletIndex ?? -1;
+  renderCouplet(qasidahIndexVal, coupletIndexVal);
+});
+</script>
+</body>
+</html>

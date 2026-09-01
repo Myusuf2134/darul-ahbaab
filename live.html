@@ -42,10 +42,27 @@ body{
 .transliteration-lines{font-family:'Manrope',system-ui,sans-serif;font-size:clamp(0.95rem,2.5vw,1.2rem);font-style:italic;color:rgba(244,239,226,.72);line-height:1.6;opacity:var(--trans-opacity,1);transition:opacity .3s var(--ease)}
 .translation-lines{font-family:'Manrope',system-ui,sans-serif;font-size:clamp(1rem,2.5vw,1.3rem);color:rgba(244,239,226,.8);line-height:1.65;opacity:var(--trans-opacity,1);transition:opacity .3s var(--ease)}
 .line{margin:.3rem 0}
-.controls{position:fixed;bottom:2rem;right:2rem;display:flex;gap:1rem;z-index:10}
-.toggle-btn{padding:12px 20px;border-radius:100px;background:rgba(212,169,62,.15);border:1px solid rgba(212,169,62,.35);color:var(--cream);font-family:'Manrope';font-size:.9rem;font-weight:600;cursor:pointer;transition:all .3s var(--ease)}
+.controls{position:fixed;bottom:1rem;left:50%;transform:translateX(-50%);display:flex;gap:1rem;z-index:10}
+.toggle-btn{padding:10px 16px;border-radius:100px;background:rgba(212,169,62,.15);border:1px solid rgba(212,169,62,.35);color:var(--cream);font-family:'Manrope';font-size:.85rem;font-weight:600;cursor:pointer;transition:all .3s var(--ease);white-space:nowrap}
 .toggle-btn:hover{background:rgba(212,169,62,.28);border-color:rgba(212,169,62,.55)}
 .toggle-btn.active{background:var(--gold-500);color:var(--green-950);border-color:var(--gold-500)}
+@media(max-width:599px){
+  body{padding:1rem}
+  .container{gap:1.5rem}
+  .waiting-screen h1{font-size:clamp(2rem,8vw,3rem)}
+  .waiting-screen p{font-size:1.1rem}
+  .qasidah-display{gap:1.5rem;min-height:auto}
+  .qasidah-header{margin-bottom:.5rem}
+  .qasidah-title{font-size:clamp(1.6rem,5vw,2.4rem)}
+  .qasidah-subtitle{font-size:clamp(1rem,2.5vw,1.4rem)}
+  .couplet-block{gap:1rem}
+  .couplet-section{gap:.8rem}
+  .arabic-lines{font-size:clamp(1.4rem,4vw,2rem)}
+  .transliteration-lines{font-size:clamp(.85rem,2vw,1rem)}
+  .translation-lines{font-size:clamp(.9rem,2.2vw,1.1rem)}
+  .line{margin:.2rem 0}
+  .toggle-btn{padding:8px 14px;font-size:.8rem}
+}
 </style>
 </head>
 <body>
@@ -100,6 +117,132 @@ const qasidahs = [
         transliteration: ['Naʿamta bi-qurbi al-habib wa-al-diyar', 'Wa-lam taʿjal al-firaq min hawaka'],
         translation: ['You enjoyed the beloved\'s closeness and abode', 'Yet did not hasten separation from your desire'],
         isRefrain: true
+      }
+    ]
+  },
+  {
+    title: 'بُشْرَى لَنَا نِلْنَا المُنَى',
+    englishTitle: 'Glad Tidings To Us, Our Aim Is Fulfilled',
+    couplets: [
+      {
+        arabic: ['بُشْرَى لَـنَـا نِـلْـنَـا المُـنَى', 'زَالَ العَنَا وَافَى الهَـنَـا'],
+        transliteration: ['bushrā lanā nilnal munā', 'zālal ʿanā wāfal hanā'],
+        translation: ['Glad tidings to us, we have attained our wish', 'Hardship has vanished, and joy has arrived'],
+        isRefrain: true
+      },
+      {
+        arabic: ['واللهُ أَنْجَـزَ وَعْدَهُ', 'وَالبِشْرُ أَضْحَى مُعْلَـنَـا'],
+        transliteration: ['wāllhu anjaza waʿdahu', 'wal bishru aḍḥā muʿlanā'],
+        translation: ['By Allah, His promise has been fulfilled', 'And the good news has become openly declared'],
+        isRefrain: true
+      },
+      {
+        arabic: ['يَا نَفْسِي طِـيْـبِـي بِاللِّقَاءْ', 'يَا عَيْنُ قَرِّي أَعْيُنَا'],
+        transliteration: ['yā nafsī ṭiybī bil liqā\'', 'yā ʿaynu qarrī aʿyunā'],
+        translation: ['O my soul, rejoice in the meeting', 'O eyes, be comforted, our eyes are blessed'],
+        isRefrain: false
+      },
+      {
+        arabic: ['هَذَا جَمَالُ المُصْطَفَى', 'أَنْوَارُهُ لَاحَتْ لَنَا'],
+        transliteration: ['hadhā jamālul muṣṭafā', 'anwāruhu lāḥat lanā'],
+        translation: ['This is the beauty of the Chosen One', 'His lights have shone upon us'],
+        isRefrain: false
+      },
+      {
+        arabic: ['بُشْرَى لَـنَـا نِـلْـنَـا المُـنَى', 'زَالَ العَنَا وَافَى الهَـنَـا'],
+        transliteration: ['bushrā lanā nilnal munā', 'zālal ʿanā wāfal hanā'],
+        translation: ['Glad tidings to us, we have attained our wish', 'Hardship has vanished, and joy has arrived'],
+        isRefrain: true
+      },
+      {
+        arabic: ['واللهُ أَنْجَـزَ وَعْدَهُ', 'وَالبِشْرُ أَضْحَى مُعْلَـنَـا'],
+        transliteration: ['wāllhu anjaza waʿdahu', 'wal bishru aḍḥā muʿlanā'],
+        translation: ['By Allah, His promise has been fulfilled', 'And the good news has become openly declared'],
+        isRefrain: true
+      },
+      {
+        arabic: ['يَا طَـيْـبَةُ مَا ذَا نَقُول', 'وَفِيكِ قَدْ حَلَّ الرَّسُولْ'],
+        transliteration: ['yā ṭaybatu mā dhā naqūl', 'wafīki qad ḥallar rasūl'],
+        translation: ['O Taybah, what shall we say', 'And in you, the Messenger has settled'],
+        isRefrain: false
+      },
+      {
+        arabic: ['وَكُلُّنَا يَرْجُو الوُصُول', 'لمُِحَمَّدٍ نَبِـيِّـنَـا'],
+        transliteration: ['wakullunā yarjūl wuṣūl', 'lmiuḥammadin nabiyyinā'],
+        translation: ['And all of us long to reach', 'To Muhammad, our Prophet ﷺ'],
+        isRefrain: false
+      },
+      {
+        arabic: ['بُشْرَى لَـنَـا نِـلْـنَـا المُـنَى', 'زَالَ العَنَا وَافَى الهَـنَـا'],
+        transliteration: ['bushrā lanā nilnal munā', 'zālal ʿanā wāfal hanā'],
+        translation: ['Glad tidings to us, we have attained our wish', 'Hardship has vanished, and joy has arrived'],
+        isRefrain: true
+      },
+      {
+        arabic: ['واللهُ أَنْجَـزَ وَعْدَهُ', 'وَالبِشْرُ أَضْحَى مُعْلَـنَـا'],
+        transliteration: ['wāllhu anjaza waʿdahu', 'wal bishru aḍḥā muʿlanā'],
+        translation: ['By Allah, His promise has been fulfilled', 'And the good news has become openly declared'],
+        isRefrain: true
+      },
+      {
+        arabic: ['يَا رَوْضَةَ الهَادِي الشَّفِيع', 'وَصَاحِبَـيْـهِ وَالبَقِيع'],
+        transliteration: ['yā rawḍatal hādīsh shafīʿ', 'waṣāḥibayhi wal baqīʿ'],
+        translation: ['O garden of the guiding intercessor', 'And his two companions and those in Al-Baqi'],
+        isRefrain: false
+      },
+      {
+        arabic: ['اُكْتُبْ لَنَا نَحْنُ الجَمِيع', 'زِيَارَةً لِـنَـبِـيِّــنَا'],
+        transliteration: ['uktub lanā naḥnul jamīʿ', 'ziyāratan linabiyyinā'],
+        translation: ['Write for all of us', 'A visit to our Prophet'],
+        isRefrain: false
+      },
+      {
+        arabic: ['بُشْرَى لَـنَـا نِـلْـنَـا المُـنَى', 'زَالَ العَنَا وَافَى الهَـنَـا'],
+        transliteration: ['bushrā lanā nilnal munā', 'zālal ʿanā wāfal hanā'],
+        translation: ['Glad tidings to us, we have attained our wish', 'Hardship has vanished, and joy has arrived'],
+        isRefrain: true
+      },
+      {
+        arabic: ['واللهُ أَنْجَـزَ وَعْدَهُ', 'وَالبِشْرُ أَضْحَى مُعْلَـنَـا'],
+        transliteration: ['wāllhu anjaza waʿdahu', 'wal bishru aḍḥā muʿlanā'],
+        translation: ['By Allah, His promise has been fulfilled', 'And the good news has become openly declared'],
+        isRefrain: true
+      },
+      {
+        arabic: ['حَيْثُ الأَمَانِي رَوْضُهَا', 'قَدْ ظَلَّ حُلْوَ المُجْتَنَى'],
+        transliteration: ['ḥaythul amānī rawḍuhā', 'qad ẓalla ḥulwal mujtanā'],
+        translation: ['Where wishes bloom like a garden', 'And the sweetness of what is gathered endures.'],
+        isRefrain: false
+      },
+      {
+        arabic: ['وَبِالحَبِيبِ المُصْطَفَى', 'صَفَا وَطَابَ عَيْشُنَا'],
+        transliteration: ['wabil ḥabībil muṣṭafā', 'ṣafā waṭāba ʿayshunā'],
+        translation: ['And with the beloved, Chosen One', 'Our lives become pure and pleasant'],
+        isRefrain: false
+      },
+      {
+        arabic: ['بُشْرَى لَـنَـا نِـلْـنَـا المُـنَى', 'زَالَ العَنَا وَافَى الهَـنَـا'],
+        transliteration: ['bushrā lanā nilnal munā', 'zālal ʿanā wāfal hanā'],
+        translation: ['Glad tidings to us, we have attained our wish', 'Hardship has vanished, and joy has arrived'],
+        isRefrain: true
+      },
+      {
+        arabic: ['واللهُ أَنْجَـزَ وَعْدَهُ', 'وَالبِشْرُ أَضْحَى مُعْلَـنَـا'],
+        transliteration: ['wāllhu anjaza waʿdahu', 'wal bishru aḍḥā muʿlanā'],
+        translation: ['By Allah, His promise has been fulfilled', 'And the good news has become openly declared'],
+        isRefrain: true
+      },
+      {
+        arabic: ['صَلِّ وَسَلِّمْ يَا سَلاَم', 'عَلَى النَّبِي بَدْرِ التَّمَام'],
+        transliteration: ['ṣalli wasallim yā salam', 'ʿalan nabī badrit tamām'],
+        translation: ['Send blessings and peace, O Source of Peace', 'Upon the Prophet, the full moon of perfection'],
+        isRefrain: false
+      },
+      {
+        arabic: ['وَالْآلِ وَالصَّحْبِ الكِرَام', 'صَلَّى عَلَيْهِمْ رَبُّنَا'],
+        transliteration: ['wal āli waṣ ṣaḥbil kirām', 'ṣallā ʿalayhim rabbunā'],
+        translation: ['And upon his noble family and honored companions', 'May our Lord send blessings upon them'],
+        isRefrain: false
       }
     ]
   }

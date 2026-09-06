@@ -22,10 +22,10 @@ body{
   font-family:'Manrope',system-ui,sans-serif;color:var(--cream);line-height:1.6;font-size:1.06rem;
   -webkit-font-smoothing:antialiased;
   background:linear-gradient(160deg,#081310,#164034);
-  min-height:100vh;display:flex;flex-direction:column;justify-content:flex-start;align-items:center;
-  padding:2rem;text-align:center;
+  display:flex;flex-direction:column;align-items:center;
+  padding:0;text-align:center;
 }
-.container{max-width:1000px;width:100%;display:flex;flex-direction:column;gap:0;align-items:center}
+.container{max-width:1000px;width:100%;display:flex;flex-direction:column;gap:0;align-items:center;padding:2rem;padding-top:1rem}
 .waiting-screen{display:flex;flex-direction:column;gap:2rem;align-items:center;justify-content:center;min-height:100vh;opacity:0;pointer-events:none;transition:opacity .6s var(--ease)}
 .waiting-screen.show{opacity:1;pointer-events:auto}
 .waiting-screen h1{font-family:'Cormorant',serif;font-size:4rem;font-weight:600;color:var(--gold-400)}
@@ -33,7 +33,7 @@ body{
 .qasidah-display{display:flex;flex-direction:column;align-items:center;gap:0;opacity:0;pointer-events:none;transition:opacity .6s var(--ease);width:100%}
 .qasidah-display.show{opacity:1;pointer-events:auto}
 .qasidah-header{width:100%;text-align:center;margin-bottom:3rem;margin-top:2rem}
-.qasidah-title{font-family:'Amiri',serif;font-size:clamp(2.4rem,6vw,3.8rem);color:var(--cream);font-weight:700;line-height:1.1;margin-bottom:1rem;text-align:center}
+.qasidah-title{font-family:'Amiri',serif;font-size:clamp(3rem,8vw,5rem);color:var(--cream);font-weight:900;line-height:1.1;margin-bottom:2rem;text-align:center}
 .qasidah-subtitle{font-family:'Cormorant',serif;font-size:clamp(1.4rem,3vw,2rem);color:var(--gold-300);font-weight:500;font-style:italic;text-align:center}
 .couplets-container{width:100%;display:flex;flex-direction:column;gap:3rem;max-width:900px;margin:0 auto;padding:0 2rem}
 .couplet-section{display:flex;flex-direction:column;gap:1.2rem;text-align:center}
@@ -42,26 +42,26 @@ body{
 .transliteration-lines{font-family:'Manrope',system-ui,sans-serif;font-size:clamp(0.95rem,2.5vw,1.2rem);font-style:italic;color:rgba(244,239,226,.72);line-height:1.6;opacity:var(--trans-opacity,1);transition:opacity .3s var(--ease);text-align:center}
 .translation-lines{font-family:'Manrope',system-ui,sans-serif;font-size:clamp(1rem,2.5vw,1.3rem);color:rgba(244,239,226,.8);line-height:1.65;opacity:var(--trans-opacity,1);transition:opacity .3s var(--ease);text-align:center}
 .line{margin:.3rem 0}
-.controls{position:fixed;bottom:1rem;left:50%;transform:translateX(-50%);display:flex;gap:1rem;z-index:10}
-.toggle-btn{padding:10px 16px;border-radius:100px;background:rgba(212,169,62,.15);border:1px solid rgba(212,169,62,.35);color:var(--cream);font-family:'Manrope';font-size:.85rem;font-weight:600;cursor:pointer;transition:all .3s var(--ease);white-space:nowrap}
-.toggle-btn:hover{background:rgba(212,169,62,.28);border-color:rgba(212,169,62,.55)}
-.toggle-btn.active{background:var(--gold-500);color:var(--green-950);border-color:var(--gold-500)}
+.toggles-row{display:flex;gap:1.5rem;justify-content:center;margin-top:1.5rem;margin-bottom:2rem}
+.toggle-switch{padding:10px 20px;border-radius:100px;background:rgba(212,169,62,.15);border:2px solid rgba(212,169,62,.35);color:var(--cream);font-family:'Manrope';font-size:.9rem;font-weight:600;cursor:pointer;transition:all .3s var(--ease);white-space:nowrap}
+.toggle-switch:hover{background:rgba(212,169,62,.28);border-color:rgba(212,169,62,.55)}
+.toggle-switch.active{background:var(--gold-500);color:var(--green-950);border-color:var(--gold-500)}
 @media(max-width:599px){
-  body{padding:1rem}
-  .container{gap:0}
+  .container{padding:1rem;padding-top:1rem}
   .waiting-screen h1{font-size:clamp(2rem,8vw,3rem)}
   .waiting-screen p{font-size:1.1rem}
   .qasidah-display{gap:0}
-  .qasidah-header{margin-bottom:2rem;margin-top:1rem}
-  .qasidah-title{font-size:clamp(1.6rem,5vw,2.4rem)}
-  .qasidah-subtitle{font-size:clamp(1rem,2.5vw,1.4rem)}
+  .qasidah-header{margin-bottom:2rem}
+  .qasidah-title{font-size:clamp(2rem,6vw,3.5rem)}
+  .qasidah-subtitle{font-size:clamp(0.9rem,2.2vw,1.2rem)}
+  .toggles-row{gap:1rem;margin-top:1rem;margin-bottom:1.5rem}
+  .toggle-switch{padding:8px 16px;font-size:.85rem}
   .couplets-container{gap:2rem;padding:0 1rem}
   .couplet-section{gap:.8rem}
   .arabic-lines{font-size:clamp(1.4rem,4vw,2rem);line-height:2}
   .transliteration-lines{font-size:clamp(.85rem,2vw,1rem)}
   .translation-lines{font-size:clamp(.9rem,2.2vw,1.1rem)}
   .line{margin:.2rem 0}
-  .toggle-btn{padding:8px 14px;font-size:.8rem}
 }
 </style>
 </head>
@@ -75,13 +75,13 @@ body{
     <div class="qasidah-header">
       <div class="qasidah-title" id="qasidahTitle"></div>
       <div class="qasidah-subtitle" id="qasidahSubtitle"></div>
+      <div class="toggles-row">
+        <button class="toggle-switch active" id="transToggle" data-layer="transliteration">Transliterate</button>
+        <button class="toggle-switch active" id="translationToggle" data-layer="translation">Translation</button>
+      </div>
     </div>
     <div class="couplets-container" id="coupletsContainer"></div>
   </div>
-</div>
-
-<div class="controls">
-  <button class="toggle-btn active" id="transToggle">Show Layers</button>
 </div>
 
 <script type="module">
@@ -1975,18 +1975,36 @@ const qasidahTitle = document.getElementById('qasidahTitle');
 const qasidahSubtitle = document.getElementById('qasidahSubtitle');
 const coupletsContainer = document.getElementById('coupletsContainer');
 const transToggle = document.getElementById('transToggle');
+const translationToggle = document.getElementById('translationToggle');
 
-let showLayers = true;
+let showTransliteration = true;
+let showTranslation = true;
 
 transToggle.addEventListener('click', () => {
-  showLayers = !showLayers;
-  transToggle.classList.toggle('active', showLayers);
+  showTransliteration = !showTransliteration;
+  transToggle.classList.toggle('active', showTransliteration);
+  updateLayersVisibility();
+});
+
+translationToggle.addEventListener('click', () => {
+  showTranslation = !showTranslation;
+  translationToggle.classList.toggle('active', showTranslation);
   updateLayersVisibility();
 });
 
 function updateLayersVisibility() {
-  const opacity = showLayers ? 1 : 0;
-  document.documentElement.style.setProperty('--trans-opacity', opacity);
+  const transOpacity = showTransliteration ? 1 : 0;
+  const translationOpacity = showTranslation ? 1 : 0;
+
+  document.querySelectorAll('.transliteration-lines').forEach(el => {
+    el.style.opacity = transOpacity;
+    el.style.pointerEvents = showTransliteration ? 'auto' : 'none';
+  });
+
+  document.querySelectorAll('.translation-lines').forEach(el => {
+    el.style.opacity = translationOpacity;
+    el.style.pointerEvents = showTranslation ? 'auto' : 'none';
+  });
 }
 
 function renderQasidah(qasidahIndex) {
@@ -2029,6 +2047,9 @@ function renderQasidah(qasidahIndex) {
 
     coupletsContainer.appendChild(section);
   });
+
+  // Apply current visibility settings to new content
+  updateLayersVisibility();
 
   // Auto-scroll to top
   window.scrollTo(0, 0);

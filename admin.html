@@ -116,146 +116,1865 @@ const db = getDatabase(app);
 // Data: same qasidahs array as in live.html
 const qasidahs = [
   {
-    title: 'Qasidah Al-Burda',
-    englishTitle: 'The Poem of the Mantle',
-    couplets: [
+    "title": "قَمَرٌ",
+    "englishTitle": "Moon",
+    "couplets": [
       {
-        arabic: ['أَمِنْ تَذَكُّرِ جِيرَانٍ بِذِي سَلَمِ', 'مَزَجْتَ جِيرَاناً بِصَبٍّ وَتَرَقْرُقِ'],
-        transliteration: ['Amin tazakkuri jiran bi-dhi-salam', 'Mazajta jiranan bi-sabbi wa-taraqqruq'],
-        translation: ['Do you remember the neighbors at Dhul-Salam', 'Mixing your heart with longing and sorrow'],
-        isRefrain: false
+        "arabic": [
+          "قَمَرٌ قَمَرٌ قَمَرٌ سِيدْنَا النَّبِي قَمَرٌ",
+          "وَجَمِيلْ وَجَمِيلْ وَجَمِيلْ سِيدْنَا النَّبِي وَجَمِيلْ"
+        ],
+        "transliteration": [
+          "qamarun qamarun qamarun sīdnan nabī qamarun",
+          "wajamīl wajamīl wajamīl sīdnan nabī wajamīl"
+        ],
+        "translation": [
+          "The Moon, The likeness of our Prophet is like the moon",
+          "Beautiful, Our master is truly beautiful"
+        ],
+        "isRefrain": true
       },
       {
-        arabic: ['نَعَمْتَ بِقُرْبِ الْحَبِيبِ وَالدِّيَارِ', 'وَلَمْ تَعْجَلِ الْفِرَاقَ مِنْ هَوَاكَا'],
-        transliteration: ['Naʿamta bi-qurbi al-habib wa-al-diyar', 'Wa-lam taʿjal al-firaq min hawaka'],
-        translation: ['You enjoyed the beloved\'s closeness and abode', 'Yet did not hasten separation from your desire'],
-        isRefrain: true
+        "arabic": [
+          "وَأَجْمَلُ مِنْكَ لَمْ تَرَ قَطُّ عَيْنٍ [ الله الله ]",
+          "وَأَطْيَبُ مِنْكَ لَمْ تَلِدِ النِّسَآءُ [ الله الله ]"
+        ],
+        "transliteration": [
+          "wa ajmalu minka lam tara qaṭṭu ʿaynin Allah Allah",
+          "wa aṭyabu minka lam talidin nisaā’u Allah Allah"
+        ],
+        "translation": [
+          "More beautiful than you no eye has ever seen",
+          "And purer than you no woman ever givi birth to"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "خُلِقْتَ مُبَرَّأً مِنْ كُلِّ عَيْبٍ",
+          "كَأَنْكَ قَدْ خُلِقْتَ كَمَا تَشَآءُ"
+        ],
+        "transliteration": [
+          "khuliqta mubarra’an min kulli ʿaybin",
+          "ka anka qad khuliqta kamā tashaā’u"
+        ],
+        "translation": [
+          "You were created free from any flaw whatsoever",
+          "As if you were created just the way you wanted"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "قَمَرٌ قَمَرٌ قَمَرٌ سِيدْنَا النَّبِي قَمَرٌ",
+          "وَجَمِيلْ وَجَمِيلْ وَجَمِيلْ سِيدْنَا النَّبِي وَجَمِيلْ"
+        ],
+        "transliteration": [
+          "qamarun qamarun qamarun sīdnan nabī qamarun",
+          "wajamīl wajamīl wajamīl sīdnan nabī wajamīl"
+        ],
+        "translation": [
+          "The Moon, The likeness of our Prophet is like the moon",
+          "Beautiful, Our master is truly beautiful"
+        ],
+        "isRefrain": true
+      },
+      {
+        "arabic": [
+          "وَكَفُّ الْمُصْطَفَى كَالْوَرْدِ نَادِي [ الله الله ]",
+          "وَعِطْرُهَا يَبْقَى اِذَا مَسَّتْ أَيَادِي [ الله الله ]"
+        ],
+        "transliteration": [
+          "wakafful muṣṭafā kal wardi nādī Allah Allah",
+          "waʿiṭruhā yabqā idhā massat ayādī Allah Allah"
+        ],
+        "translation": [
+          "The palm of the Chosen One is like a rose-petal, silken and dewy",
+          "Its fragrant scent lingers upon the hands' brushing touch"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَعَمَّ نَوَالُهَا كُلَّ العِبَادِ",
+          "حَبِيبُ اللهِ يَا خَيْرَ البَرَايَا"
+        ],
+        "transliteration": [
+          "waʿamma nawāluhā kullal ʿibādi",
+          "ḥabību Allahi yā khayral barāyā"
+        ],
+        "translation": [
+          "Its great favor has encompassed all of humanity, and is widespread.",
+          "[Such is] the beloved of Allah. O very best of creation!"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "قَمَرٌ قَمَرٌ قَمَرٌ سِيدْنَا النَّبِي قَمَرٌ",
+          "وَجَمِيلْ وَجَمِيلْ وَجَمِيلْ سِيدْنَا النَّبِي وَجَمِيلْ"
+        ],
+        "transliteration": [
+          "qamarun qamarun qamarun sīdnan nabī qamarun",
+          "wajamīl wajamīl wajamīl sīdnan nabī wajamīl"
+        ],
+        "translation": [
+          "The Moon, The likeness of our Prophet is like the moon",
+          "Beautiful, Our master is truly beautiful"
+        ],
+        "isRefrain": true
+      },
+      {
+        "arabic": [
+          "كَحِيلُ الطَّرْفِ حَبِيبِي لَوْ تَرَاهُ [ الله الله ]",
+          "ضَحُوكُ السِّنَّ لِلْعَاشِقْ رَمَاهُ [ الله الله ]"
+        ],
+        "transliteration": [
+          "kaḥīluṭ ṭarfi ḥabībī law tarāhu Allah Allah",
+          "ḍaḥūkus sinna lilʿāshiq ramāhu Allah Allah"
+        ],
+        "translation": [
+          "Kohl-eyed is my beloved, were you to see him",
+          "Cheerful and smiling, leaving his admirers utterly love-struck"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "بَهِيُّ الطَّلْعَةْ فَالْمَوْلَى اصْطَفَاهُ",
+          "وَكُلُّ الخَلْقِ مِن أَنْوَارِ طَهَ"
+        ],
+        "transliteration": [
+          "bahiyyuṭ ṭalʿah fal mawlāṣ ṭafāhu",
+          "wakullul khalqi min anwāri ṭaha"
+        ],
+        "translation": [
+          "Magnificent of appearance, for the Lord did choose him",
+          "While all of creation is lit up from the light of Ta-Ha"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "قَمَرٌ قَمَرٌ قَمَرٌ سِيدْنَا النَّبِي قَمَرٌ",
+          "وَجَمِيلْ وَجَمِيلْ وَجَمِيلْ سِيدْنَا النَّبِي وَجَمِيلْ"
+        ],
+        "transliteration": [
+          "qamarun qamarun qamarun sīdnan nabī qamarun",
+          "wajamīl wajamīl wajamīl sīdnan nabī wajamīl"
+        ],
+        "translation": [
+          "The Moon, The likeness of our Prophet is like the moon",
+          "Beautiful, Our master is truly beautiful"
+        ],
+        "isRefrain": true
+      },
+      {
+        "arabic": [
+          "وَلَا ظِلُّ لَهُ بَلْ كَانَ نُورَا [ الله الله ]",
+          "تَنَالُ الشَّمْسَ مِنْهُ وَالْبُدُورَا [ الله الله ]"
+        ],
+        "transliteration": [
+          "walā ẓillu lahu bal kāna nūrā Allah Allah",
+          "tanālush shamsa minhu wal budūrā Allah Allah"
+        ],
+        "translation": [
+          "He had no taint of shadow, rather he was light",
+          "The moon and sun both benefited from him"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَلَمْ يَكُنِ الْهُدَى لَوْلَا ظُهُورَهْ",
+          "وَكُلُّ الْكَوْنِ أَنَارَ بِنُورِ طَهَ"
+        ],
+        "transliteration": [
+          "walam yakunil hudā lawlā ẓuhūrah",
+          "wakullul kawni anāra binūri ṭaha"
+        ],
+        "translation": [
+          "There would have been no guidance without his appearance",
+          "The whole universe became illuminated through the light of Ta-Ha"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "قَمَرٌ قَمَرٌ قَمَرٌ سِيدْنَا النَّبِي قَمَرٌ",
+          "وَجَمِيلْ وَجَمِيلْ وَجَمِيلْ سِيدْنَا النَّبِي وَجَمِيلْ"
+        ],
+        "transliteration": [
+          "qamarun qamarun qamarun sīdnan nabī qamarun",
+          "wajamīl wajamīl wajamīl sīdnan nabī wajamīl"
+        ],
+        "translation": [
+          "The Moon, The likeness of our Prophet is like the moon",
+          "Beautiful, Our master is truly beautiful"
+        ],
+        "isRefrain": true
+      },
+      {
+        "arabic": [
+          "وَرِيقُ المُصْطَفَى يَشْفِي العَلِيلَ [ الله الله ]",
+          "وَعَيْنُ قَتَادَةَ خُذْهَا دَلِيلَا [ الله الله ]"
+        ],
+        "transliteration": [
+          "warīqul muṣṭafā yashfīl ʿalīla Allah Allah",
+          "waʿaynu qatādata khudhhā dalīlā Allah Allah"
+        ],
+        "translation": [
+          "The saliva of the Chosen One heals the ailing, the sick.",
+          "Take the eye of Qatada as evidence [of this]"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "تَفَلْ فِي الْبِئْرِ أَضْحَتْ سَلْسَبِيلًا",
+          "وَصَارَ لِصَحْبِهِ شَهْدًا مُدَامَا"
+        ],
+        "transliteration": [
+          "tafal fīl bi’ri aḍḥat salsabīlan",
+          "waṣāra liṣaḥbihi shahdan mudāmā"
+        ],
+        "translation": [
+          "He spat in the well and it became a flowing spring",
+          "And it became like honey for his companions."
+        ],
+        "isRefrain": false
       }
     ]
   },
   {
-    title: 'بُشْرَى لَنَا نِلْنَا المُنَى',
-    englishTitle: 'Glad Tidings To Us, Our Aim Is Fulfilled',
-    couplets: [
+    "title": "Diya'ul Lami: Introduction",
+    "englishTitle": "Introduction",
+    "couplets": [
       {
-        arabic: ['بُشْرَى لَـنَـا نِـلْـنَـا المُـنَى', 'زَالَ العَنَا وَافَى الهَـنَـا'],
-        transliteration: ['bushrā lanā nilnal munā', 'zālal ʿanā wāfal hanā'],
-        translation: ['Glad tidings to us, we have attained our wish', 'Hardship has vanished, and joy has arrived'],
-        isRefrain: true
+        "arabic": [
+          "يَارَبِّ صَلِّ عَلَى مُحَمَّدْ",
+          "يَارَبِّ صَلِّ عَلَيْهِ وَسَلِّمْ"
+        ],
+        "transliteration": [
+          "yārabbi ṣalli ʿalā muḥammad",
+          "yārabbi ṣalli ʿalayhi wasallim"
+        ],
+        "translation": [
+          "O Lord, send Your mercy upon Muhammad",
+          "O Lord, send Your mercy and peace upon Muhammad."
+        ],
+        "isRefrain": false
       },
       {
-        arabic: ['واللهُ أَنْجَـزَ وَعْدَهُ', 'وَالبِشْرُ أَضْحَى مُعْلَـنَـا'],
-        transliteration: ['wāllhu anjaza waʿdahu', 'wal bishru aḍḥā muʿlanā'],
-        translation: ['By Allah, His promise has been fulfilled', 'And the good news has become openly declared'],
-        isRefrain: true
+        "arabic": [
+          "يَارَبِّ صَلِّ عَلَى مُحَمَّدْ",
+          "حَبِيبِكَ الشَّافِعِ المُشَفَّعْ"
+        ],
+        "transliteration": [
+          "yārabbi ṣalli ʿalā muḥammad",
+          "ḥabībikash shāfiʿil mushaffaʿ"
+        ],
+        "translation": [
+          "O Lord, send Your mercy upon Muhammad",
+          "Your Beloved One, the Intercessor, whose intercession is accepted"
+        ],
+        "isRefrain": false
       },
       {
-        arabic: ['يَا نَفْسِي طِـيْـبِـي بِاللِّقَاءْ', 'يَا عَيْنُ قَرِّي أَعْيُنَا'],
-        transliteration: ['yā nafsī ṭiybī bil liqā\'', 'yā ʿaynu qarrī aʿyunā'],
-        translation: ['O my soul, rejoice in the meeting', 'O eyes, be comforted, our eyes are blessed'],
-        isRefrain: false
+        "arabic": [
+          "يَارَبِّ صَلِّ عَلَى مُحَمَّدْ",
+          "أَعْلَى الوَرَى رُتْبَةً وَ أَرْفَعْ"
+        ],
+        "transliteration": [
+          "yārabbi ṣalli ʿalā muḥammad",
+          "aʿlal warā rutbatan wa arfaʿ"
+        ],
+        "translation": [
+          "O Lord, send Your mercy upon Muhammad",
+          "Most lofty of mankind in station and most exalted"
+        ],
+        "isRefrain": false
       },
       {
-        arabic: ['هَذَا جَمَالُ المُصْطَفَى', 'أَنْوَارُهُ لَاحَتْ لَنَا'],
-        transliteration: ['hadhā jamālul muṣṭafā', 'anwāruhu lāḥat lanā'],
-        translation: ['This is the beauty of the Chosen One', 'His lights have shone upon us'],
-        isRefrain: false
+        "arabic": [
+          "يَارَبِّ صَلِّ عَلَى مُحَمَّدْ",
+          "أَسْمَى البَرَايَا جَاهَاً وَ أَوْسَعْ"
+        ],
+        "transliteration": [
+          "yārabbi ṣalli ʿalā muḥammad",
+          "asmal barāyā jāhāan wa awsaʿ"
+        ],
+        "translation": [
+          "O Lord, send Your mercy upon Muhammad",
+          "Highest and most vast of creation in rank"
+        ],
+        "isRefrain": false
       },
       {
-        arabic: ['بُشْرَى لَـنَـا نِـلْـنَـا المُـنَى', 'زَالَ العَنَا وَافَى الهَـنَـا'],
-        transliteration: ['bushrā lanā nilnal munā', 'zālal ʿanā wāfal hanā'],
-        translation: ['Glad tidings to us, we have attained our wish', 'Hardship has vanished, and joy has arrived'],
-        isRefrain: true
+        "arabic": [
+          "يَارَبِّ صَلِّ عَلَى مُحَمَّدْ",
+          "وَ اسْلُكْ بِنَا رَبِّ خَيْرَ مَهْيَعْ"
+        ],
+        "transliteration": [
+          "yārabbi ṣalli ʿalā muḥammad",
+          "was luk binā rabbi khayra mahyaʿ"
+        ],
+        "translation": [
+          "O Lord, send Your mercy upon Muhammad",
+          "Lead us, my Lord, upon the most virtuous of paths"
+        ],
+        "isRefrain": false
       },
       {
-        arabic: ['واللهُ أَنْجَـزَ وَعْدَهُ', 'وَالبِشْرُ أَضْحَى مُعْلَـنَـا'],
-        transliteration: ['wāllhu anjaza waʿdahu', 'wal bishru aḍḥā muʿlanā'],
-        translation: ['By Allah, His promise has been fulfilled', 'And the good news has become openly declared'],
-        isRefrain: true
+        "arabic": [
+          "يَارَبِّ صَلِّ عَلَى مُحَمَّدْ",
+          "وَ عَافِنَا وَ اشْفِ كُلَّ مُوجَعْ"
+        ],
+        "transliteration": [
+          "yārabbi ṣalli ʿalā muḥammad",
+          "wa ʿāfinā wash fi kulla mūjaʿ"
+        ],
+        "translation": [
+          "O Lord, send Your mercy upon Muhammad",
+          "Give us us well-being and cure every suffering one"
+        ],
+        "isRefrain": false
       },
       {
-        arabic: ['يَا طَـيْـبَةُ مَا ذَا نَقُول', 'وَفِيكِ قَدْ حَلَّ الرَّسُولْ'],
-        transliteration: ['yā ṭaybatu mā dhā naqūl', 'wafīki qad ḥallar rasūl'],
-        translation: ['O Taybah, what shall we say', 'And in you, the Messenger has settled'],
-        isRefrain: false
+        "arabic": [
+          "يَارَبِّ صَلِّ عَلَى مُحَمَّدْ",
+          "وَ أَصلِحِ القَلْبَ وَ اعْفُ وَ انْفَعْ"
+        ],
+        "transliteration": [
+          "yārabbi ṣalli ʿalā muḥammad",
+          "wa aṣliḥil qalba waʿ fu wan faʿ"
+        ],
+        "translation": [
+          "O Lord, send Your mercy upon Muhammad",
+          "Rectify hearts, pardon us and benefit us"
+        ],
+        "isRefrain": false
       },
       {
-        arabic: ['وَكُلُّنَا يَرْجُو الوُصُول', 'لمُِحَمَّدٍ نَبِـيِّـنَـا'],
-        transliteration: ['wakullunā yarjūl wuṣūl', 'lmiuḥammadin nabiyyinā'],
-        translation: ['And all of us long to reach', 'To Muhammad, our Prophet ﷺ'],
-        isRefrain: false
+        "arabic": [
+          "يَارَبِّ صَلِّ عَلَى مُحَمَّدْ",
+          "وَ اكْفِ المُعَادِي وَ اصْرِفْهُ وَ ارْدَعْ"
+        ],
+        "transliteration": [
+          "yārabbi ṣalli ʿalā muḥammad",
+          "wak fil muʿādī waṣ rifhu war daʿ"
+        ],
+        "translation": [
+          "O Lord, send Your mercy upon Muhammad",
+          "Restrain, divert and deter every aggressor"
+        ],
+        "isRefrain": false
       },
       {
-        arabic: ['بُشْرَى لَـنَـا نِـلْـنَـا المُـنَى', 'زَالَ العَنَا وَافَى الهَـنَـا'],
-        transliteration: ['bushrā lanā nilnal munā', 'zālal ʿanā wāfal hanā'],
-        translation: ['Glad tidings to us, we have attained our wish', 'Hardship has vanished, and joy has arrived'],
-        isRefrain: true
+        "arabic": [
+          "يَارَبِّ صَلِّ عَلَى مُحَمَّدْ",
+          "نَحِلُّ فِي حِصْنِكَ المُمَنَّعْ"
+        ],
+        "transliteration": [
+          "yārabbi ṣalli ʿalā muḥammad",
+          "naḥillu fī ḥiṣnikal mumannaʿ"
+        ],
+        "translation": [
+          "O Lord, send Your mercy upon Muhammad",
+          "Allow us to dwell in Your impenetrable fortress"
+        ],
+        "isRefrain": false
       },
       {
-        arabic: ['واللهُ أَنْجَـزَ وَعْدَهُ', 'وَالبِشْرُ أَضْحَى مُعْلَـنَـا'],
-        transliteration: ['wāllhu anjaza waʿdahu', 'wal bishru aḍḥā muʿlanā'],
-        translation: ['By Allah, His promise has been fulfilled', 'And the good news has become openly declared'],
-        isRefrain: true
+        "arabic": [
+          "يَارَبِّ صَلِّ عَلَى مُحَمَّدْ",
+          "رَبِّ ارْضَ عَنَّا رِضَاكَ الأَرْفَعْ"
+        ],
+        "transliteration": [
+          "yārabbi ṣalli ʿalā muḥammad",
+          "rabbir ḍa ʿannā riḍākal arfaʿ"
+        ],
+        "translation": [
+          "O Lord, send Your mercy upon Muhammad",
+          "Lord, be pleased with us with Your Most Exalted Pleasure"
+        ],
+        "isRefrain": false
       },
       {
-        arabic: ['يَا رَوْضَةَ الهَادِي الشَّفِيع', 'وَصَاحِبَـيْـهِ وَالبَقِيع'],
-        transliteration: ['yā rawḍatal hādīsh shafīʿ', 'waṣāḥibayhi wal baqīʿ'],
-        translation: ['O garden of the guiding intercessor', 'And his two companions and those in Al-Baqi'],
-        isRefrain: false
+        "arabic": [
+          "يَارَبِّ صَلِّ عَلَى مُحَمَّدْ",
+          "وَ اجْعَلْ لَنَا فِي الجِنَانِ مَجْمَعْ"
+        ],
+        "transliteration": [
+          "yārabbi ṣalli ʿalā muḥammad",
+          "waj ʿal lanā fīl jināni majmaʿ"
+        ],
+        "translation": [
+          "O Lord, send Your mercy upon Muhammad",
+          "And make the Gardens of Paradise our place of gathering"
+        ],
+        "isRefrain": false
       },
       {
-        arabic: ['اُكْتُبْ لَنَا نَحْنُ الجَمِيع', 'زِيَارَةً لِـنَـبِـيِّــنَا'],
-        transliteration: ['uktub lanā naḥnul jamīʿ', 'ziyāratan linabiyyinā'],
-        translation: ['Write for all of us', 'A visit to our Prophet'],
-        isRefrain: false
+        "arabic": [
+          "يَارَبِّ صَلِّ عَلَى مُحَمَّدْ",
+          "رَافِقْ بِنَا خَيْرَ خَلْقِكَ اجْمَعْ"
+        ],
+        "transliteration": [
+          "yārabbi ṣalli ʿalā muḥammad",
+          "rāfiq binā khayra khalqikaj maʿ"
+        ],
+        "translation": [
+          "O Lord, send Your mercy upon Muhammad",
+          "Grant us all the company of the best of Your creation"
+        ],
+        "isRefrain": false
       },
       {
-        arabic: ['بُشْرَى لَـنَـا نِـلْـنَـا المُـنَى', 'زَالَ العَنَا وَافَى الهَـنَـا'],
-        transliteration: ['bushrā lanā nilnal munā', 'zālal ʿanā wāfal hanā'],
-        translation: ['Glad tidings to us, we have attained our wish', 'Hardship has vanished, and joy has arrived'],
-        isRefrain: true
+        "arabic": [
+          "يَارَبِّ صَلِّ عَلَى مُحَمَّدْ",
+          "يَارَبِّ صَلِّ عَلَيْهِ وَسَلِّم"
+        ],
+        "transliteration": [
+          "yārabbi ṣalli ʿalā muḥammad",
+          "yārabbi ṣalli ʿalayhi wasallim"
+        ],
+        "translation": [
+          "O Lord, send Your mercy upon Muhammad",
+          "Oh Allah, send Your mercy, peace and blessings upon him and his Family"
+        ],
+        "isRefrain": false
+      }
+    ]
+  },
+  {
+    "title": "Diya'ul Lami: Chapter 1",
+    "englishTitle": "Chapter 1",
+    "couplets": [
+      {
+        "arabic": [
+          "الحَمْدُ لِلّهِ الَّذِي هَدَانَا",
+          "بِعَبْدِهِ المُخْتَارِ مَن دَعَانَا"
+        ],
+        "transliteration": [
+          "alḥamdu lillāhil ladhī hadānā",
+          "biʿabdihil mukhtāri man daʿānā"
+        ],
+        "translation": [
+          "Praise be to the One who guided us",
+          "Through His chosen slave, who summoned us"
+        ],
+        "isRefrain": false
       },
       {
-        arabic: ['واللهُ أَنْجَـزَ وَعْدَهُ', 'وَالبِشْرُ أَضْحَى مُعْلَـنَـا'],
-        transliteration: ['wāllhu anjaza waʿdahu', 'wal bishru aḍḥā muʿlanā'],
-        translation: ['By Allah, His promise has been fulfilled', 'And the good news has become openly declared'],
-        isRefrain: true
+        "arabic": [
+          "إِلَيْهِ بِالإِذْنِ وَ قَدْ نَادَانَا",
+          "لَبَّيْكَ يَا مَنْ دَلَّنَا وَحَدَانَا"
+        ],
+        "transliteration": [
+          "ilayhi bil idhni wa qad nādānā",
+          "labbayka yā man dallanā waḥadānā"
+        ],
+        "translation": [
+          "To HIm, by (His) permission, indeed he invited us",
+          "At your service [O Prophet], O one who guided and urged us forward"
+        ],
+        "isRefrain": false
       },
       {
-        arabic: ['حَيْثُ الأَمَانِي رَوْضُهَا', 'قَدْ ظَلَّ حُلْوَ المُجْتَنَى'],
-        transliteration: ['ḥaythul amānī rawḍuhā', 'qad ẓalla ḥulwal mujtanā'],
-        translation: ['Where wishes bloom like a garden', 'And the sweetness of what is gathered endures.'],
-        isRefrain: false
+        "arabic": [
+          "صَلَّى عَلَيْكَ اللهُ بَارِئُكَ الَّذِي",
+          "بِكَ يَا مُشَفَّعُ خَصَّنَا وَ حَبَانَا"
+        ],
+        "transliteration": [
+          "ṣallā ʿalayka Allahu bāri’ukal ladhī",
+          "bika yā mushaffaʿu khaṣṣanā wa ḥabānā"
+        ],
+        "translation": [
+          "Allāh - your creator - has sent mercy upon you",
+          "Through you, O Possessor of Intercession, He distinguished and favoured us"
+        ],
+        "isRefrain": false
       },
       {
-        arabic: ['وَبِالحَبِيبِ المُصْطَفَى', 'صَفَا وَطَابَ عَيْشُنَا'],
-        transliteration: ['wabil ḥabībil muṣṭafā', 'ṣafā waṭāba ʿayshunā'],
-        translation: ['And with the beloved, Chosen One', 'Our lives become pure and pleasant'],
-        isRefrain: false
+        "arabic": [
+          "مَعَ آلِكَ الأَطْهَارِ مَعْدِنِ سِرِّكَ الــ",
+          "أَسْمَى فَهُمْ سُفُنُ النَّجَاةِ حِمَانَا"
+        ],
+        "transliteration": [
+          "maʿa ālikal aṭhāri maʿdini sirrikal",
+          "asmā fahum sufunun najāti ḥimānā"
+        ],
+        "translation": [
+          "Together with your pure Family, the treasure trove of your highest secret,",
+          "For they are the ships of salvation, our sanctuary"
+        ],
+        "isRefrain": false
       },
       {
-        arabic: ['بُشْرَى لَـنَـا نِـلْـنَـا المُـنَى', 'زَالَ العَنَا وَافَى الهَـنَـا'],
-        transliteration: ['bushrā lanā nilnal munā', 'zālal ʿanā wāfal hanā'],
-        translation: ['Glad tidings to us, we have attained our wish', 'Hardship has vanished, and joy has arrived'],
-        isRefrain: true
+        "arabic": [
+          "وَ عَلَى صَحَابَتِكَ الكِرَامِ حُمَاةِ دِينِكَ",
+          "أَصْبَحُوا لِوَلَائِهِ عُنْوَانَا"
+        ],
+        "transliteration": [
+          "wa ʿalā ṣaḥābatikal kirāmi ḥumāti dīnika",
+          "aṣbaḥū liwalā’ihi ʿunwānā"
+        ],
+        "translation": [
+          "And upon your noble Companions, the defenders of your religion",
+          "They are models of loyalty to him"
+        ],
+        "isRefrain": false
       },
       {
-        arabic: ['واللهُ أَنْجَـزَ وَعْدَهُ', 'وَالبِشْرُ أَضْحَى مُعْلَـنَـا'],
-        transliteration: ['wāllhu anjaza waʿdahu', 'wal bishru aḍḥā muʿlanā'],
-        translation: ['By Allah, His promise has been fulfilled', 'And the good news has become openly declared'],
-        isRefrain: true
+        "arabic": [
+          "وَ التَّابِعِينَ لَهُمْ بِصِدْقٍ مَا حَدَا",
+          "حَادِي المَوَدَّةِ هَيَّجَ الأَشْجَانَا"
+        ],
+        "transliteration": [
+          "wat tābiʿīna lahum biṣidqin mā ḥadā",
+          "ḥādīl mawaddati hayyajal ashjānā"
+        ],
+        "translation": [
+          "And upon those who follow them with truthfulness, as long as",
+          "The camel singer urges on the caravan of love, igniting the fires of yearning"
+        ],
+        "isRefrain": false
       },
       {
-        arabic: ['صَلِّ وَسَلِّمْ يَا سَلاَم', 'عَلَى النَّبِي بَدْرِ التَّمَام'],
-        transliteration: ['ṣalli wasallim yā salam', 'ʿalan nabī badrit tamām'],
-        translation: ['Send blessings and peace, O Source of Peace', 'Upon the Prophet, the full moon of perfection'],
-        isRefrain: false
+        "arabic": [
+          "وَ اللهِ مَا ذُكِرَ الحَبِيبُ لَدَى المُحِبّ",
+          "إِلَّا وَ أَضْحَى وَالِهَاً نَشْوَانَا"
+        ],
+        "transliteration": [
+          "wa Allahi mā dhukiral ḥabību ladal muḥibb",
+          "illā wa aḍḥā wālihāan nashwānā"
+        ],
+        "translation": [
+          "By Allāh, never is the Beloved mentioned in the presence of the lover",
+          "Except that he becomes passionately overwhelmed with joy"
+        ],
+        "isRefrain": false
       },
       {
-        arabic: ['وَالْآلِ وَالصَّحْبِ الكِرَام', 'صَلَّى عَلَيْهِمْ رَبُّنَا'],
-        transliteration: ['wal āli waṣ ṣaḥbil kirām', 'ṣallā ʿalayhim rabbunā'],
-        translation: ['And upon his noble family and honored companions', 'May our Lord send blessings upon them'],
-        isRefrain: false
+        "arabic": [
+          "أَيْنَ المُحِبُّونَ الَّذِينَ عَلَيْهِمُ",
+          "بَذْلُ النُّفُوسِ مَعَ النَّفَائِسِ هَانَا؟"
+        ],
+        "transliteration": [
+          "aynal muḥibbūnal ladhīna ʿalayhimu",
+          "badhlun nufūsi maʿan nafā’isi hānā"
+        ],
+        "translation": [
+          "Where are the lovers who find ease",
+          "In sacrificing their souls and every precious thing [for their beloved]?"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "لَا يَسْمَعُونَ بِذِكْرِ طَهَ المُصْطَفَى",
+          "إِلَّا بِهِ انْتَعَشُوا وَ أَذْهَبَ رَانَا"
+        ],
+        "transliteration": [
+          "lā yasmaʿūna bidhikri ṭahal muṣṭafā",
+          "illā bihin taʿashū wa adhhaba rānā"
+        ],
+        "translation": [
+          "Never do they hear a mention of Ṭaha, the Chosen one,",
+          "Except that by it they are revived and the rust [upon their heart] vanishes"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "فَاهْتَاجَتِ الأَرْوَاحُ تَشْتَاقُ اللِّقَا",
+          "وَ تَحِنُّ تَسأَلُ رَبَّهَا الرِّضْوَانَا"
+        ],
+        "transliteration": [
+          "fah tājatil arwāḥu tashtāqul liqā",
+          "wa taḥinnu tasalu rabbahar riḍwānā"
+        ],
+        "translation": [
+          "Their souls have become aroused, yearning for the encounter,",
+          "Longing and asking their Lord for His Good Pleasure"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "حَالُ المُحِبِّينَ كَذَا فَاسْمَعْ إِلى",
+          "سِيَرِ المُشَفَّعِ وَ ارْهِفِ الآذَانَا"
+        ],
+        "transliteration": [
+          "ḥālul muḥibbīna kadhā fas maʿ ilā",
+          "siyaril mushaffaʿi war hifil ādhānā"
+        ],
+        "translation": [
+          "This is the state of the lovers, so listen closely",
+          "To the life story of the one whose intercession is accepted"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ انْصِتْ إِلَى أَوْصَافِ طَهَ المُجْتَبَى",
+          "وَ احْضِرْ لِقَلْبِكَ يَمْتَلِئْ وِجْدَانَا"
+        ],
+        "transliteration": [
+          "wan ṣit ilā awṣāfi ṭahal mujtabā",
+          "waḥ ḍir liqalbika yamtali’ wijdānā"
+        ],
+        "translation": [
+          "And lend an ear to the description of Ṭaha, the Elected One,",
+          "Make your heart present, and it will be filled with ecstasy"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "يَارَبَّنَا صَلِّ وَ سَلِّم دَائِماً",
+          "عَلَى حَبِيبِكَ مَن إِلَيكَ دَعَانَا"
+        ],
+        "transliteration": [
+          "yārabbanā ṣalli wa sallim dā’iman",
+          "ʿalā ḥabībika man ilaīka daʿānā"
+        ],
+        "translation": [
+          "Our Lord, send Your mercy and peace perpetually",
+          "Upon Your Beloved, the one who invited us to You,"
+        ],
+        "isRefrain": false
+      }
+    ]
+  },
+  {
+    "title": "Diya'ul Lami: Chapter 2",
+    "englishTitle": "Chapter 2",
+    "couplets": [
+      {
+        "arabic": [
+          "نَبَّأَنَا اللهُ فَقَالَ \"جَاءَكُمْ",
+          "نُورٌ\" فَسُبْحَانَ الَّذِي أَنْبَانَا"
+        ],
+        "transliteration": [
+          "nabba’ana Allahu faqāla jā’akum",
+          "nūrun fasubḥānal ladhī anbānā"
+        ],
+        "translation": [
+          "Allāh has announced to us [in the Qur'an], saying, 'Indeed, there has come to you...",
+          "A light'. So glory be to the One who informed us!"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ النُّورُ طَهَ عَبْدُهُ مَنَّ بِهِ",
+          "فِي ذِكْرِهِ, أَعْظِمْ بِهِ مَنَّانَا"
+        ],
+        "transliteration": [
+          "wan nūru ṭaha ʿabduhu manna bihi",
+          "fī dhikrihi aʿẓim bihi mannānā"
+        ],
+        "translation": [
+          "And the light is Ṭaha, His servant, He has bestowed [great] favor through him",
+          "As mentioned in His reminder, so declare the magnificence of the Bestower of Gifts!"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "هُوَ رَحْمَةُ المَولَى تَأَمَّلْ قَوْلَهُ",
+          "فَلْيَفْرَحُوا، وَ اغْدُ بِهِ فَرْحَانَا"
+        ],
+        "transliteration": [
+          "huwa raḥmatul mawlā ta’ammal qawlahu",
+          "falyafraḥūā wagh du bihi farḥānā"
+        ],
+        "translation": [
+          "He is the mercy of our Master. Reflect upon His words:",
+          "'Rejoice' and through him go forth in utter happiness"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "مُسْتَمْسِكَاً بِالعُرْوَةِ الوُثْقَى",
+          "وَ مُعْتَصِمَاً بِحَبْلِ اللهِ مَنْ أَنْشَانَا"
+        ],
+        "transliteration": [
+          "mustamsikāan bil ʿurwatil wuthqā",
+          "wa muʿtaṣimāan biḥablillāhi man anshānā"
+        ],
+        "translation": [
+          "While taking hold of the firmest handhold,",
+          "And clinging to the rope of Allāh, our Originator"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ اسْتَشْعِرَنْ أَنْوَارَ مَنْ قِيلَ : مَتَى",
+          "كُنْتَ نَبِيَّاً؟ قَالَ : آدَمُ كَانَا"
+        ],
+        "transliteration": [
+          "was tashʿiran anwāra man qīla matā",
+          "kunta nabiyyāan qāla ādamu kānā"
+        ],
+        "translation": [
+          "Experience the lights of the one, who when asked,",
+          "'When were you a prophet?' replied, 'When Adam was..."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "بَيْنَ التُّرَابِ وَ بَيْنَ مَاءٍ فَاسْتَفِقْ",
+          "مِنْ غَفْلَةٍ عَنْ ذَا وَ كُنْ يَقْظَانَا"
+        ],
+        "transliteration": [
+          "baynat turābi wa bayna mā’in fas tafiq",
+          "min ghaflatin ʿan dhā wa kun yaqẓānā"
+        ],
+        "translation": [
+          "...between earth and water! So awaken",
+          "From your heedlessness concerning this and become enlightened!"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ اعْبُرْ إِلَى أَسْرَارِ رَبِّي لَمْ يَزَلْ",
+          "يَنْقُلُنِي بَيْنَ الخِيَارِ مُصَانَا"
+        ],
+        "transliteration": [
+          "waʿ bur ilā asrāri rabbī lam yazal",
+          "yanqulunī baynal khiyāri muṣānā"
+        ],
+        "translation": [
+          "Contemplate the secrets of 'My Lord continued",
+          "To transport me safely through the best [of loins]."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "لَمْ تَفْتَرِقْ مِن شُعْبَتَيِنِ إِلَّا أَنَا",
+          "فِي خَيْرِهَا حَتَّى بُرُوزِيَ آنَا"
+        ],
+        "transliteration": [
+          "lam taftariq min shuʿbatayini illā anā",
+          "fī khayrihā ḥattā burūziya ānā"
+        ],
+        "translation": [
+          "'Never did two lineages branch out except that I was",
+          "in the better half until the time came for my emergence,"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "فَأَنَا خِيَارٌ مِنْ خِيَارٍ قَدْ خَرَجْتُ",
+          "مِنْ نِكَاحٍ لِي إِلَهِيَ صَانَا"
+        ],
+        "transliteration": [
+          "fa anā khiyārun min khiyārin qad kharajtu",
+          "min nikāḥin lī ilahiya ṣānā"
+        ],
+        "translation": [
+          "'For I am the best of the best, I have come into existence",
+          "Through pure unions [alone]; my Lord has protected this for me'."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "طَهَّرَهُ اللهُ حَمَاهُ اخْتَارَهُ",
+          "وَمَا بَرَى كَمِثْلِهِ إِنْسَانَا"
+        ],
+        "transliteration": [
+          "ṭahharahu Allahu ḥamāhukh tārahu",
+          "wamā barā kamithlihi insānā"
+        ],
+        "translation": [
+          "Allāh has purified him, protected him and chosen him,",
+          "Never has any human being been created like him!"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ بِحُبِّهِ وَ بِذِكْرِهِ وَ النَّصْرِ وَ التَّوْقِيرِ",
+          "رَبُّ العَرْشِ قَدْ أَوْصَانَا"
+        ],
+        "transliteration": [
+          "wa biḥubbihi wa bidhikrihi wan naṣri wat tawqīri",
+          "rabbul ʿarshi qad awṣānā"
+        ],
+        "translation": [
+          "To love him, to mention him, to give him victory and to respect him,",
+          "Thus we are directed by the Lord of the Throne"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "يَا رَبَّنَا صَلِّ وَ سَلِّمْ دَائِماً",
+          "عَلَى حَبِيبِكَ مَنْ إِلَيْكَ دَعَانَا"
+        ],
+        "transliteration": [
+          "yā rabbanā ṣalli wa sallim dā’iman",
+          "ʿalā ḥabībika man ilayka daʿānā"
+        ],
+        "translation": [
+          "Our Lord, send Your Mercy and Peace perpetually",
+          "Upon Your Beloved, the one who invited us to You."
+        ],
+        "isRefrain": false
+      }
+    ]
+  },
+  {
+    "title": "Diya'ul Lami: Chapter 3",
+    "englishTitle": "Chapter 3",
+    "couplets": [
+      {
+        "arabic": [
+          "هَذَا وَ قَدْ نَشَرَ الإِلَهُ نُعُوتَهُ",
+          "فِي الكُتْبِ بَيَّنَهَا لَنَا تِبْيَانَا"
+        ],
+        "transliteration": [
+          "hadhā wa qad nasharal ilahu nuʿūtahu",
+          "fīl kutbi bayyanahā lanā tibyānā"
+        ],
+        "translation": [
+          "So indeed the Divine has spread mention of His attributes",
+          "In the revealed books, announcing them to us clearly"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "أَخَذَ مِيثَاقَ النَّبِيِّينَ لَمَا",
+          "آتيْتُكُمْ مِنْ حِكْمَةٍ إِحْسَانَا"
+        ],
+        "transliteration": [
+          "akhadha mīthāqan nabiyyīna lamā",
+          "ātytukum min ḥikmatin iḥsānā"
+        ],
+        "translation": [
+          "He took the covenant from the Prophets",
+          "When [He said] 'I have given you of wisdom, the most excellent,"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ جَاءَكُمْ رَسُولُنَا لَتُؤْمِنُنَّ",
+          "وَ تَنْصُرُونَ وَ تُصْبِحُونَ أَعْوَانَا"
+        ],
+        "transliteration": [
+          "wa jā’akum rasūlunā latu’minunna",
+          "wa tanṣurūna wa tuṣbiḥūna aʿwānā"
+        ],
+        "translation": [
+          "'And [when] Our Messenger comes to you, Then you must believe in him,",
+          "give victory to him, And become his helpers.'"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "قَدْ بَشَّرُوا أَقْوَامَهُمْ بِالمُصْطَفَى",
+          "أَعْظِمْ بِذَلِكَ رُتْبَةً وَ مَكَانَا"
+        ],
+        "transliteration": [
+          "qad bashsharū aqwāmahum bil muṣṭafā",
+          "aʿẓim bidhalika rutbatan wa makānā"
+        ],
+        "translation": [
+          "They gave their people the good news of the coming of the Chosen One,",
+          "Oh how great is that station and rank!"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "فَهُوَ وَ إِنْ جَاءَ الأَخِيرُ مُقَدَّمٌ",
+          "يَمْشُونَ تَحْتَ لِوَاءِ مَن نَادَانَا"
+        ],
+        "transliteration": [
+          "fahuwa wa in jā’al akhīru muqaddamun",
+          "yamshūna taḥta liwā’i man nādānā"
+        ],
+        "translation": [
+          "Although he was the last to be sent, he will be the foremost,",
+          "[All the Prophets] will walk under the banner of the one who called us."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "يَا أُمَّةَ الإِسْلَامِ أَوَّلُ شَافِعٍ",
+          "وَ مُشَفَّعٍ أَنَا قَطُّ لَا أَتَوَانَى"
+        ],
+        "transliteration": [
+          "yā ummatal islāmi awwalu shāfiʿin",
+          "wa mushaffaʿin anā qaṭṭu lā atawānā"
+        ],
+        "translation": [
+          "'O Ummah of Islam! I am the first intercessor",
+          "and my intercession will be accepted, I will not hold back in any way whatsoever"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "حَتَّى أُنَادَى ارْفَعْ وَ سَلْ تُعْطَ وَ قُلْ",
+          "يُسْمَعْ لِقَوْلِكَ نَجْمُ فَخْرِكَ بَانَا"
+        ],
+        "transliteration": [
+          "ḥattā unādār faʿ wa sal tuʿṭa wa qul",
+          "yusmaʿ liqawlika najmu fakhrika bānā"
+        ],
+        "translation": [
+          "'Until it will be said, “Rise [from prostration]; ask and you will be given;",
+          "speak and you will be heard, for the star of your glory has become manifest.\""
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ لِوَاءُ حَمْدِ اللهِ جَلَّ بِيَدِي",
+          "وَ لَأَوَّلاً آتِي أَنَا الجِنَانَا"
+        ],
+        "transliteration": [
+          "wa liwā’u ḥamdillāhi jalla biyadī",
+          "wa la’awwalan ātī anal jinānā"
+        ],
+        "translation": [
+          "\"The banner of the praise of Allāh Most High will be in my hand,",
+          "And indeed I will be the first to enter Paradise!"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ أَكْرَمُ الخَلْقِ عَلَى اللهِ أَنَا",
+          "فَلَقَدْ حَبَاكَ اللهُ مِنْهُ حَنَانَا"
+        ],
+        "transliteration": [
+          "wa akramul khalqi ʿala Allahi anā",
+          "falaqad ḥabāka Allahu minhu ḥanānā"
+        ],
+        "translation": [
+          "'I am the most honorable of creation with Allāh.'",
+          "Indeed Allāh has granted you compassion from himself"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ لَسَوْفَ يُعْطِيكَ فَتَرضَى، جَلَّ مِنْ",
+          "مُعْطٍ تَقَاصَرَ عَن عَطَاهُ نُهَانَا"
+        ],
+        "transliteration": [
+          "wa lasawfa yuʿṭīka fatarḍā jalla min",
+          "muʿṭin taqāṣara ʿan ʿaṭāhu nuhānā"
+        ],
+        "translation": [
+          "'And [your Lord] will give to you so that you are pleased' - Exalted is the Giver!",
+          "Our intellects are incapable of grasping His bounty!"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "بِاللّهِ كَرِّرْ ذِكْرَ وَصْفِ مُحَمَّدٍ",
+          "كَيْمَا تُزِيحَ عَنِ القُلُوبِ الرَّانَا"
+        ],
+        "transliteration": [
+          "billāhi karrir dhikra waṣfi muḥammadin",
+          "kaymā tuzīḥa ʿanil qulūbir rānā"
+        ],
+        "translation": [
+          "By Allāh, mention the attributes of Muḥammad time and time again",
+          "In order to remove the rust from [our] hearts."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "يَا رَبَّنَا صَلِّ وَ سَلِّمْ دَائِماً",
+          "عَلَى حَبِيبِكَ مَنْ إِلَيْكَ دَعَانَا"
+        ],
+        "transliteration": [
+          "yā rabbanā ṣalli wa sallim dā’iman",
+          "ʿalā ḥabībika man ilayka daʿānā"
+        ],
+        "translation": [
+          "Our Lord, send Your Mercy and Peace perpetually",
+          "Upon Your Beloved, the one who invited us to You."
+        ],
+        "isRefrain": false
+      }
+    ]
+  },
+  {
+    "title": "Diya'ul Lami: Chapter 4",
+    "englishTitle": "Chapter 4",
+    "couplets": [
+      {
+        "arabic": [
+          "لَمَّا دَنَا وَقْتُ البُرُوزِ لأَحْمَدٍ",
+          "عَنْ إِذْنِ مَنْ مَا شَاءَهُ قَدْ كَانَا"
+        ],
+        "transliteration": [
+          "lammā danā waqtul burūzi laḥmadin",
+          "ʿan idhni man mā shā’ahu qad kānā"
+        ],
+        "translation": [
+          "When the time drew near for the emergence of Aḥmad",
+          "He came into being by the permission of the One who willed it so."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "حَمَلَتْ بِهِ الأُمُّ الأَمِينَةُ بِنْتُ وَهْبٍ",
+          "مَن لَهَا أَعْلَى الإِلَهُ مَكَانَا"
+        ],
+        "transliteration": [
+          "ḥamalat bihil ummul amīnatu bintu wahbin",
+          "man lahā aʿlal ilahu makānā"
+        ],
+        "translation": [
+          "The trustworthy mother, the daughter of Wahb,",
+          "She whose station had been elevated by God, became pregnant with him,"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "مِن وَالِدِ المُخْتَارِ عَبْدِ اللهِ بِنْ",
+          "عَبْدٍ لِمُطَّلِبٍ رَأَى البُرْهَانَا"
+        ],
+        "transliteration": [
+          "min wālidil mukhtāri ʿabdillāhi bin",
+          "ʿabdin limuṭṭalibin ra’al burhānā"
+        ],
+        "translation": [
+          "From the chosen father 'Abd-Allāh, the son of 'Abd al-Muttalib",
+          "who saw the evident proof"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "قَدْ كَانَ يَغْمُرُ نُورُ طَهَ وَجْهَهُ",
+          "وَ سَرَى إِلَى الإِبْنِ المَصُونِ عِيَانَا"
+        ],
+        "transliteration": [
+          "qad kāna yaghmuru nūru ṭaha wajhahu",
+          "wa sarā ilal ibnil maṣūni ʿiyānā"
+        ],
+        "translation": [
+          "His face overflowed with the light of Ṭaha",
+          "Then it was transferred to the protected son ['Abd-Allāh] for all to see"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ هُوَ ابْنُ هَاشِمٍ الكَرِيمِ الشَّهْمِ بِنْ",
+          "عَبْدِ مَنَافٍ ابْنِ قُصَيٍّ كَانَا"
+        ],
+        "transliteration": [
+          "wa huwab nu hāshiminal karīmish shahmi bin",
+          "ʿabdi manāfinb ni quṣayyin kānā"
+        ],
+        "translation": [
+          "And he ['Abd al-Muttalib] was the son of Hāshim, the generous and noble [Who] was",
+          "The son of 'Abdu Manāf, the son of Qusayy"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَالِدُهُ يُدْعَى حَكِيمًا شَأْنُهُ",
+          "قَدِ اعْتَلَى أَعْزِزْ بِذَلِكَ شَانَا"
+        ],
+        "transliteration": [
+          "wāliduhu yudʿā ḥakīman sha’nuhu",
+          "qadiʿ talā aʿziz bidhalika shānā"
+        ],
+        "translation": [
+          "And [Qusayy's] father was named 'The Wise', his status has been elevated,",
+          "Indeed by them the lineage was strengthened"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَاحْفَظْ أُصُولَ المُصْطَفَى حَتَّى تَرَى",
+          "فِي سِلْسِلَاتِ أُصُولِهِ عَدْنَانَا"
+        ],
+        "transliteration": [
+          "waḥ faẓ uṣūlal muṣṭafā ḥattā tarā",
+          "fī silsilāti uṣūlihi ʿadnānā"
+        ],
+        "translation": [
+          "Commit to memory the lineage of the Chosen One",
+          "Until you see ʿAdnān in the line of his ancestors"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "فَهُنَاكَ قِفْ وَ اعْلَمْ بِرَفْعِهِ إِلَى اسْمَاعِيلَ",
+          "كَانَ لِلأَبِ مِعْوَانَا"
+        ],
+        "transliteration": [
+          "fahunāka qif waʿ lam birafʿihi ilās māʿīla",
+          "kāna lilabi miʿwānā"
+        ],
+        "translation": [
+          "At that point, stop and realize that the lineage is traced back to Ismaīl,",
+          "who was a loyal helper to his father"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ حِينَمَا حَمَلَتْ بِهِ آمِنَةٌ",
+          "لَمْ تَشْكُ شَيْئاً يَأْخُذُ النِّسْوَانَا"
+        ],
+        "transliteration": [
+          "wa ḥīnamā ḥamalat bihi āminatun",
+          "lam tashku shay’an ya’khudhun niswānā"
+        ],
+        "translation": [
+          "And while Āmina was carrying him,",
+          "She did not complain of anything that befalls [pregnant] women"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ بِهَا أَحَاطَ اللُّطْفُ مِنْ رَبِّ السَّمَا",
+          "أَقْصَى الأَذَى وَ الهَمَّ وَ الأَحْزَانَا"
+        ],
+        "transliteration": [
+          "wa bihā aḥāṭal luṭfu min rabbis samā",
+          "aqṣal adhā wal hamma wal aḥzānā"
+        ],
+        "translation": [
+          "Gentleness from the Lord of Heaven encompassed her",
+          "And drove away from her all harm, worry and sadness"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ رَأَتْ كَمَا قَدْ جَاءَ مَا عَلِمَتْ بِهِ",
+          "أَنَّ المُهَيْمِنَ شَرَّفَ الأَكْوَانَا"
+        ],
+        "transliteration": [
+          "wa ra’at kamā qad jā’a mā ʿalimat bihi",
+          "annal muhaymina sharrafal akwānā"
+        ],
+        "translation": [
+          "And she saw [in a vision], as is narrated what she had come to know",
+          "That the Guardian (Allāh) had honored the universe"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "بِالطُّهْرِ مَنْ فِي بَطْنِهَا فَاسْتَبْشَرَتْ",
+          "وَ دَنَا المَخَاضُ فَأُتْرِعَتْ رِضْوَانَا"
+        ],
+        "transliteration": [
+          "biṭ ṭuhri man fī baṭnihā fas tabsharat",
+          "wa danal makhāḍu fa utriʿat riḍwānā"
+        ],
+        "translation": [
+          "Through the pure one who was in her womb, so she rejoiced,",
+          "As the time for labour drew near, she was filled with happiness"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ تَجَلَّتِ الأَنْوَارُ مِنْ كُلِّ الجِهَاتِ",
+          "فَوَقْتُ مِيلَادِ المُشَفَّعِ حَانَا"
+        ],
+        "transliteration": [
+          "wa tajallatil anwāru min kullil jihāti",
+          "fawaqtu mīlādil mushaffaʿi ḥānā"
+        ],
+        "translation": [
+          "The lights emanated from all directions",
+          "For the moment of birth of the one given intercession had come"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ قُبَيْلَ فَجْرٍ أَبْرَزَتْ شَمْسَ الهُدَى",
+          "ظَهَرَ الحَبِيبُ مُكَرَّماً وَ مُصَانَا"
+        ],
+        "transliteration": [
+          "wa qubayla fajrin abrazat shamsal hudā",
+          "ẓaharal ḥabību mukarraman wa muṣānā"
+        ],
+        "translation": [
+          "And shortly before dawn, the Sun of Guidance was made manifest,",
+          "The Beloved appeared, honored and protected"
+        ],
+        "isRefrain": false
+      }
+    ]
+  },
+  {
+    "title": "Diya'ul Lami: Place of Standing",
+    "englishTitle": "Place of Standing",
+    "couplets": [
+      {
+        "arabic": [
+          "صَلَّى الله عَلَى مُحَمَّدْ",
+          "صَلَّى الله عَلَيْهِ وَ سَلَّمْ"
+        ],
+        "transliteration": [
+          "ṣalla Allah ʿalā muḥammad",
+          "ṣalla Allah ʿalayhi wa sallam"
+        ],
+        "translation": [
+          "O Allāh, send Your Mercy upon Muḥammad",
+          "O Allāh, send your Mercy and Peace upon him"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "يَا نَبِيّ سَلَامْ عَلَيْكَ",
+          "يَا رَسُولْ سَلَامْ عَلَيْكَ"
+        ],
+        "transliteration": [
+          "yā nabiyy salām ʿalayka",
+          "yā rasūl salām ʿalayka"
+        ],
+        "translation": [
+          "O Prophet, peace be upon you",
+          "O Messenger, peace be upon you."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "يَا حَبِيبْ سَلَامْ عَلَيْكَ",
+          "صَلَوَاتُ اللهْ عَلَيْكَ"
+        ],
+        "transliteration": [
+          "yā ḥabīb salām ʿalayka",
+          "ṣalawātu Allah ʿalayka"
+        ],
+        "translation": [
+          "O Beloved, peace be upon you (O Messenger of Allāh)",
+          "The blessings of Allāh be upon you"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "أَبْرَزَ اللهُ المُشَفَّعْ",
+          "صَاحِبَ القَدْرِ المُرَفَّعْ"
+        ],
+        "transliteration": [
+          "abraza Allahul mushaffaʿ",
+          "ṣāḥibal qadril muraffaʿ"
+        ],
+        "translation": [
+          "Allāh has manifested the Intercessor",
+          "Possessor of the elevated station"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "فَمَلَا النُّورُ النَّوَاحِي",
+          "عَمَّ كُلَّ الكَوْنِ أَجْمَعْ"
+        ],
+        "transliteration": [
+          "famalan nūrun nawāḥī",
+          "ʿamma kullal kawni ajmaʿ"
+        ],
+        "translation": [
+          "And his light has filled the horizons (by the virtue of the Messenger of Allāh)",
+          "It has encompassed the entire universe"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "نُكِسَتْ أَصْنَامُ شِرْكٍ",
+          "وَ بِنَا الشِّرْكِ تَصَدَّعْ"
+        ],
+        "transliteration": [
+          "nukisat aṣnāmu shirkin",
+          "wa binash shirki taṣaddaʿ"
+        ],
+        "translation": [
+          "Torn down are the icons of idolatry",
+          "The edifice of idolatry has crumbled"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ دَنَا وَقْتُ الهِدَايَةْ",
+          "وَ حِمَى الكُفْرِ تَزَعْزَعْ"
+        ],
+        "transliteration": [
+          "wa danā waqtul hidāyah",
+          "wa ḥimal kufri tazaʿzaʿ"
+        ],
+        "translation": [
+          "The time of guidance has drawn near (by the virtue of the Messenger of Allāh)",
+          "And the fortress of disbelief has been shaken"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "مَرْحَباً أَهْلاً وَ سَهْلاً",
+          "بِكَ يَا ذَا القَدْرِ الأَرْفَعْ"
+        ],
+        "transliteration": [
+          "marḥaban ahlan wa sahlan",
+          "bika yā dhal qadril arfaʿ"
+        ],
+        "translation": [
+          "Greetings and welcome",
+          "To you, O possessor of the lofty rank"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "يَا إِمَامَ أَهْلِ الرِّسَالَةْ",
+          "مَنْ بِهِ الآفَاتُ تُدْفَعْ"
+        ],
+        "transliteration": [
+          "yā imāma ahlir risālah",
+          "man bihil āfātu tudfaʿ"
+        ],
+        "translation": [
+          "O Master of the people of revelation (O Messenger of Allāh)",
+          "By whom evil is repelled"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "أَنْتَ فِي الحَشْرِ مَلَاذٌ",
+          "لَكَ كُلُّ الخَلْقِ تَفْزَعْ"
+        ],
+        "transliteration": [
+          "anta fīl ḥashri malādhun",
+          "laka kullul khalqi tafzaʿ"
+        ],
+        "translation": [
+          "You will be a refuge on the Day of Gathering",
+          "All of creation will flee to you"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "ويُنَادُونَ تَرَى مَا",
+          "قَدْ دَهَا مِنْ هَوْلٍ أَفْظَعْ"
+        ],
+        "transliteration": [
+          "wyunādūna tarā mā",
+          "qad dahā min hawlin afẓaʿ"
+        ],
+        "translation": [
+          "And they will cry out, saying, 'Look (O Messenger of Allāh)",
+          "What dreadful terrors have afflicted us!'"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "مَرْحَبًا مَرْحَبًا يا نُورَ عَينِي",
+          "مَرْحَبًا مَرْحَبًا جَدَّ الحُسَيْنِي"
+        ],
+        "transliteration": [
+          "marḥaban marḥaban īā nūra ʿaīnī",
+          "marḥaban marḥaban jaddal ḥusaynī"
+        ],
+        "translation": [
+          "Welcome, a warm and joyful welcome to the Messenger! (Welcome, O welcome!)",
+          "Welcome to nearness unto him and to his arrival ﷺ (Welcome, O welcome!)"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "فَلَهَا أَنْتَ فَتَسْجُد (مَرْحَبًا)",
+          "وَتُنَادَى اشْفَعْ تُشَفَّعْ (مَرْحَبًا)"
+        ],
+        "transliteration": [
+          "falahā anta fatasjud marḥaban",
+          "watunādāsh faʿ tushaffaʿ marḥaban"
+        ],
+        "translation": [
+          "And for (the intercession) you will prostrate (Welcome!)",
+          "And be addressed, 'Intercede, for your intercession is accepted', (Welcome!)"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "فَعَلَيْكَ اللهُ صَلَّى (مَرْحَبًا)",
+          "مَا بَدَا النُّورُ وَ شَعْشَعْ (مَرْحَبًا)"
+        ],
+        "transliteration": [
+          "faʿalayka Allahu ṣallā marḥaban",
+          "mā badan nūru wa shaʿshaʿ marḥaban"
+        ],
+        "translation": [
+          "For Allāh has sent mercy upon you (Welcome!)",
+          "As long as the light shines and radiates (Welcome!)"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ بِكَ الرَّحْمَنَ نَسْأَلْ (يا الله)",
+          "وَ إِلَهُ العَرْشِ يَسْمَعْ (يا الله)"
+        ],
+        "transliteration": [
+          "wa bikar raḥmana nasal īa Allah",
+          "wa ilahul ʿarshi yasmaʿ īa Allah"
+        ],
+        "translation": [
+          "By you, we ask the Most Merciful (O Allāh)",
+          "and the Lord of the Throne hears (O Allāh)"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "يَا عَظِيمَ المَنِّ يَا رَبّ \"يَا الله\"",
+          "شَمْلَنَا بِالمُصْطَفَى اجْمَعْ \"يَا الله\""
+        ],
+        "transliteration": [
+          "yā ʿaẓīmal manni yā rabb ya Allah",
+          "shamlanā bil muṣṭafāj maʿ ya Allah"
+        ],
+        "translation": [
+          "O Bestower of Great Bounties, O Lord! (O Allāh)",
+          "Gather us all with the Chosen One (O Allāh)"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ بِهِ فَانْظُرْ إِلَيْنَا \"يَا الله\"",
+          "وَ اعْطِنَا بِهْ كُلَّ مَطْمَعْ \"يَا الله\""
+        ],
+        "transliteration": [
+          "wa bihi fan ẓur ilaynā ya Allah",
+          "waʿ ṭinā bih kulla maṭmaʿ ya Allah"
+        ],
+        "translation": [
+          "And by him, gaze upon us (O Allāh)",
+          "And by him, grant us all we long for (O Allāh)"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ اكْفِنَا كُلَّ البَلَايَا \"يَا الله\"",
+          "وَ ادْفَعِ الآفَاتِ وَ ارْفَع \"يَا الله\""
+        ],
+        "transliteration": [
+          "wak finā kullal balāyā ya Allah",
+          "wad faʿil āfāti war faʿ ya Allah"
+        ],
+        "translation": [
+          "Protect us from all calamities (O Allāh)",
+          "Divert and lift all afflictions (O Allāh)"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ اسْقِنَا يَا رَبّ أَغِثْنَا",
+          "بِحَياً هَطَّالِ يَهْمَعْ"
+        ],
+        "transliteration": [
+          "was qinā yā rabb aghithnā",
+          "biḥaīan haṭṭāli yahmaʿ"
+        ],
+        "translation": [
+          "Give us to drink, O Lord! And come to our aid",
+          "With a life-giving rain pouring down"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ اخْتِمِ العُمْرَ بِحُسْنَى",
+          "وَ احْسِنِ العُقْبَى وَ مَرْجَعْ"
+        ],
+        "transliteration": [
+          "wakh timil ʿumra biḥusnā",
+          "waḥ sinil ʿuqbā wa marjaʿ"
+        ],
+        "translation": [
+          "Seal our lives with excellence",
+          "Make beautiful our final end and our return"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ صَلاةُ اللهِ تَغْشَى",
+          "مَن لَهُ الحُسْنُ تَجَمَّعْ"
+        ],
+        "transliteration": [
+          "wa ṣalātu Allahi taghshā",
+          "man lahul ḥusnu tajammaʿ"
+        ],
+        "translation": [
+          "And may the mercy of Allāh envelop",
+          "The one in whom all beauty has gathered"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "أَحْمَدَ الطُّهْرَ وَ آلِهْ",
+          "وَ الصَّحَابَةْ مَا السَّنَا شَعْ"
+        ],
+        "transliteration": [
+          "aḥmadaṭ ṭuhra wa ālih",
+          "waṣ ṣaḥābah mas sanā shaʿ"
+        ],
+        "translation": [
+          "Aḥmad the Pure, and his Family",
+          "And the Companions, as long as light shines"
+        ],
+        "isRefrain": false
+      }
+    ]
+  },
+  {
+    "title": "Diya'ul Lami: Supplication",
+    "englishTitle": "Supplication",
+    "couplets": [
+      {
+        "arabic": [
+          "وَ لَقَدْ أَشَرْتُ لِنَعْتِ مَنْ أَوْصَافُهُ",
+          "تُحْيِي القُلُوبَ تُهَيِّجُ الأَشْجَانَا"
+        ],
+        "transliteration": [
+          "wa laqad ashartu linaʿti man awṣāfuhu",
+          "tuḥyīl qulūba tuhayyijul ashjānā"
+        ],
+        "translation": [
+          "Indeed I have drawn attention to the attributes of the one",
+          "Whose qualities revive the heart, and ignite the fires of yearning"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ اللهُ قَدْ أَثْنَى عَلَيْهِ فَمَا يُسَاوِي",
+          "القَوْلُ مِنَّا أَو يَكُونُ ثَنَانَا"
+        ],
+        "transliteration": [
+          "wa Allahu qad athnā ʿalayhi famā yusāwī",
+          "alqawlu minnā aw yakūnu thanāna"
+        ],
+        "translation": [
+          "Allāh Himself has praised him, so how can our words compare",
+          "Or even be considered praise?"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "لَكِنَّ حُبّاً فِي السَّرَائِرِ قَدْ دَعَا",
+          "لِمَدِيحِ صَفْوَةِ رَبِّنَا وَ حَدَانَا"
+        ],
+        "transliteration": [
+          "lakinna ḥubban fīs sarā’iri qad daʿā",
+          "limadīḥi ṣafwati rabbinā wa ḥadānā"
+        ],
+        "translation": [
+          "However it is a love established deep in the heart, which called to us and urged us",
+          "To praise the purest of our Lord's (creation)"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ إِذِ امْتَزَجْنَا بِالمَوَدَّةِ هٰهُنَا",
+          "نَرْفَعُ أَيْدِي فَقْرِنَا وَ رَجَانَا"
+        ],
+        "transliteration": [
+          "wa idhim tazajnā bil mawaddati hāhunā",
+          "narfaʿu aydī faqrinā wa rajānā"
+        ],
+        "translation": [
+          "And now that we have become infused with the love [of Muhammad] here,",
+          "we raise the hands of our poverty and hope"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "لِلوَاحِدِ الأَحَدِ العَلِيِّ إِلَهِنَا",
+          "مُتَوَسِّلِينَ بِمَنْ إِلَيْهِ دَعَانَا"
+        ],
+        "transliteration": [
+          "lilwāḥidil aḥadil ʿaliyyi ilahinā",
+          "mutawassilīna biman ilayhi daʿānā"
+        ],
+        "translation": [
+          "To our Lord, the One, the Unique, the Most High,",
+          "Interceding by the one who called us to Him"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "مُخْتَارِهِ وَ حَبِيبِهِ وَ صَفِيِّهِ",
+          "زَيْنِ الوُجُودِ بِهِ الإِلَهُ حَبَانَا"
+        ],
+        "transliteration": [
+          "mukhtārihi wa ḥabībihi wa ṣafiyyihi",
+          "zaynil wujūdi bihil ilahu ḥabānā"
+        ],
+        "translation": [
+          "His Chosen one, His Beloved, His Purest,",
+          "The beauty of existence, by him the Lord has favored us"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "يَا رَبَّنَا يَا رَبَّنَا يَا رَبَّنَا",
+          "بِالمُصْطَفَى اقْبَلْنَا أَجِبْ دَعْوَانَا"
+        ],
+        "transliteration": [
+          "yā rabbanā yā rabbanā yā rabbanā",
+          "bil muṣṭafāq balnā ajib daʿwānā"
+        ],
+        "translation": [
+          "Our Lord! Our Lord! Our Lord!",
+          "By the Chosen one, accept us and answer our supplications"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "أَنْتَ لَنَا أَنْتَ لَنَا يَا ذُخْرَنَا",
+          "فِي هَذِهِ الدُّنيَا وَ فِي أُخْرَانَا"
+        ],
+        "transliteration": [
+          "anta lanā anta lanā yā dhukhranā",
+          "fī hadhihid dunyā wa fī ukhrānā"
+        ],
+        "translation": [
+          "You are sufficient for us! You are sufficient for us!",
+          "You are our security in this world and in the hereafter"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "أَصْلِحْ لَنَا الأَحْوَالَ وَ اغْفِرْ ذَنْبَنَا",
+          "وَ لَا تُؤَاخِذْ رَبِّي إِنْ أَخْطَانَا"
+        ],
+        "transliteration": [
+          "aṣliḥ lanal aḥwāla wagh fir dhanbanā",
+          "wa lā tuākhidh rabbī in akhṭānā"
+        ],
+        "translation": [
+          "Rectify our states for us and forgive us our sins",
+          "And do not hold us accountable, O Lord, if we err"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ اسْلُكْ بِنَا فِي نَهْجِ طَهَ المُصطَفَى",
+          "ثَبِّتْ عَلَى قَدَمِ الحَبِيبِ خُطَانَا"
+        ],
+        "transliteration": [
+          "was luk binā fī nahji ṭahal muṣṭafā",
+          "thabbit ʿalā qadamil ḥabībi khuṭānā"
+        ],
+        "translation": [
+          "Lead us down the path of Ṭaha, the Chosen one,",
+          "And make firm our footsteps in the steps of the Beloved"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "أَرِنَا بِفَضْلٍ مِنْكَ طَلْعَةَ أَحْمَدٍ",
+          "فِي بَهْجَةٍ عَيْنُ الرِّضَا تَرْعَانَا"
+        ],
+        "transliteration": [
+          "arinā bifaḍlin minka ṭalʿata aḥmadin",
+          "fī bahjatin ʿaynur riḍā tarʿānā"
+        ],
+        "translation": [
+          "Show us, through Your grace, the manifestation of Aḥmad, in his splendor,",
+          "As the eye of Your good pleasure watches over us"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ ارْبُطْ بِهِ فِي كُلِّ حَالٍ حَبْلَنَا",
+          "وَ حِبَالَ مَنْ وَدَّ وَ مَنْ وَالَانَا"
+        ],
+        "transliteration": [
+          "war buṭ bihi fī kulli ḥālin ḥablanā",
+          "wa ḥibāla man wadda wa man wālānā"
+        ],
+        "translation": [
+          "Strengthen our bond with him (Muhammad) in every state",
+          "And the bond of those who love and support us"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ المُحْسِنِينَ وَ مَنْ أَجَابَ نِدَاءَنَا",
+          "وَ ذَوِي الحُقُوقِ وَ طَالِبَاً أَوْصَانَا"
+        ],
+        "transliteration": [
+          "wal muḥsinīna wa man ajāba nidā’anā",
+          "wa dhawīl ḥuqūqi wa ṭālibāan awṣānā"
+        ],
+        "translation": [
+          "And those who do good and those answered our call,",
+          "Those who have rights [over us] and those who have requested our prayers"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ الحَاضِرِينَ وَ سَاعِيَاً فِي جَمْعِنَا",
+          "هَا نَحْنُ بَيْنَ يَدَيْكَ أَنْتَ تَرَانَا"
+        ],
+        "transliteration": [
+          "wal ḥāḍirīna wa sāʿiyāan fī jamʿinā",
+          "hā naḥnu bayna yadayka anta tarānā"
+        ],
+        "translation": [
+          "Those who are present and those who assist in our gatherings",
+          "Here we are, before You (O Allāh), truly You see us"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ لَقَدْ رَجَوْنَاكَ فَحَقِّقْ سُؤْلَنَا",
+          "وَ اسْمَعْ بِفَضْلِكَ يَا سَمِيعُ دُعَانَا"
+        ],
+        "transliteration": [
+          "wa laqad rajawnāka faḥaqqiq su’lanā",
+          "was maʿ bifaḍlika yā samīʿu duʿānā"
+        ],
+        "translation": [
+          "Indeed we have placed our hopes in You, that You might answer our request",
+          "Hear us, by Your grace, O Hearer of our prayer"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ انْصُرْ بِنَا سُنَّةَ طَهَ فِي بِقَاعِ",
+          "الأَرْضِ وَ اقْمَعْ كُلَّ مَنْ عَادَانَا"
+        ],
+        "transliteration": [
+          "wan ṣur binā sunnata ṭaha fī biqāʿi",
+          "alarḍi waq maʿ kulla man ʿādāna"
+        ],
+        "translation": [
+          "By means of us, give victory to the sunnah of Taha, throughout the earth,",
+          "Throughout the earth, and restrain all those who show enmity to us"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ انْظُرْ إِلَيْنَا وَ اسْقِنَا كَأْسَ الهَنَا",
+          "وَ اشْفِ وَ عَافِ عَاجِلاً مَرْضَانَا"
+        ],
+        "transliteration": [
+          "wan ẓur ilaynā was qinā ka sal hanā",
+          "wash fi wa ʿāfi ʿājilan marḍānā"
+        ],
+        "translation": [
+          "Gaze upon us, give us to drink from a cup of felicity",
+          "Nd swiftly cure and gran good health to our sick ones"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ اقْضِ لَنَا الحَاجَاتِ وَ احْسِنْ خَتْمَنَا",
+          "عِنْدَ المَمَاتِ وَ أَصْلِحَنْ عُقْبَانَا"
+        ],
+        "transliteration": [
+          "waq ḍi lanal ḥājāti waḥ sin khatmanā",
+          "ʿindal mamāti wa aṣliḥan ʿuqbānā"
+        ],
+        "translation": [
+          "Take care of our affairs and beautify our last moments",
+          "At the time of death, and make good our final end"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "يَا رَبِّ وَ اجْمَعْنَا وَ أَحْبَاباً لَنَا",
+          "فِي دَارِكَ الفِرْدَوْسِ يَا رَجْوَانَا"
+        ],
+        "transliteration": [
+          "yā rabbi waj maʿnā wa aḥbāban lanā",
+          "fī dārikal firdawsi yā rajwānā"
+        ],
+        "translation": [
+          "O Lord, gather us and those beloved to us",
+          "In Your abode of Firdaus, O our [only] Hope,"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "بِالمُصْطَفَى صَلِّ عَلَيْهِ وَ آلِهِ",
+          "مَا حَرَّكَتْ رِيحُ الصَّبَا أَغْصَانَا"
+        ],
+        "transliteration": [
+          "bil muṣṭafā ṣalli ʿalayhi wa ālihi",
+          "mā ḥarrakat rīḥuṣ ṣabā aghṣānā"
+        ],
+        "translation": [
+          "Through the Chosen One, and send Your mercy upon him and his Family",
+          "So long as the easterly breezes sway the branches"
+        ],
+        "isRefrain": false
       }
     ]
   }

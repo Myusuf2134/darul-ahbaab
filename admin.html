@@ -61,13 +61,6 @@ body{
 
     <div class="button-group">
       <div>
-        <div class="label">Couplet Navigation</div>
-        <div class="button-row">
-          <button class="btn btn-secondary" id="prevCouplet">← Previous</button>
-          <button class="btn btn-secondary" id="nextCouplet">Next →</button>
-        </div>
-      </div>
-      <div>
         <div class="label">Qasidah Navigation</div>
         <div class="button-row">
           <button class="btn btn-secondary" id="prevQasidah">← Previous</button>
@@ -1982,10 +1975,7 @@ const qasidahs = [
 
 const mawlidRef = ref(db, 'mawlid');
 let currentQasidahIndex = -1;
-let currentCoupletIndex = -1;
 
-const prevCoupletBtn = document.getElementById('prevCouplet');
-const nextCoupletBtn = document.getElementById('nextCouplet');
 const prevQasidahBtn = document.getElementById('prevQasidah');
 const nextQasidahBtn = document.getElementById('nextQasidah');
 const clearScreenBtn = document.getElementById('clearScreen');
@@ -1993,7 +1983,7 @@ const qasidahList = document.getElementById('qasidahList');
 const preview = document.getElementById('preview');
 const statusValue = document.getElementById('statusValue');
 
-function updatePreview(qIdx, cIdx) {
+function updatePreview(qIdx) {
   if (qIdx < 0 || qIdx >= qasidahs.length) {
     preview.innerHTML = '<div class="preview-empty">No content selected</div>';
     statusValue.textContent = '—';
@@ -2001,57 +1991,47 @@ function updatePreview(qIdx, cIdx) {
   }
 
   const qasidah = qasidahs[qIdx];
-  if (cIdx < 0 || cIdx >= qasidah.couplets.length) {
-    preview.innerHTML = '<div class="preview-empty">Invalid couplet</div>';
-    statusValue.textContent = `Qasidah ${qIdx + 1}`;
-    return;
-  }
+  const firstCouplet = qasidah.couplets[0];
 
-  const couplet = qasidah.couplets[cIdx];
-  preview.innerHTML = `
+  // Show title and first couplet as preview
+  let html = `
     <div class="preview-title">${qasidah.title}</div>
     <div class="preview-subtitle">${qasidah.englishTitle}</div>
-    <div class="preview-arabic">${couplet.arabic[0]}</div>
-    <div class="preview-arabic">${couplet.arabic[1]}</div>
-    <div class="preview-text"><strong>Translation:</strong></div>
-    <div class="preview-text">${couplet.translation.join(' ')}</div>
   `;
-  statusValue.textContent = `Qasidah ${qIdx + 1} • Couplet ${cIdx + 1}`;
+
+  if (firstCouplet) {
+    html += `
+    <div class="preview-arabic">${firstCouplet.arabic[0]}</div>
+    ${firstCouplet.arabic[1] ? `<div class="preview-arabic">${firstCouplet.arabic[1]}</div>` : ''}
+    <div class="preview-text"><strong>Translation:</strong></div>
+    <div class="preview-text">${firstCouplet.translation.join(' ')}</div>
+    `;
+  }
+
+  preview.innerHTML = html;
+  statusValue.textContent = `Qasidah ${qIdx + 1} of ${qasidahs.length}`;
 }
 
-async function updateFirebase(qIdx, cIdx) {
+async function updateFirebase(qIdx) {
   currentQasidahIndex = qIdx;
-  currentCoupletIndex = cIdx;
-  await set(mawlidRef, { qasidahIndex: qIdx, coupletIndex: cIdx });
-  updatePreview(qIdx, cIdx);
+  await set(mawlidRef, { qasidahIndex: qIdx, coupletIndex: 0 });
+  updatePreview(qIdx);
 }
-
-prevCoupletBtn.addEventListener('click', () => {
-  if (currentCoupletIndex > 0) {
-    updateFirebase(currentQasidahIndex, currentCoupletIndex - 1);
-  }
-});
-
-nextCoupletBtn.addEventListener('click', () => {
-  if (currentQasidahIndex >= 0 && currentCoupletIndex < qasidahs[currentQasidahIndex].couplets.length - 1) {
-    updateFirebase(currentQasidahIndex, currentCoupletIndex + 1);
-  }
-});
 
 prevQasidahBtn.addEventListener('click', () => {
   if (currentQasidahIndex > 0) {
-    updateFirebase(currentQasidahIndex - 1, 0);
+    updateFirebase(currentQasidahIndex - 1);
   }
 });
 
 nextQasidahBtn.addEventListener('click', () => {
   if (currentQasidahIndex < qasidahs.length - 1) {
-    updateFirebase(currentQasidahIndex + 1, 0);
+    updateFirebase(currentQasidahIndex + 1);
   }
 });
 
 clearScreenBtn.addEventListener('click', () => {
-  updateFirebase(-1, -1);
+  updateFirebase(-1);
 });
 
 // Populate qasidah list
@@ -2059,19 +2039,16 @@ qasidahs.forEach((q, idx) => {
   const btn = document.createElement('button');
   btn.className = 'qasidah-btn';
   btn.textContent = `${idx + 1}. ${q.title}`;
-  btn.addEventListener('click', () => updateFirebase(idx, 0));
+  btn.addEventListener('click', () => updateFirebase(idx));
   qasidahList.appendChild(btn);
 });
 
 // Listen for changes from Firebase
-onValue(mawlidRef, (snap) => {
-  const data = snap.val() || {};
-  const qIdx = data.qasidahIndex ?? -1;
-  const cIdx = data.coupletIndex ?? -1;
+onValue(ref(db, 'mawlid/qasidahIndex'), (snap) => {
+  const qIdx = snap.val() ?? -1;
 
   currentQasidahIndex = qIdx;
-  currentCoupletIndex = cIdx;
-  updatePreview(qIdx, cIdx);
+  updatePreview(qIdx);
 
   // Update active qasidah button
   document.querySelectorAll('.qasidah-btn').forEach((btn, i) => {

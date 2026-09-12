@@ -3,1299 +3,2987 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Darul Ahbaab — Islamic Learning Center · Columbus, OH</title>
-<meta name="description" content="Darul Ahbaab is a community-centered Islamic learning center in Columbus, Ohio, teaching Quran, Hadith, Arabic, Fiqh and Suluk under experienced scholars.">
-<meta name="robots" content="index, follow">
-<!-- Canonical: change to your real domain after you register it -->
-<link rel="canonical" href="https://darulahbaab.com/">
-<!-- Open Graph / social sharing (WhatsApp, iMessage, etc.) -->
-<meta property="og:title" content="Darul Ahbaab — Islamic Learning Center · Columbus, OH">
-<meta property="og:description" content="Community-centered Islamic learning center in Columbus, Ohio teaching Quran, Hadith, Arabic, Fiqh and Suluk.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://darulahbaab.com/">
-<meta property="og:image" content="https://darulahbaab.com/og-image.jpg">
-<meta property="og:locale" content="en_US">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Darul Ahbaab — Islamic Learning Center · Columbus, OH">
-<meta name="twitter:description" content="Community-centered Islamic learning center in Columbus, Ohio teaching Quran, Hadith, Arabic, Fiqh and Suluk.">
-<meta name="twitter:image" content="https://darulahbaab.com/og-image.jpg">
-<meta name="theme-color" content="#0B1C15">
-<!-- Local business structured data for Google -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "EducationalOrganization",
-  "name": "Darul Ahbaab",
-  "alternateName": "Dar Al-Ahbaab",
-  "url": "https://darulahbaab.com/",
-  "telephone": "+16146017834",
-  "email": "Axbaabta1@gmail.com",
-  "sameAs": ["https://www.instagram.com/darul_ahbaab/"],
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "5075 Westerville Road",
-    "addressLocality": "Columbus",
-    "addressRegion": "OH",
-    "postalCode": "43231",
-    "addressCountry": "US
-
-
-
-  }
-}
-</script>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%230F2A1F'/><text x='50%25' y='52%25' dominant-baseline='central' text-anchor='middle' font-size='42' font-family='serif' fill='%23D4A93E'>د</text></svg>">
+<title>Live Qasidah Display — Darul Ahbaab</title>
+<meta name="robots" content="noindex, nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Amiri:ital,wght@0,400;0,700;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Amiri:ital,wght@0,400;0,700;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --green-950:#081310;--green-900:#0B1C15;--green-800:#0F2A1F;--green-700:#164034;
   --green-600:#1F5942;--green-500:#2E7D57;
   --gold-500:#D4A93E;--gold-400:#E3C265;--gold-300:#F0D68C;
-  --cream:#F4EFE2;--ink:#F4EFE2;
-  --line:rgba(212,169,62,.16);
-  --t-xs:.78rem;--t-sm:.92rem;--t-base:1.06rem;--t-md:1.32rem;--t-lg:1.72rem;--t-xl:2.35rem;--t-2xl:3.1rem;--t-3xl:4.3rem;--t-4xl:5.7rem;
-  --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--s8:64px;--s9:96px;--s10:140px;
-  --radius:18px;
-  --shadow-md:0 4px 12px rgba(0,0,0,.3),0 12px 34px rgba(0,0,0,.34);
-  --shadow-lg:0 10px 30px rgba(0,0,0,.4),0 30px 80px rgba(0,0,0,.5);
+  --cream:#F4EFE2;
   --ease:cubic-bezier(.22,.61,.36,1);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{
-  font-family:'Manrope',system-ui,sans-serif;color:var(--ink);line-height:1.6;font-size:var(--t-base);
-  -webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative;
-  background:radial-gradient(120% 80% at 50% -10%, #12301F 0%, #0B1C15 40%, #081310 100%);
+  font-family:'Manrope',system-ui,sans-serif;color:var(--cream);line-height:1.6;font-size:1.06rem;
+  -webkit-font-smoothing:antialiased;
+  background:linear-gradient(160deg,#081310,#164034);
+  display:flex;flex-direction:column;align-items:center;
+  margin:0;padding:0;text-align:center;min-height:100vh;
 }
-h1,h2,h3,.display{font-family:'Cormorant',serif;font-weight:600;line-height:1.08;letter-spacing:-.01em}
-.arabic{font-family:'Amiri',serif}
-a{color:inherit;text-decoration:none}
-img{max-width:100%;display:block}
-.wrap{max-width:1180px;margin:0 auto;padding:0 var(--s5);position:relative;z-index:2}
-
-/* cosmic canvas fixed behind everything */
-#cosmos{position:fixed;inset:0;z-index:0;pointer-events:none}
-/* nebula glow layers */
-.nebula{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-.neb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.5;mix-blend-mode:screen}
-.neb.a{width:52vw;height:52vw;left:-12vw;top:6vh;background:radial-gradient(circle,rgba(46,125,87,.5),transparent 66%);animation:drift1 26s ease-in-out infinite}
-.neb.b{width:44vw;height:44vw;right:-10vw;top:34vh;background:radial-gradient(circle,rgba(212,169,62,.28),transparent 66%);animation:drift2 32s ease-in-out infinite}
-.neb.c{width:60vw;height:60vw;left:20vw;bottom:-20vh;background:radial-gradient(circle,rgba(31,89,66,.5),transparent 68%);animation:drift1 30s ease-in-out infinite reverse}
-@keyframes drift1{0%,100%{transform:translate(0,0)}50%{transform:translate(6%,4%)}}
-@keyframes drift2{0%,100%{transform:translate(0,0)}50%{transform:translate(-5%,6%)}}
-
-/* scroll thread */
-#thread{position:absolute;top:0;left:0;width:100%;z-index:1;pointer-events:none;overflow:visible}
-#thread path{fill:none}
-.thread-base{stroke:rgba(212,169,62,.16);stroke-width:2.5;stroke-linecap:round}
-.thread-glow{stroke:url(#threadGrad);stroke-width:3;stroke-linecap:round;filter:drop-shadow(0 0 7px rgba(240,214,140,.9)) drop-shadow(0 0 16px rgba(212,169,62,.6))}
-.comet{fill:url(#cometGrad);filter:drop-shadow(0 0 12px rgba(255,246,222,1)) drop-shadow(0 0 28px rgba(240,214,140,.9))}
-.comet-halo{fill:rgba(240,214,140,.16);animation:cometPulse 2.4s ease-in-out infinite}
-@keyframes cometPulse{0%,100%{opacity:.5;r:16}50%{opacity:.9;r:22}}
-
-/* content sits above */
-main,header,footer{position:relative;z-index:2}
-
-/* NAV */
-header{position:fixed;top:0;left:0;right:0;z-index:100;transition:all .4s var(--ease)}
-.nav-inner{position:fixed;top:0;left:0;right:0;backdrop-filter:blur(0);background:transparent;border-bottom:1px solid transparent;transition:all .45s var(--ease)}
-header.scrolled .nav-inner{backdrop-filter:blur(18px) saturate(1.3);background:rgba(8,19,16,.66);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;padding:var(--s3) var(--s5);max-width:1180px;margin:0 auto}
-.brand{display:flex;align-items:center;gap:var(--s3);font-family:'Cormorant',serif;font-weight:700;font-size:var(--t-md);color:var(--cream)}
-.brand .navlogo{width:38px;height:38px;flex:none}
-.brand small{display:block;font-family:'Manrope';font-weight:500;font-size:9px;letter-spacing:.24em;text-transform:uppercase;opacity:.65;margin-top:1px}
-.navlinks{display:flex;gap:var(--s6);align-items:center}
-.navlinks a{font-size:var(--t-sm);font-weight:500;color:rgba(244,239,226,.8);transition:color .3s;position:relative}
-.navlinks a::after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:1.5px;background:var(--gold-500);transition:width .3s var(--ease)}
-.navlinks a:hover::after{width:100%}
-.navlinks a:hover{color:var(--gold-400)}
-.nav-cta{padding:10px 20px;border-radius:100px;font-weight:600;background:var(--gold-500);color:var(--green-950);box-shadow:0 4px 16px rgba(212,169,62,.4);transition:all .3s var(--ease)}
-.nav-cta:hover{background:var(--gold-400);transform:translateY(-1px);box-shadow:0 8px 24px rgba(212,169,62,.55)}
-.nav-cta::after{display:none}
-.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
-.burger span{width:24px;height:2px;background:var(--cream);border-radius:2px;transition:.3s}
-
-.eyebrow{font-size:var(--t-xs);letter-spacing:.28em;text-transform:uppercase;font-weight:600;color:var(--gold-400);display:inline-flex;align-items:center;gap:var(--s3)}
-.eyebrow::before{content:"";width:26px;height:1px;background:var(--gold-500);opacity:.7}
-
-/* HERO */
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--cream);padding:var(--s10) 0 var(--s9)}
-.hero-logo{width:min(300px,64vw);height:auto;margin:0 auto var(--s6);filter:drop-shadow(0 8px 40px rgba(212,169,62,.28));opacity:0;transform:translateY(20px) scale(.96);animation:logoIn 1.3s var(--ease) .1s forwards}
-.hero-logo .da-logo{width:100%;height:auto;animation:logoFloat 7s ease-in-out infinite}
-@keyframes logoIn{to{opacity:1;transform:translateY(0) scale(1)}}
-@keyframes logoFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-.hero .arabic-greet{font-family:'Amiri';font-size:var(--t-md);color:var(--gold-300);margin-bottom:var(--s4);opacity:0;animation:rise .9s var(--ease) .5s forwards}
-.hero h1{font-size:clamp(2.6rem,7vw,var(--t-3xl));margin:var(--s3) auto var(--s5);max-width:16ch}
-.hero h1 .ln{display:block;opacity:0;animation:rise 1s var(--ease) forwards}
-.hero h1 .ln:nth-child(1){animation-delay:.66s}
-.hero h1 .ln:nth-child(2){animation-delay:.8s;color:var(--gold-400);font-style:italic;font-weight:500}
-.hero p.lead{font-size:var(--t-md);color:rgba(244,239,226,.8);max-width:54ch;margin:0 auto;font-weight:300;opacity:0;animation:rise 1s var(--ease) .95s forwards}
-.hero-actions{display:flex;gap:var(--s4);margin-top:var(--s7);justify-content:center;flex-wrap:wrap;opacity:0;animation:rise 1s var(--ease) 1.1s forwards}
-.btn{padding:15px 30px;border-radius:100px;font-weight:600;font-size:var(--t-sm);display:inline-flex;align-items:center;gap:10px;transition:all .35s var(--ease);cursor:pointer;border:none}
-.btn-gold{background:var(--gold-500);color:var(--green-950);box-shadow:0 8px 26px rgba(212,169,62,.4)}
-.btn-gold:hover{background:var(--gold-400);transform:translateY(-2px);box-shadow:0 14px 38px rgba(212,169,62,.55)}
-.btn-ghost{background:rgba(244,239,226,.05);color:var(--cream);border:1px solid rgba(244,239,226,.22);backdrop-filter:blur(6px)}
-.btn-ghost:hover{background:rgba(244,239,226,.12);transform:translateY(-2px)}
-.btn svg{width:16px;height:16px}
-@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
-
-.reveal{opacity:0;transform:translateY(34px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
-.reveal.in{opacity:1;transform:none}
-.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
-
-.band{padding:var(--s10) 0}
-.sec-head{max-width:640px;margin-bottom:var(--s8)}
-.sec-head h2{font-size:clamp(2rem,5vw,var(--t-2xl));margin:var(--s4) 0;color:var(--cream)}
-.sec-head p{color:rgba(244,239,226,.62);font-size:var(--t-md);font-weight:300}
-
-/* glass card base */
-.glass{background:rgba(255,255,255,.035);border:1px solid rgba(212,169,62,.14);border-radius:var(--radius);backdrop-filter:blur(10px)}
-
-/* VERSE */
-.verse{text-align:center;padding:var(--s9) var(--s5)}
-.verse .qmark{font-family:'Cormorant';font-size:7rem;line-height:.4;color:var(--gold-500);opacity:.4;height:56px}
-.verse blockquote{font-family:'Cormorant';font-style:italic;font-size:clamp(1.6rem,4vw,var(--t-xl));max-width:24ch;margin:var(--s5) auto;font-weight:500;line-height:1.28;color:var(--cream)}
-.verse cite{font-style:normal;font-size:var(--t-sm);letter-spacing:.16em;text-transform:uppercase;color:var(--gold-400);font-family:'Manrope';font-weight:600}
-
-/* ABOUT */
-.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:var(--s9);align-items:center}
-.about-copy h2{font-size:clamp(2rem,4.5vw,var(--t-2xl));margin:var(--s4) 0 var(--s5);color:var(--cream)}
-.about-copy p{color:rgba(244,239,226,.68);margin-bottom:var(--s4);font-weight:300;font-size:var(--t-md)}
-.about-card{padding:var(--s8) var(--s7);position:relative;overflow:hidden;box-shadow:var(--shadow-lg)}
-.about-card .arabic{font-size:clamp(2.4rem,5vw,3.4rem);color:var(--gold-400);margin-bottom:var(--s3)}
-.about-card h3{font-size:var(--t-lg);margin-bottom:var(--s5);color:var(--cream)}
-.about-card p{color:rgba(244,239,226,.72);font-weight:300}
-.about-card .divider{width:48px;height:2px;background:var(--gold-500);margin:var(--s5) 0}
-.stat-row{display:flex;gap:var(--s7);margin-top:var(--s7)}
-.stat b{font-family:'Cormorant';font-size:var(--t-xl);color:var(--gold-400);display:block;line-height:1}
-.stat span{font-size:var(--t-xs);letter-spacing:.14em;text-transform:uppercase;color:rgba(244,239,226,.55)}
-
-/* PROGRAMS */
-.prog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--s5)}
-.prog{padding:var(--s7) var(--s6);transition:all .45s var(--ease);position:relative;overflow:hidden}
-.prog::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gold-500);transform:scaleY(0);transform-origin:top;transition:transform .45s var(--ease)}
-.prog:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);border-color:rgba(212,169,62,.4)}
-.prog:hover::before{transform:scaleY(1)}
-.prog .num{font-family:'Cormorant';font-size:var(--t-sm);color:var(--gold-500);font-weight:600;letter-spacing:.1em}
-.prog .ic{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;margin:var(--s4) 0 var(--s5);background:linear-gradient(145deg,var(--green-600),var(--green-700));color:var(--gold-400);transition:transform .45s var(--ease)}
-.prog:hover .ic{transform:rotate(-6deg) scale(1.06)}
-.prog .ic svg{width:26px;height:26px}
-.prog h3{font-size:var(--t-lg);margin-bottom:var(--s2);color:var(--cream)}
-.prog .ar{font-family:'Amiri';font-size:var(--t-md);color:var(--gold-400);margin-bottom:var(--s3)}
-.prog p{color:rgba(244,239,226,.62);font-size:var(--t-sm);font-weight:300;line-height:1.65}
-.prog.wide{grid-column:1/-1;display:flex;gap:var(--s7);align-items:center}
-.prog.wide .ic{margin:0}.prog.wide .body{flex:1}
-
-/* EXPECT */
-.exp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s4)}
-.exp{padding:var(--s6) var(--s5);transition:all .4s var(--ease)}
-.exp:hover{background:rgba(212,169,62,.08);border-color:rgba(212,169,62,.35);transform:translateY(-5px)}
-.exp .ic{width:44px;height:44px;color:var(--gold-400);margin-bottom:var(--s4)}
-.exp .ic svg{width:100%;height:100%}
-.exp h4{font-family:'Manrope';font-weight:600;font-size:var(--t-base);margin-bottom:var(--s2);color:var(--cream)}
-.exp p{font-size:var(--t-sm);color:rgba(244,239,226,.58);font-weight:300}
-
-/* SCHEDULE */
-.sched-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--s5)}
-.sched{padding:var(--s8) var(--s7);position:relative;overflow:hidden;transition:all .4s var(--ease)}
-.sched:hover{box-shadow:var(--shadow-md);transform:translateY(-4px)}
-.sched .tag{font-size:var(--t-xs);letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--gold-400)}
-.sched .days{font-family:'Cormorant';font-size:var(--t-xl);color:var(--cream);margin:var(--s3) 0 var(--s2);font-weight:600}
-.sched .time{display:flex;align-items:center;gap:10px;color:rgba(244,239,226,.65);font-weight:500}
-.sched .time svg{width:18px;height:18px;color:var(--gold-500)}
-
-/* CONTACT */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--s9);align-items:center}
-.contact h2{font-size:clamp(2.2rem,5vw,var(--t-2xl));margin:var(--s4) 0 var(--s5);color:var(--cream)}
-.contact .lead{color:rgba(244,239,226,.7);font-weight:300;font-size:var(--t-md);max-width:44ch;margin-bottom:var(--s7)}
-.contact-list{display:flex;flex-direction:column}
-.cline{display:flex;align-items:center;gap:var(--s4);padding:var(--s4) 0;border-bottom:1px solid rgba(212,169,62,.12)}
-.cline .ic{width:44px;height:44px;border-radius:12px;flex:none;display:grid;place-items:center;background:rgba(212,169,62,.14);color:var(--gold-400)}
-.cline .ic svg{width:20px;height:20px}
-.cline .lbl{font-size:var(--t-xs);letter-spacing:.14em;text-transform:uppercase;color:rgba(244,239,226,.5)}
-.cline .val{font-size:var(--t-md);font-weight:500;font-family:'Cormorant';color:var(--cream)}
-.cline a.val:hover{color:var(--gold-400)}
-.contact-card{padding:var(--s8);box-shadow:var(--shadow-lg)}
-.contact-card h3{font-size:var(--t-lg);margin-bottom:var(--s3);color:var(--cream)}
-.contact-card p{color:rgba(244,239,226,.65);font-weight:300;margin-bottom:var(--s6)}
-.field{margin-bottom:var(--s5)}
-.field label{display:block;font-size:var(--t-xs);letter-spacing:.12em;text-transform:uppercase;color:rgba(244,239,226,.6);margin-bottom:8px;font-weight:600}
-.field input,.field textarea{width:100%;padding:14px 16px;border-radius:12px;border:1px solid rgba(212,169,62,.18);background:rgba(8,19,16,.5);color:var(--cream);font-family:'Manrope';font-size:var(--t-sm);transition:all .3s}
-.field input:focus,.field textarea:focus{outline:none;border-color:var(--gold-500);box-shadow:0 0 0 3px rgba(212,169,62,.15)}
-.field textarea{resize:vertical;min-height:96px}
-.contact-card .btn-gold{width:100%;justify-content:center}
-.form-note{font-size:var(--t-xs);color:rgba(244,239,226,.5);margin-top:var(--s4);text-align:center}
-
-/* FOOTER */
-footer{padding:var(--s8) 0 var(--s6);border-top:1px solid rgba(212,169,62,.12)}
-.foot-grid{display:flex;justify-content:space-between;align-items:flex-start;gap:var(--s6);flex-wrap:wrap;padding-bottom:var(--s7);border-bottom:1px solid rgba(212,169,62,.1)}
-.foot-brand{display:flex;flex-direction:column;gap:var(--s3);max-width:320px}
-.foot-brand p{font-size:var(--t-sm);font-weight:300;color:rgba(244,239,226,.55)}
-.foot-cols{display:flex;gap:var(--s9)}
-.foot-col h5{font-size:var(--t-xs);letter-spacing:.16em;text-transform:uppercase;color:var(--gold-400);margin-bottom:var(--s4);font-weight:600}
-.foot-col a{display:block;font-size:var(--t-sm);margin-bottom:10px;transition:color .3s;font-weight:300;color:rgba(244,239,226,.7)}
-.foot-col a:hover{color:var(--gold-400)}
-.foot-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:var(--s5);font-size:var(--t-xs);color:rgba(244,239,226,.45);flex-wrap:wrap;gap:var(--s3)}
-.foot-bottom .arabic{font-size:var(--t-md);color:var(--gold-500)}
-
-.mobile-menu{position:fixed;inset:0;z-index:120;background:linear-gradient(160deg,#081310,#164034);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:var(--s6);opacity:0;pointer-events:none;transform:scale(.96) translateY(-20px);transition:opacity .35s var(--ease),transform .35s var(--ease)}
-.mobile-menu.open{opacity:1;pointer-events:auto;transform:scale(1) translateY(0)}
-.mobile-menu a{color:var(--cream);font-family:'Cormorant';font-size:var(--t-xl);font-weight:500;transition:color .3s}
-.mobile-menu a:hover{color:var(--gold-400)}
-.mobile-menu a.nav-cta{padding:10px 20px;border-radius:100px;background:var(--gold-500);color:var(--green-950);font-weight:600;box-shadow:0 4px 16px rgba(212,169,62,.4);transition:all .3s var(--ease);font-family:'Manrope';font-size:var(--t-base)}
-.mobile-menu a.nav-cta:hover{background:var(--gold-400);transform:translateY(-1px);box-shadow:0 8px 24px rgba(212,169,62,.55)}
-.mobile-menu .close{position:absolute;top:var(--s5);right:var(--s5);color:var(--cream);font-size:2rem;cursor:pointer;background:none;border:none}
-
-@media(max-width:900px){
-  .about-grid,.contact-grid{grid-template-columns:1fr;gap:var(--s7)}
-  .exp-grid{grid-template-columns:repeat(2,1fr)}
-  .prog.wide{flex-direction:column;align-items:flex-start}
-  .navlinks{display:none}.burger{display:flex}
-  #thread{display:none}
+.container{max-width:1000px;width:100%;display:flex;flex-direction:column;gap:0;align-items:center;padding:0}
+.waiting-screen{display:none;position:fixed;inset:0;flex-direction:column;gap:2rem;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .6s var(--ease)}
+.waiting-screen.show{display:flex;opacity:1;pointer-events:auto}
+.waiting-screen h1{font-family:'Cormorant',serif;font-size:4rem;font-weight:600;color:var(--gold-400)}
+.waiting-screen p{font-size:1.5rem;color:rgba(244,239,226,.7)}
+.qasidah-display{display:flex;flex-direction:column;align-items:center;gap:0;opacity:0;pointer-events:none;transition:opacity .6s var(--ease);width:100%}
+.qasidah-display.show{opacity:1;pointer-events:auto}
+.qasidah-header{width:100%;text-align:center;margin:0;padding:0}
+.qasidah-title{font-family:'Amiri',serif;font-size:clamp(3rem,8vw,5rem);color:var(--cream);font-weight:900;line-height:1;margin:0 0 1rem;padding:0;text-align:center}
+.qasidah-subtitle{font-family:'Cormorant',serif;font-size:clamp(1.4rem,3vw,2rem);color:var(--gold-300);font-weight:500;font-style:italic;text-align:center}
+.couplets-container{width:100%;display:flex;flex-direction:column;gap:3rem;max-width:900px;margin:0 auto;padding:0 2rem}
+.couplet-section{display:flex;flex-direction:column;gap:1.2rem;text-align:center}
+.arabic-lines{font-family:'Amiri',serif;font-size:clamp(1.8rem,5vw,2.8rem);font-weight:700;line-height:2.2;color:var(--cream);direction:rtl;text-align:center;letter-spacing:.02em}
+.arabic-lines .line:first-child{margin-bottom:0.5em}
+.transliteration-lines{font-family:'Manrope',system-ui,sans-serif;font-size:clamp(0.95rem,2.5vw,1.2rem);font-style:italic;color:rgba(244,239,226,.72);line-height:1.6;opacity:var(--trans-opacity,1);transition:opacity .3s var(--ease);text-align:center}
+.translation-lines{font-family:'Manrope',system-ui,sans-serif;font-size:clamp(1rem,2.5vw,1.3rem);color:rgba(244,239,226,.8);line-height:1.65;opacity:var(--trans-opacity,1);transition:opacity .3s var(--ease);text-align:center}
+.line{margin:.3rem 0}
+.toggles-row{display:flex;gap:1.5rem;justify-content:center;margin-top:1.5rem;margin-bottom:.5rem}
+.toggle-switch{padding:10px 20px;border-radius:100px;background:rgba(212,169,62,.15);border:2px solid rgba(212,169,62,.35);color:var(--cream);font-family:'Manrope';font-size:.9rem;font-weight:600;cursor:pointer;transition:all .3s var(--ease);white-space:nowrap}
+.toggle-switch:hover{background:rgba(212,169,62,.28);border-color:rgba(212,169,62,.55)}
+.toggle-switch.active{background:var(--gold-500);color:var(--green-950);border-color:var(--gold-500)}
+@media(max-width:599px){
+  .container{padding:0}
+  .waiting-screen h1{font-size:clamp(2rem,8vw,3rem)}
+  .waiting-screen p{font-size:1.1rem}
+  .qasidah-display{gap:0}
+  .qasidah-header{margin:0}
+  .qasidah-title{font-size:clamp(2rem,6vw,3.5rem)}
+  .qasidah-subtitle{font-size:clamp(0.9rem,2.2vw,1.2rem)}
+  .toggles-row{gap:1rem;margin-top:1rem;margin-bottom:.5rem}
+  .toggle-switch{padding:8px 16px;font-size:.85rem}
+  .couplets-container{gap:2rem;padding:0 1rem}
+  .couplet-section{gap:.8rem}
+  .arabic-lines{font-size:clamp(1.4rem,4vw,2rem);line-height:2}
+  .transliteration-lines{font-size:clamp(.85rem,2vw,1rem)}
+  .translation-lines{font-size:clamp(.9rem,2.2vw,1.1rem)}
+  .line{margin:.2rem 0}
 }
-@media(max-width:640px){
-  .prog-grid,.sched-grid{grid-template-columns:1fr}
-  .foot-cols{gap:var(--s6)}.band{padding:var(--s9) 0}
-}
-@media(prefers-reduced-motion:reduce){
-  *{animation:none!important;transition:none!important}
-  .reveal{opacity:1;transform:none}
-  .hero-logo,.hero .arabic-greet,.hero h1 .ln,.hero p.lead,.hero-actions{opacity:1;transform:none;animation:none}
-}
+/* flush-top overrides */
+html,body{margin:0;padding:0}
+body{justify-content:flex-start}
+.container,.qasidah-display,.qasidah-header{margin-top:0;padding-top:0;min-height:0}
+.waiting-screen:not(.show){display:none!important}
+.qasidah-title{margin-top:-.08em}
+.qasidah-title:first-child{margin-block-start:0}
 </style>
 </head>
-<body id="top">
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="daLogo" viewBox="0 0 2672 2352">
-<defs>
-<linearGradient id="daGreen" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#41A268"/><stop offset="1" stop-color="#1B5E38"/></linearGradient>
-<linearGradient id="daGold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F2D68C"/><stop offset=".5" stop-color="#D6AB40"/><stop offset="1" stop-color="#B5842A"/></linearGradient>
-</defs>
-<g transform="translate(0.000000,2352.000000) scale(0.100000,-0.100000)" fill="url(#daGreen)"><path d="M13238 23483 c-1 -21 -2 -120 -2 -219 -1 -182 -1 -182 -31 -225 -17
--24 -53 -60 -79 -81 -60 -44 -97 -98 -120 -172 -14 -44 -17 -82 -14 -183 3
--128 3 -128 61 -218 32 -49 73 -104 92 -121 19 -17 35 -37 35 -43 0 -6 -18
--30 -40 -52 -34 -35 -40 -48 -40 -85 0 -23 7 -73 16 -110 17 -73 18 -235 2
--293 -10 -35 -35 -76 -75 -121 -38 -44 -52 -99 -61 -255 -10 -146 -9 -151 14
--207 15 -35 24 -77 24 -108 0 -47 -2 -51 -20 -45 -16 5 -19 3 -13 -12 4 -10
-11 -21 17 -25 7 -5 7 -8 -1 -8 -15 0 -18 -36 -4 -44 16 -10 19 -84 6 -140 -7
--31 -12 -56 -9 -56 2 0 -10 -24 -26 -54 -17 -30 -30 -61 -30 -70 0 -9 -4 -16
--9 -16 -5 0 -11 -18 -15 -40 -3 -22 -19 -54 -34 -72 -16 -18 -37 -49 -48 -68
--10 -19 -23 -38 -27 -41 -5 -3 -8 -10 -8 -15 2 -21 -11 -43 -29 -49 -10 -3
--22 -14 -25 -23 -6 -18 -69 -92 -79 -92 -18 0 -116 -86 -134 -118 -11 -20 -41
--57 -66 -80 -25 -24 -46 -48 -46 -54 0 -5 -20 -61 -45 -123 -28 -69 -53 -154
--65 -221 -11 -60 -25 -121 -31 -137 -10 -22 -89 -97 -117 -109 -4 -2 -18 -17
--30 -35 -14 -19 -39 -37 -66 -46 -28 -10 -60 -33 -92 -67 -27 -29 -69 -62 -94
--75 -26 -13 -52 -31 -59 -39 -8 -9 -45 -37 -83 -62 -37 -25 -88 -68 -111 -96
--45 -53 -90 -78 -142 -78 -23 0 -44 -11 -76 -40 -72 -65 -79 -70 -88 -70 -6 0
--31 -20 -58 -45 -32 -30 -66 -50 -100 -61 -70 -21 -181 -96 -220 -150 -19 -25
--49 -50 -70 -59 -20 -8 -58 -36 -84 -60 -27 -25 -54 -45 -61 -45 -7 0 -33 -16
--57 -35 -24 -19 -61 -40 -82 -45 -41 -11 -59 -33 -59 -72 0 -30 -17 -48 -47
--48 -13 0 -23 -4 -23 -8 0 -8 -25 -16 -140 -47 -43 -12 -65 -26 -100 -63 -25
--27 -66 -62 -92 -80 -26 -18 -56 -45 -67 -61 -13 -18 -36 -32 -63 -40 -29 -7
--57 -25 -88 -56 -24 -26 -72 -62 -105 -82 -33 -20 -71 -47 -85 -59 -15 -13
--50 -31 -79 -40 -39 -11 -68 -30 -109 -70 -31 -30 -59 -54 -63 -54 -4 0 -18
--17 -30 -37 -29 -48 -31 -49 -90 -57 -39 -5 -54 -13 -78 -42 -18 -23 -51 -45
--86 -60 -32 -12 -67 -32 -79 -42 -11 -11 -49 -34 -83 -51 -34 -17 -73 -45 -85
--62 -13 -18 -46 -42 -75 -55 -29 -13 -59 -35 -68 -48 -10 -14 -39 -34 -69 -45
--35 -13 -72 -39 -113 -79 -35 -34 -73 -61 -89 -65 -34 -7 -74 -41 -94 -80 -8
--16 -32 -39 -55 -52 -22 -13 -49 -39 -59 -57 -23 -39 -30 -46 -75 -77 -54 -39
--182 -178 -213 -232 -16 -27 -43 -59 -61 -70 -18 -12 -50 -48 -70 -80 -21 -32
--59 -82 -85 -111 -27 -29 -59 -69 -72 -88 -14 -19 -40 -48 -58 -64 -33 -29
--189 -254 -267 -386 -22 -37 -63 -92 -91 -122 -27 -31 -55 -73 -62 -94 -6 -22
--43 -93 -81 -159 -38 -66 -87 -151 -109 -190 -21 -38 -62 -110 -90 -160 -30
--52 -58 -117 -66 -154 -8 -36 -31 -89 -51 -120 -51 -80 -154 -296 -166 -350
--10 -46 -75 -265 -130 -436 -15 -49 -38 -137 -49 -195 -11 -58 -39 -178 -61
--268 -22 -90 -42 -193 -45 -230 -7 -105 -20 -183 -39 -235 -14 -39 -15 -55 -6
--91 10 -39 7 -55 -19 -137 -16 -51 -35 -96 -42 -101 -7 -4 -36 -8 -64 -8 -38
-0 -61 -7 -97 -30 -26 -17 -53 -30 -60 -30 -24 0 -223 -106 -242 -129 -43 -52
--56 -61 -88 -61 -105 0 -139 -111 -152 -485 -4 -110 -11 -238 -16 -285 -5 -47
--14 -184 -19 -305 -5 -121 -11 -254 -13 -295 -2 -41 -8 -84 -14 -95 -6 -11
--13 -65 -15 -121 -4 -75 -1 -106 9 -119 21 -30 16 -92 -14 -148 -16 -29 -35
--59 -44 -67 -8 -8 -23 -42 -33 -75 -9 -33 -24 -73 -33 -90 -30 -56 -142 -200
--177 -227 -21 -17 -50 -58 -73 -104 -20 -42 -56 -97 -79 -123 -23 -25 -51 -66
--64 -91 -12 -25 -57 -81 -99 -125 -86 -91 -154 -171 -197 -232 -89 -127 -224
--291 -313 -380 -42 -42 -45 -47 -45 -103 -1 -32 2 -53 6 -47 4 7 8 -2 8 -20 0
--31 34 -78 50 -68 4 2 23 -4 42 -13 31 -16 58 -18 239 -14 250 5 257 5 292 -4
-22 -5 32 -2 47 16 13 15 20 18 20 9 0 -9 3 -10 8 -3 10 15 47 34 67 34 9 0 23
-6 30 14 8 7 30 12 51 11 36 -2 104 21 104 35 0 7 6 9 70 13 60 5 110 17 110
-27 0 4 17 11 38 15 50 8 70 21 136 83 31 28 59 52 62 52 2 0 44 39 93 88 93
-92 121 117 121 106 0 -4 22 15 50 42 27 27 62 55 77 63 44 22 61 44 58 79 -2
-18 1 32 5 32 4 0 7 6 6 12 0 7 3 14 8 15 5 1 12 6 16 13 4 6 27 11 51 12 54 0
-95 20 131 63 15 18 39 36 53 39 14 4 25 11 25 17 0 6 4 8 9 5 11 -7 51 27 51
-43 0 7 5 9 10 6 6 -3 10 2 10 13 0 10 9 38 21 61 11 24 19 52 16 62 -3 12 6
-28 27 46 56 48 69 76 63 134 -3 28 -8 53 -11 56 -8 8 29 71 54 91 19 15 22 27
-21 82 -1 40 11 119 31 206 20 90 28 148 23 160 -4 10 -10 28 -12 39 -2 10 -9
-23 -16 27 -8 5 -12 40 -13 103 -1 57 -7 106 -14 121 -11 20 -10 38 3 108 10
-47 17 101 17 121 0 20 7 51 15 68 8 18 23 67 34 109 11 42 26 87 35 100 8 13
-26 53 41 89 25 64 61 111 89 115 7 1 30 13 52 26 21 14 42 26 47 27 4 0 9 2
-12 2 3 1 17 3 33 4 15 2 36 5 47 8 11 3 23 6 28 6 4 1 7 8 7 16 0 8 4 15 10
-15 5 0 20 10 32 23 29 27 83 58 90 51 3 -2 4 19 2 48 -2 37 3 59 15 78 20 28
-33 80 20 80 -4 0 -5 10 -3 23 3 12 8 42 11 67 3 25 10 51 16 58 5 7 11 52 13
-100 4 124 9 159 28 226 12 40 18 104 20 200 2 81 9 154 16 171 6 17 13 62 14
-100 2 39 12 106 24 150 12 44 22 99 22 122 0 23 5 43 12 45 7 3 12 34 13 90 1
-61 7 92 18 109 10 13 17 33 17 46 0 12 5 25 10 28 6 3 10 13 10 21 0 12 33 67
-50 84 16 15 39 61 54 108 13 37 16 64 10 90 -4 20 -6 44 -5 52 4 29 23 70 31
-65 10 -6 26 27 29 61 0 9 6 12 13 8 8 -5 9 -2 5 9 -3 10 -3 17 1 17 4 0 9 17
-10 37 2 28 15 51 50 93 56 65 102 126 102 135 0 4 12 25 28 48 15 23 36 60 47
-82 10 22 26 48 34 58 9 11 16 42 17 77 1 32 6 65 10 72 5 7 11 36 14 63 5 50
-5 50 68 81 78 38 102 55 102 72 0 7 4 11 9 8 5 -4 7 7 5 24 -5 32 11 74 26 65
-4 -3 16 2 24 11 9 8 16 13 16 10 0 -3 9 3 20 14 11 11 23 20 28 20 4 0 13 12
-19 28 7 15 42 59 78 97 65 69 105 133 105 166 0 19 67 95 81 91 5 -1 9 2 9 8
-0 5 21 24 48 42 26 17 61 46 78 62 47 46 94 86 100 86 2 0 24 18 46 40 23 22
-50 41 60 41 10 1 23 3 28 4 6 1 16 3 23 4 19 1 67 44 67 59 0 19 40 54 56 48
-8 -3 14 0 14 6 0 6 8 18 18 27 9 9 53 69 96 134 72 107 85 121 135 146 31 16
-74 34 96 41 56 18 105 44 136 71 97 88 174 146 228 172 36 18 73 21 106 8 22
--9 105 15 105 30 0 5 7 9 15 9 9 0 27 10 40 23 36 33 48 42 68 50 9 3 17 11
-17 16 0 5 10 11 23 15 13 3 36 22 52 43 72 91 108 123 163 143 32 12 73 37 93
-56 19 19 48 37 64 40 47 8 144 74 224 153 86 83 126 112 191 137 57 22 74 37
-100 86 21 40 50 76 50 62 0 -4 6 0 13 10 13 17 48 41 80 52 9 3 17 11 17 17 0
-6 3 8 6 4 4 -3 14 3 24 15 15 20 24 24 70 32 52 9 72 22 99 65 29 44 79 91 99
-91 5 0 28 18 52 40 24 22 47 40 51 40 4 0 9 7 13 15 3 8 10 15 16 15 18 0 199
-141 205 160 3 11 16 22 27 26 12 3 26 10 32 15 6 5 30 24 53 43 24 19 56 37
-72 41 16 3 45 22 65 41 19 18 43 35 53 37 43 7 93 32 99 49 3 10 10 18 15 18
-5 0 9 7 9 15 0 8 5 15 10 15 6 0 14 8 17 18 4 9 19 29 35 45 15 15 28 31 28
-35 0 9 50 68 56 65 9 -6 23 -2 36 10 22 19 56 37 74 37 26 0 157 65 184 92 35
-34 95 78 107 78 22 0 176 147 168 160 -3 5 0 12 7 17 7 4 21 22 30 38 9 17 18
-28 21 25 2 -3 19 11 38 31 19 20 44 42 56 48 37 19 170 33 179 19 3 -5 9 -6
-14 -3 4 3 18 -16 30 -43 50 -107 65 -133 87 -147 13 -9 23 -13 23 -9 0 3 12
--1 26 -11 14 -9 28 -14 31 -11 3 3 21 -9 39 -27 47 -45 64 -59 64 -52 0 3 8 1
-19 -4 10 -6 32 -13 49 -16 47 -8 74 -20 107 -49 17 -14 35 -26 41 -26 7 0 25
--7 40 -15 16 -8 36 -15 44 -15 19 0 70 -43 70 -59 0 -6 5 -11 10 -11 6 0 10
--9 10 -19 0 -11 5 -21 11 -23 6 -2 13 -21 16 -43 6 -45 33 -82 83 -114 19 -12
-46 -38 60 -56 14 -19 33 -35 43 -35 10 0 30 -6 45 -14 18 -9 52 -13 102 -10
-48 2 84 -2 100 -10 14 -7 47 -25 74 -39 27 -15 55 -27 63 -27 17 0 69 -34 98
--64 26 -26 65 -90 65 -105 0 -14 67 -80 75 -73 3 3 16 -5 30 -18 14 -13 25
--20 25 -15 0 5 15 -5 33 -22 17 -17 41 -40 52 -50 21 -18 123 -70 183 -93 17
--7 32 -16 32 -21 0 -5 6 -9 13 -9 17 0 89 -78 104 -112 7 -16 16 -28 21 -28 6
-0 10 -6 9 -12 -1 -49 4 -57 39 -64 19 -4 51 -21 71 -40 20 -19 40 -34 45 -34
-5 0 22 -10 38 -22 16 -12 40 -22 52 -24 64 -7 108 -42 133 -107 12 -33 26 -50
-53 -63 95 -49 159 -92 195 -131 10 -12 32 -27 48 -33 16 -7 29 -17 29 -23 0
--6 3 -8 6 -5 3 3 17 -5 31 -18 14 -13 28 -23 32 -22 3 1 24 -7 46 -17 22 -9
-47 -18 54 -20 8 -1 17 -7 19 -13 2 -7 9 -12 16 -12 7 0 25 -17 41 -39 16 -21
-50 -48 75 -61 25 -12 60 -30 78 -39 17 -8 32 -19 32 -24 0 -23 71 -82 110 -92
-44 -11 84 -31 99 -51 11 -14 21 -24 23 -24 15 6 68 -29 102 -68 22 -26 54 -58
-70 -72 16 -14 48 -44 71 -67 23 -24 47 -43 52 -43 6 0 16 -7 23 -15 7 -8 16
--12 21 -9 5 3 9 0 9 -5 0 -6 6 -11 14 -11 8 0 16 -4 18 -9 2 -5 24 -19 50 -32
-254 -128 249 -126 288 -161 10 -9 28 -21 39 -28 12 -6 30 -29 41 -50 11 -22
-24 -40 29 -40 4 0 16 -19 27 -41 10 -23 32 -57 49 -75 16 -18 50 -56 75 -83
-25 -28 48 -51 52 -51 27 -1 106 -120 93 -140 -3 -6 0 -10 9 -10 8 0 16 -5 18
--11 2 -5 11 -11 20 -13 10 -1 21 -5 24 -9 4 -4 16 -7 27 -7 10 0 21 -9 24 -20
-3 -11 9 -20 14 -20 5 0 9 -6 9 -14 0 -8 8 -17 18 -20 10 -3 25 -18 34 -33 24
--40 73 -93 86 -93 7 0 12 -4 12 -8 0 -5 11 -14 24 -21 13 -8 36 -35 50 -62 15
--26 74 -95 132 -152 79 -79 108 -114 116 -143 13 -51 97 -247 108 -254 4 -3
-22 -35 39 -72 17 -38 42 -78 56 -90 14 -12 25 -28 25 -35 0 -7 5 -13 10 -13 6
-0 10 -5 10 -11 0 -6 13 -29 28 -52 27 -39 61 -119 78 -177 3 -14 17 -47 31
--73 13 -26 29 -74 34 -105 6 -31 14 -61 19 -67 16 -20 38 -102 44 -165 8 -82
-26 -189 36 -215 5 -11 11 -39 14 -63 7 -48 25 -82 43 -82 6 0 19 -21 28 -47 9
--27 22 -59 28 -73 6 -14 11 -28 13 -32 1 -5 3 -10 4 -13 1 -3 3 -8 4 -12 1 -5
-5 -14 10 -22 6 -10 5 -12 -2 -7 -7 4 -12 2 -12 -3 0 -6 4 -11 9 -11 5 0 12
--11 15 -25 4 -14 13 -25 20 -25 14 0 18 -15 31 -120 4 -25 13 -72 22 -105 10
--39 15 -93 13 -155 -5 -181 1 -314 15 -343 7 -15 16 -53 20 -85 4 -31 12 -70
-18 -87 15 -40 66 -115 83 -122 7 -2 16 -17 19 -33 3 -16 12 -31 19 -33 7 -3
-16 -19 19 -35 3 -16 12 -36 20 -43 7 -8 30 -36 51 -64 44 -57 108 -116 151
--137 26 -13 73 -25 110 -29 6 0 26 -8 45 -16 19 -8 44 -16 55 -19 11 -2 21 -8
-23 -14 2 -5 9 -10 16 -10 7 0 34 -21 60 -46 43 -42 49 -54 61 -117 13 -66 25
--87 52 -87 7 0 20 -11 28 -24 17 -25 14 -68 -6 -92 -8 -10 -10 -39 -5 -92 6
--77 -6 -257 -17 -269 -4 -3 -20 -6 -36 -7 -29 -1 -29 -1 -14 -39 16 -39 16
--41 -7 -232 -6 -49 -13 -144 -15 -210 -4 -111 -3 -125 21 -188 14 -37 27 -73
-28 -80 2 -6 9 -32 16 -57 7 -25 14 -54 15 -65 4 -37 18 -80 34 -105 9 -14 23
--38 31 -55 18 -36 113 -135 130 -135 23 0 79 -70 113 -142 30 -62 97 -155 97
--134 0 3 9 -3 20 -14 11 -11 20 -25 20 -31 0 -5 4 -8 9 -4 5 3 24 -15 42 -40
-18 -25 34 -43 37 -40 7 7 71 -112 86 -158 3 -11 15 -21 26 -24 11 -3 20 -8 20
--12 0 -6 20 -17 91 -50 14 -7 46 -30 71 -52 35 -29 51 -53 64 -92 9 -28 22
--59 29 -67 14 -17 25 -45 31 -79 9 -45 32 -86 72 -130 23 -24 44 -57 47 -73 4
--15 12 -31 18 -35 7 -5 21 -25 32 -45 11 -21 23 -38 27 -38 10 0 46 -120 54
--182 4 -29 11 -61 16 -72 6 -10 13 -89 18 -175 5 -116 12 -164 24 -186 15 -27
-16 -60 11 -305 -3 -151 -11 -295 -16 -320 -7 -34 -6 -57 6 -95 18 -61 21 -334
-4 -367 -14 -26 -17 -203 -5 -334 6 -73 5 -115 -4 -152 -9 -38 -9 -69 -1 -119
-6 -42 11 -388 13 -903 3 -835 3 -835 -25 -885 -27 -50 -27 -50 -24 -285 3
--213 2 -238 -15 -268 -10 -18 -18 -34 -18 -36 0 -2 9 -6 20 -9 11 -3 23 -12
-26 -21 9 -24 -14 -46 -49 -46 -20 0 -39 -8 -52 -24 -54 -62 -156 -86 -404 -93
--132 -3 -196 -2 -200 6 -7 11 -23 12 -153 11 -49 0 -90 -5 -93 -11 -10 -15
--105 -2 -127 18 -15 13 -32 15 -105 9 -49 -4 -139 -8 -200 -8 -62 -1 -113 -5
--113 -8 0 -21 -63 -29 -212 -29 -245 -1 -355 20 -390 75 -9 14 -300 9 -327 -5
--13 -8 -56 -8 -138 -1 -65 5 -222 10 -349 10 -168 0 -243 4 -277 14 -50 15
--57 13 -57 -16 0 -10 -7 -30 -16 -43 -21 -31 -71 -34 -102 -5 -12 11 -26 20
--32 20 -5 0 -9 3 -9 8 5 32 -3 42 -35 42 -57 0 -91 -23 -48 -33 10 -2 2 -7
--20 -11 -21 -5 -38 -12 -38 -17 0 -15 -57 -10 -74 6 -8 8 -26 15 -41 15 -14 0
--35 5 -46 11 -12 6 -28 7 -37 3 -20 -9 -18 -8 -60 -18 -18 -4 -45 -14 -60 -22
--35 -18 -67 -18 -86 1 -8 8 -21 15 -29 15 -9 0 -17 4 -19 10 -3 11 -78 -6 -78
--18 0 -11 -76 -32 -117 -32 -20 0 -44 6 -52 14 -20 17 -178 59 -191 51 -6 -3
--10 -2 -10 4 0 6 -12 8 -27 6 -61 -11 -79 -12 -105 -3 -16 6 -28 14 -28 19 0
-13 -64 11 -77 -2 -6 -6 -39 -13 -74 -16 -35 -3 -77 -13 -94 -22 -26 -14 -74
--16 -374 -14 -189 1 -347 6 -350 10 -3 4 -37 16 -76 26 -58 15 -109 18 -309
-17 -131 0 -246 -4 -255 -9 -9 -5 -91 -12 -183 -15 -171 -7 -191 -5 -227 32
--15 15 -79 11 -90 -6 -3 -4 -25 -18 -49 -30 -35 -18 -59 -22 -137 -22 -56 0
--95 4 -95 10 0 6 -198 9 -572 7 -315 -1 -747 1 -960 5 -214 3 -388 3 -388 -1
-0 -3 -19 -6 -42 -5 -71 2 -118 -14 -136 -47 -9 -16 -23 -29 -29 -29 -7 0 -13
--4 -13 -10 0 -5 -9 -10 -20 -10 -11 0 -20 5 -20 10 0 6 -11 10 -24 10 -14 0
--31 7 -40 15 -19 19 -26 19 -26 0 0 -21 -95 -21 -104 0 -3 8 -10 15 -16 15 -6
-0 -18 6 -25 14 -8 7 -45 17 -82 20 -37 4 -80 9 -95 12 -21 4 -28 2 -28 -11 0
--12 -4 -13 -17 -7 -10 5 -64 12 -121 16 -56 3 -112 11 -124 17 -12 6 -70 14
--130 17 -59 3 -108 9 -108 13 0 5 -25 9 -55 9 -30 0 -55 -3 -55 -8 0 -15 -45
--34 -99 -42 -31 -5 -101 -4 -158 2 -88 8 -107 7 -137 -7 -27 -13 -52 -15 -123
--11 -93 7 -394 6 -550 -1 -67 -3 -93 -1 -93 7 0 7 -7 9 -16 6 -9 -4 -12 -2 -8
-5 4 8 -14 9 -62 4 -45 -4 -99 -19 -154 -43 -92 -39 -80 -38 -315 -28 -114 4
--147 9 -180 26 -29 15 -58 20 -116 20 -42 0 -101 5 -130 10 -30 6 -83 13 -119
-15 -76 5 -105 11 -123 22 -10 7 -71 10 -246 14 -18 0 -40 -6 -50 -13 -29 -24
--104 -56 -161 -68 -30 -6 -66 -16 -80 -21 -31 -12 -101 -18 -255 -25 -112 -5
--124 -4 -170 18 -86 41 -148 86 -161 118 -11 26 -18 30 -52 30 -21 0 -42 -4
--48 -10 -5 -5 -32 -13 -59 -16 -28 -4 -53 -12 -57 -18 -4 -6 -48 -11 -105 -12
--128 -2 -234 -14 -253 -28 -49 -38 -99 -56 -143 -51 -33 3 -60 -2 -93 -16 -72
--32 -129 -13 -149 51 -6 18 -9 20 -16 9 -6 -10 -9 -4 -9 19 0 27 -4 32 -24 32
--13 0 -53 7 -88 16 -52 14 -69 14 -97 4 -19 -7 -81 -12 -140 -12 -58 -1 -113
--4 -121 -8 -8 -4 -78 -11 -155 -15 -77 -3 -175 -9 -218 -11 -42 -3 -98 -1
--125 6 -63 15 -79 16 -132 6 -51 -8 -200 18 -212 37 -6 9 -8 8 -8 -1 0 -10 -5
--10 -22 -1 -12 7 -60 12 -105 13 -73 0 -85 -3 -103 -22 -12 -12 -27 -22 -35
--22 -7 0 -15 -4 -17 -8 -1 -5 -29 -21 -60 -35 -38 -18 -73 -27 -107 -27 -60 0
--151 18 -151 30 0 5 -17 12 -38 15 -20 4 -44 9 -52 11 -8 3 -16 5 -18 4 -1 0
--13 10 -25 22 -19 20 -33 23 -99 24 -74 1 -84 -2 -79 -29 1 -5 -3 -6 -7 -3 -5
-3 -20 -4 -34 -17 -13 -12 -53 -41 -90 -65 -36 -23 -83 -61 -104 -84 -33 -36
--39 -49 -42 -99 -4 -47 0 -63 16 -86 28 -39 37 -80 24 -106 -20 -42 -33 -96
--34 -146 -1 -49 1 -53 49 -101 28 -27 63 -67 79 -87 15 -21 54 -64 85 -95 40
--40 66 -58 83 -58 14 0 49 -9 79 -20 30 -11 69 -20 88 -19 19 1 75 -2 124 -6
-77 -5 94 -10 116 -31 26 -25 26 -25 198 -21 162 3 173 4 194 25 61 62 62 62
-188 62 107 0 118 -2 124 -19 3 -12 18 -21 38 -24 40 -6 100 -29 109 -42 10
--13 148 -11 157 3 5 9 69 23 161 36 35 5 76 20 88 33 8 7 33 18 58 24 24 6 44
-15 44 19 0 25 112 39 175 22 17 -5 41 -6 55 -2 15 4 45 0 75 -12 28 -10 57
--18 65 -18 8 0 27 -10 42 -23 83 -70 79 -68 141 -74 29 -3 55 -10 58 -15 4 -6
-33 -10 65 -9 33 0 82 1 109 1 48 0 92 14 107 35 4 6 19 5 41 -3 38 -14 93 -16
-101 -4 5 8 67 16 126 15 19 0 38 4 41 9 3 5 66 9 140 10 74 0 154 5 179 10 25
-5 97 10 160 9 63 0 132 5 152 11 30 9 46 8 82 -6 38 -15 64 -16 160 -10 63 3
-141 6 173 5 32 -1 128 -4 213 -7 85 -2 207 -6 271 -7 63 -2 120 -6 125 -10 17
--10 106 -8 164 3 41 9 74 9 132 0 43 -7 92 -10 110 -6 64 11 323 10 345 -3 13
--6 35 -12 50 -12 92 -1 178 -12 191 -25 16 -17 72 -12 162 13 30 9 73 18 95
-20 22 2 54 8 71 12 18 5 38 5 45 0 26 -16 45 -9 88 32 41 40 43 41 94 34 66
--8 177 -37 177 -47 0 -5 16 -8 35 -8 20 0 52 -7 72 -15 19 -8 59 -15 89 -15
-45 0 59 -5 86 -29 40 -35 64 -40 103 -20 21 11 42 13 70 8 49 -8 55 -6 80 32
-11 17 40 40 65 52 40 18 67 21 230 23 195 2 222 -3 261 -47 9 -11 22 -19 29
--19 7 0 18 -7 25 -16 9 -13 35 -18 113 -22 72 -3 102 -1 102 7 0 6 5 11 11 11
-5 0 7 -5 4 -10 -4 -6 13 0 37 12 38 20 66 24 228 32 180 9 245 10 380 6 36 -1
-155 3 265 8 167 7 206 7 237 -6 32 -12 48 -12 100 -2 107 21 169 22 273 5 104
--17 196 -20 205 -6 9 15 50 32 50 22 0 -13 104 -3 108 10 5 12 25 11 59 -2 15
--6 55 -14 88 -17 71 -8 245 -7 295 1 39 7 111 -9 122 -27 5 -7 44 -11 115 -10
-104 0 111 1 185 38 77 38 77 38 305 34 228 -3 228 -3 294 -41 59 -33 73 -37
-137 -37 51 0 75 -4 86 -16 9 -8 16 -11 16 -6 0 5 8 12 19 15 10 2 21 17 25 33
-13 52 34 74 69 74 18 0 37 -4 43 -9 10 -10 100 -21 179 -23 28 0 194 3 370 7
-434 11 512 9 531 -9 23 -24 79 -30 147 -16 34 7 112 15 172 16 61 2 126 6 146
-10 21 3 53 0 78 -8 23 -8 66 -13 94 -11 189 11 397 14 397 4 0 -6 15 -11 33
--11 20 0 42 -8 56 -21 20 -19 31 -20 136 -17 90 4 119 8 133 22 11 9 28 19 38
-21 11 2 37 9 59 14 22 6 75 11 119 11 62 0 86 -4 112 -21 19 -11 34 -17 34
--12 0 4 4 2 9 -6 10 -15 152 -27 180 -15 21 9 61 6 88 -8 25 -13 84 2 138 34
-39 23 122 24 146 2 26 -24 85 -34 243 -44 76 -4 141 -12 145 -17 14 -20 67
--33 136 -33 43 0 75 -4 75 -10 0 -5 20 -10 45 -10 25 0 45 4 45 9 0 5 15 12
-34 15 19 4 36 11 38 16 2 5 14 11 28 13 18 3 26 11 28 30 2 15 11 29 23 32 10
-4 19 10 19 14 0 4 19 14 43 21 23 8 44 17 47 21 14 18 74 39 114 39 38 0 48
--4 62 -25 9 -14 20 -25 26 -25 5 0 21 -11 36 -25 15 -14 32 -25 39 -25 7 0 13
--4 13 -10 0 -5 7 -10 15 -10 8 0 15 -4 15 -10 0 -5 17 -12 38 -15 50 -9 92
--25 92 -37 0 -14 79 1 125 24 22 11 64 21 94 23 29 1 57 8 61 15 10 16 71 21
-88 7 12 -10 36 -11 172 -10 36 0 84 0 107 0 32 -1 46 4 61 21 11 12 24 22 31
-22 6 0 11 4 11 10 0 5 28 8 63 8 47 -2 66 -6 79 -21 10 -11 15 -24 12 -28 -3
--5 0 -9 5 -9 6 0 11 -8 11 -18 0 -33 25 -54 74 -62 44 -6 50 -5 77 22 16 16
-29 34 29 39 0 5 7 9 16 9 8 0 12 5 9 10 -3 6 4 10 16 10 12 0 29 8 38 18 18
-22 91 39 91 22 0 -5 9 -10 20 -10 11 0 20 4 20 8 0 9 56 31 108 43 40 9 185
--8 231 -27 73 -30 183 -10 228 42 12 14 25 26 30 27 4 1 7 8 7 14 -1 7 2 10 7
-7 5 -3 9 3 10 13 1 34 10 78 19 103 6 14 12 86 14 160 8 207 8 1583 1 1601 -3
-9 -3 204 0 435 11 708 5 2337 -9 2879 -21 779 -22 804 -70 956 -20 61 -55 152
--79 202 -64 134 -176 297 -265 385 -42 42 -126 133 -187 201 -60 69 -140 158
--177 198 -38 41 -68 78 -68 83 0 5 -46 60 -102 123 -173 192 -288 331 -330
-398 -27 42 -31 89 -13 142 13 40 14 62 5 149 -28 264 -32 310 -40 408 -4 58
--15 173 -24 255 -21 190 -35 427 -36 575 -1 250 -43 344 -165 366 -75 13 -232
-112 -254 159 -22 49 -50 74 -77 69 -13 -2 -24 0 -24 6 0 6 -4 9 -9 6 -5 -3
--11 0 -14 8 -3 7 -24 16 -48 19 -33 4 -52 16 -87 51 -41 41 -46 49 -49 103 -3
-35 -18 89 -39 139 -19 45 -34 90 -34 101 0 11 -7 38 -16 59 -9 22 -34 125 -55
-229 -22 105 -48 217 -59 250 -10 33 -26 87 -34 121 -9 34 -27 86 -41 117 -13
-31 -34 93 -45 139 -12 46 -44 150 -71 232 -27 83 -49 160 -49 173 0 13 -14 56
--31 96 -17 40 -44 108 -59 152 -39 113 -94 248 -135 330 -19 39 -43 95 -54
-125 -10 30 -33 82 -50 115 -17 33 -31 69 -31 81 0 11 -16 47 -36 80 -20 32
--53 93 -74 134 -21 42 -71 126 -112 187 -40 61 -90 138 -110 170 -20 32 -65
-92 -100 134 -35 42 -80 103 -101 135 -54 83 -140 196 -227 300 -119 142 -461
-477 -542 532 -40 27 -84 62 -98 77 -14 15 -53 45 -87 67 -35 22 -63 43 -63 47
-0 10 -90 76 -138 100 -22 11 -58 41 -79 66 -23 28 -52 50 -78 59 -22 8 -60 21
--85 30 -25 9 -57 27 -72 41 -31 29 -114 75 -135 75 -7 0 -29 25 -48 55 -34 52
--37 55 -88 61 -47 6 -57 12 -106 66 -30 32 -75 71 -100 87 -25 16 -65 47 -88
-70 -24 23 -47 40 -53 36 -5 -3 -10 -1 -10 6 0 7 -3 9 -7 6 -3 -4 -11 -1 -17 7
--6 7 -47 32 -91 56 -44 23 -100 59 -125 79 -25 21 -70 51 -100 67 -30 16 -81
-54 -115 85 -33 31 -87 70 -121 88 -33 17 -89 58 -125 90 -35 32 -82 67 -104
-79 -22 11 -50 33 -62 49 -14 20 -43 37 -85 53 -45 16 -76 36 -108 70 -56 58
--123 106 -220 156 -41 21 -97 60 -123 87 -27 26 -65 59 -85 71 -21 13 -55 43
--77 65 -27 29 -56 47 -90 57 -27 8 -56 18 -63 23 -8 4 -55 48 -105 97 -74 72
--102 92 -141 103 -50 15 -62 23 -107 83 -15 18 -55 49 -90 67 -39 21 -90 60
--129 101 -36 37 -90 83 -121 103 -47 29 -62 46 -88 99 -17 35 -38 99 -46 143
--8 44 -23 91 -33 105 -11 14 -39 54 -63 90 -44 64 -123 146 -180 185 -29 20
--89 124 -89 155 0 20 -30 53 -69 76 -32 19 -73 84 -70 111 3 28 -11 53 -31 53
--21 0 -50 31 -50 54 0 9 -10 21 -22 27 -37 17 -56 52 -67 119 -6 34 -15 68
--21 75 -18 22 -39 107 -30 124 4 9 8 19 8 24 0 81 30 240 59 307 11 26 14 72
-13 184 -1 134 -3 152 -24 195 -68 135 -86 172 -99 203 -8 18 -29 48 -47 66
--29 30 -32 37 -28 77 4 32 16 56 47 92 45 54 51 85 25 134 -8 17 -18 52 -21
-80 -3 27 -10 52 -14 55 -16 9 -9 66 11 98 10 18 38 47 61 65 23 19 50 52 60
-75 24 55 40 215 28 289 -16 101 -79 198 -166 258 -30 21 -52 47 -67 78 -19 41
--21 64 -21 221 0 96 -4 192 -9 213 -8 37 -8 37 -232 37 -224 0 -224 0 -226
--37z m-7078 -14012 c0 -14 -49 -70 -72 -82 -14 -8 -23 -8 -31 0 -7 7 2 22 30
-51 38 37 73 52 73 31z m-650 -635 c0 -25 -49 -73 -81 -80 -34 -7 -73 9 -63 26
-6 10 120 67 137 68 4 0 7 -6 7 -14z m-582 -123 c42 -10 3 -23 -105 -34 -54 -5
--117 -12 -140 -15 -36 -5 -43 -3 -43 10 0 29 58 44 164 45 54 0 110 -2 124 -6z
-m-417 -6125 c62 -42 62 -42 193 -50 91 -6 157 -5 216 4 109 15 302 15 405 -2
-89 -14 427 -7 550 11 80 12 477 7 805 -11 118 -6 242 -11 275 -11 33 0 445 3
-915 6 483 2 885 9 925 15 40 5 298 9 600 9 427 0 541 -3 587 -15 48 -12 158
--13 730 -7 744 9 887 9 1253 5 138 -1 588 -2 1000 -1 413 2 820 1 905 -1 85
--3 407 -1 715 3 368 5 592 4 651 -3 50 -5 216 -10 370 -10 153 0 522 0 819 0
-762 0 1146 -6 1175 -17 23 -9 21 -11 -25 -21 -35 -8 -113 -9 -255 -4 -151 6
--229 4 -297 -5 -74 -11 -550 -12 -2450 -9 -1297 3 -2374 5 -2393 5 -19 1
--1160 1 -2535 0 -1734 0 -2524 2 -2577 10 -59 8 -118 7 -245 -3 -131 -11 -398
--14 -1203 -12 -1035 2 -1035 2 -1102 33 -76 36 -118 72 -118 103 0 33 41 25
-111 -22z m18018 -1 c17 -22 24 -73 12 -95 -10 -19 -21 -21 -104 -23 -572 -9
--1259 0 -1374 18 -98 15 -229 14 -440 -5 -135 -12 -2446 -9 -2520 4 -24 3 -43
-10 -43 14 0 30 74 33 1030 36 655 2 1014 7 1118 15 135 11 175 10 360 -7 114
--10 257 -18 317 -18 196 2 895 16 1092 21 173 5 203 3 308 -17 116 -23 116
--23 163 23 49 50 63 55 81 34z m-4700 -73 c60 -12 30 -24 -59 -24 -81 0 -112
-9 -77 23 18 8 100 8 136 1z M13220 14594 c-8 -1 -96 -5 -195 -8 -234 -6 -372 -14 -415 -24 -26
--6 -42 -19 -64 -52 -17 -25 -40 -54 -53 -65 -12 -11 -26 -36 -29 -55 -4 -19
--11 -41 -17 -47 -5 -7 -6 -24 -3 -37 3 -14 -1 -47 -10 -73 -17 -48 -21 -118
--24 -458 -1 -82 4 -222 10 -310 7 -112 7 -185 0 -245 -6 -47 -9 -130 -8 -185
-1 -55 1 -233 1 -395 0 -162 1 -320 4 -350 2 -30 6 -138 8 -240 3 -102 10 -202
-17 -222 7 -26 8 -62 2 -115 -5 -43 -8 -211 -7 -373 4 -434 3 -543 -2 -664 -2
--60 0 -130 5 -155 5 -25 11 -77 14 -116 9 -122 29 -187 69 -228 19 -20 39 -37
-43 -37 3 0 17 -12 29 -26 18 -20 27 -24 41 -17 11 5 36 11 57 12 20 1 50 6 65
-12 73 29 166 30 254 3 9 -3 25 -7 36 -9 11 -2 38 -15 61 -29 23 -15 41 -22 41
--17 0 5 8 7 19 4 12 -3 24 3 33 16 8 12 17 18 21 15 3 -3 13 8 22 25 8 17 18
-31 21 31 3 0 2 -4 -1 -10 -10 -17 3 -11 30 12 14 12 25 29 26 37 0 12 3 10 9
--4 7 -17 9 -15 9 13 1 19 7 35 16 38 8 4 15 12 15 18 0 7 11 35 25 62 14 27
-25 61 25 75 0 15 7 42 15 62 8 19 11 37 8 41 -4 3 -1 6 7 6 9 0 11 9 6 30 -3
-20 2 50 16 88 21 54 22 71 21 302 -2 192 1 250 12 272 7 15 9 28 4 28 -5 0 -9
-5 -9 12 0 6 -7 19 -16 29 -12 14 -16 43 -17 136 -2 120 5 191 24 270 9 32 8
-55 0 86 -10 38 -14 311 -9 582 1 50 -2 113 -5 140 -11 76 -24 215 -25 260 -3
-141 0 260 6 271 4 7 4 156 -1 331 -4 175 -8 462 -8 638 -1 267 -4 327 -16 355
--9 19 -18 44 -20 55 -6 33 -60 138 -83 163 -32 34 -67 46 -110 36z m-494
--4285 c7 -12 -13 -29 -36 -29 -23 0 -43 17 -36 29 4 6 20 11 36 11 16 0 32 -5
-36 -11z M11079 13298 c-13 -5 -33 -7 -44 -4 -11 3 -33 -3 -48 -13 -45 -29
--109 -102 -103 -118 3 -8 1 -11 -4 -8 -5 3 -12 -7 -16 -22 -4 -15 -17 -48 -29
--73 -19 -41 -21 -57 -17 -175 5 -175 5 -212 -9 -415 -14 -209 -13 -642 2 -905
-6 -104 8 -228 5 -275 -16 -257 -26 -366 -42 -470 -27 -183 -29 -222 -10 -232
-26 -15 19 -89 -18 -198 -19 -54 -46 -116 -59 -137 -37 -59 -214 -206 -322
--268 -27 -15 -52 -31 -55 -35 -3 -3 -27 -17 -53 -29 -26 -13 -71 -45 -100 -71
--29 -26 -74 -59 -102 -73 -80 -40 -212 -143 -239 -184 -25 -40 -58 -72 -119
--117 -80 -58 -174 -242 -161 -313 3 -15 7 -33 8 -39 6 -35 106 -124 141 -124
-8 0 15 -4 15 -8 0 -4 13 -9 30 -10 16 -1 40 -6 52 -11 28 -11 155 1 184 16 11
-7 37 29 56 51 30 33 54 50 78 57 4 1 51 11 90 20 3 0 37 13 77 29 40 15 75 27
-79 26 3 -1 17 14 29 32 15 22 47 46 90 67 36 18 69 39 72 47 3 8 11 14 18 14
-7 0 15 5 17 10 2 6 21 10 43 10 83 -1 99 1 110 10 32 27 114 41 258 46 83 3
-166 6 182 7 17 2 38 -1 48 -6 11 -5 17 -4 17 4 0 8 4 8 15 -1 12 -10 15 -10
-15 0 0 7 6 10 14 7 7 -3 26 1 41 9 15 8 33 14 40 14 7 0 15 7 19 15 3 8 12 15
-21 15 8 0 15 4 15 8 0 4 20 16 45 26 25 11 45 23 45 28 0 5 4 7 9 4 4 -3 19
-18 31 48 15 33 36 61 56 75 19 13 38 38 44 57 6 19 15 34 20 34 12 0 29 51 34
-106 3 28 14 69 25 91 12 21 32 93 46 159 14 65 29 128 34 139 38 85 51 116 51
-123 0 5 7 22 15 39 12 24 16 90 19 339 2 170 7 487 11 704 4 217 7 596 7 841
-0 421 -2 451 -22 550 -18 83 -34 127 -82 216 -52 99 -100 160 -129 164 -37 5
--67 19 -73 34 -3 8 -13 15 -22 15 -9 0 -29 10 -46 21 -24 17 -37 20 -66 14
--20 -5 -59 -9 -87 -9 -39 -1 -49 -4 -48 -16 2 -9 -12 -24 -31 -34 -28 -15 -38
--16 -57 -5 -13 6 -26 15 -29 18 -12 15 -59 33 -69 27 -6 -4 -11 -1 -11 7 0 16
--16 17 -51 5z m26 -3697 c11 -19 -39 -41 -95 -41 -73 0 -93 13 -54 34 32 17
-139 22 149 7z m-397 -88 c-4 -23 -59 -42 -120 -42 -47 -1 -55 4 -40 25 15 23
-49 33 105 34 50 0 58 -2 55 -17z M15877 13258 c-10 -5 -32 -10 -50 -10 -18 0 -36 -3 -42 -7 -11 -6 -9
--6 -92 -15 -35 -4 -89 -2 -120 3 -32 6 -182 12 -333 13 -250 2 -279 1 -314
--16 -33 -15 -45 -16 -76 -7 -25 7 -89 9 -201 4 -90 -5 -184 -7 -209 -6 -202 7
--392 8 -396 2 -2 -5 -31 -6 -64 -5 -33 2 -60 0 -60 -5 0 -5 -6 -9 -12 -9 -7 0
--35 -20 -62 -43 -49 -44 -49 -44 -50 -113 -1 -133 40 -244 173 -463 46 -75
-101 -131 130 -131 5 0 11 -4 13 -8 2 -5 32 -31 68 -59 36 -28 81 -69 100 -91
-56 -62 202 -139 280 -146 8 -1 37 -14 65 -31 43 -26 61 -30 141 -33 60 -3 94
-0 98 7 4 6 14 11 22 11 8 0 24 9 36 20 12 11 30 20 40 20 10 0 18 5 18 10 0
-14 24 13 105 -6 85 -19 128 -39 177 -82 68 -61 95 -144 65 -202 -17 -34 -20
--92 -6 -142 15 -57 13 -169 -3 -180 -10 -6 -10 -8 2 -8 10 0 11 -3 4 -8 -6 -4
--14 -23 -18 -43 -3 -20 -16 -45 -29 -56 -38 -35 -113 -82 -140 -89 -15 -3 -27
--12 -27 -20 0 -9 -11 -14 -29 -14 -16 0 -31 -5 -33 -12 -10 -28 -278 -21 -278
-8 0 8 -7 14 -15 14 -8 0 -15 5 -15 11 0 19 -101 1 -120 -21 -22 -25 -68 -42
--91 -35 -11 4 -19 2 -19 -3 0 -5 -18 -9 -40 -10 -22 -1 -40 3 -40 9 0 5 -4 8
--8 5 -4 -2 -48 -1 -97 4 -54 5 -128 4 -184 -2 -71 -8 -100 -7 -120 2 -14 7
--42 15 -61 17 -28 3 -42 -1 -63 -21 -16 -14 -37 -26 -47 -26 -10 0 -22 -5 -25
--11 -4 -6 -24 -10 -44 -8 -59 3 -73 0 -65 -13 6 -10 4 -10 -8 0 -13 10 -19 10
--33 -4 -9 -9 -14 -25 -12 -35 3 -11 1 -19 -3 -19 -4 0 -6 -10 -2 -22 3 -13 1
--19 -5 -15 -6 4 -13 1 -15 -6 -7 -23 0 -462 9 -573 8 -98 13 -115 40 -155 17
--24 40 -63 52 -87 12 -24 30 -46 39 -49 9 -4 26 -16 37 -28 25 -27 85 -69 85
--59 0 3 7 1 15 -6 8 -6 19 -9 25 -5 5 3 10 1 10 -5 0 -6 4 -9 9 -6 5 3 12 -1
-15 -10 3 -9 11 -12 18 -8 6 4 41 8 77 10 58 1 69 -1 86 -21 22 -24 12 -24 155
-0 35 6 93 14 179 24 60 7 85 5 125 -7 40 -13 99 -17 281 -18 127 0 336 -4 465
--7 129 -3 241 -2 250 3 9 5 31 2 55 -8 24 -9 90 -18 165 -22 121 -6 127 -5
-185 21 33 15 74 30 90 33 31 7 60 13 96 21 21 4 81 39 102 58 6 7 30 21 51 32
-25 13 43 31 50 50 6 17 22 48 35 68 19 32 25 62 37 188 7 83 19 179 25 213 6
-36 10 151 8 281 -4 382 10 1268 21 1315 17 75 19 230 3 282 -8 27 -18 76 -23
-110 -5 35 -13 81 -19 103 -6 22 -15 66 -21 97 -8 42 -23 72 -56 114 -24 32
--44 63 -44 70 0 25 -45 42 -125 48 -22 2 -43 4 -47 5 -3 1 -20 15 -38 32 -30
-30 -33 31 -117 30 -53 0 -90 4 -94 11 -9 14 -51 18 -72 6z m333 -2899 c0 -18
--64 -69 -102 -81 -37 -11 -88 -5 -88 11 0 5 39 25 88 44 100 40 102 41 102 26z
-m-1305 -46 c163 -6 203 -9 155 -14 -89 -9 -543 -9 -605 0 -50 7 -50 7 10 15
-33 4 69 9 80 11 11 2 47 2 80 -1 33 -2 159 -7 280 -11z m973 -12 c11 -7 11 -9
-0 -12 -24 -8 -168 2 -168 12 0 11 150 12 168 0z M11802 4953 c-32 -4 -32 -5 30 -36 79 -39 161 -120 193 -189 24 -53
-64 -213 66 -265 2 -41 29 91 34 162 3 50 -1 70 -23 116 -15 30 -34 63 -42 73
--17 21 -92 96 -112 112 -31 24 -84 34 -146 27z M11421 4899 c-19 -11 -44 -32 -55 -47 -12 -14 -31 -35 -43 -46 -13
--11 -23 -24 -23 -30 0 -6 -18 -31 -40 -55 -27 -31 -41 -57 -46 -87 -6 -39 6
--136 25 -214 9 -35 9 -34 10 15 2 57 34 234 46 256 43 76 123 181 153 203 43
-30 23 34 -27 5z M6400 4888 c-14 -6 -48 -21 -76 -35 -28 -13 -64 -26 -80 -29 -16 -3
--30 -9 -32 -15 -2 -5 -9 -9 -16 -9 -27 0 -128 -121 -113 -137 3 -3 24 14 47
-37 24 24 72 56 118 77 73 34 82 36 174 34 90 -1 103 -4 175 -39 64 -31 87 -49
-134 -105 32 -37 67 -87 79 -110 22 -44 21 -38 -4 53 -9 30 -16 67 -16 82 0 43
--19 74 -58 93 -21 10 -39 19 -42 20 -3 1 -12 4 -20 8 -14 5 -56 15 -72 17 -21
-2 -94 32 -108 44 -22 20 -61 26 -90 14z M6340 4630 c-26 -16 -18 -81 17 -130 17 -25 36 -63 42 -85 14 -53 47
--105 66 -105 12 0 15 16 15 85 0 80 -2 88 -27 111 -15 13 -36 48 -47 77 -21
-52 -39 65 -66 47z M6353 4235 c-17 -19 -16 -30 3 -45 12 -11 18 -10 32 4 13 12 14 20 6
-33 -14 23 -27 25 -41 8z M11955 4136 c-27 -29 -61 -60 -75 -69 -19 -12 -12 -11 26 4 51 20 85
-54 98 97 4 12 6 22 4 21 -2 0 -25 -24 -53 -53z M6055 4140 c17 -54 53 -89 113 -110 23 -8 24 -8 8 3 -45 30 -70 53
--98 91 -23 31 -28 35 -23 16z"/></g>
-<g transform="translate(0.000000,2352.000000) scale(0.100000,-0.100000)" fill="url(#daGold)"><path d="M14665 17724 c14 -14 91 -73 154 -119 46 -33 52 -35 41 -15 -25 46
--103 110 -134 110 -9 0 -29 8 -44 17 -15 9 -22 12 -17 7z M13343 17530 c-39 -10 -84 -25 -100 -34 -16 -8 -85 -67 -154 -130
--68 -64 -164 -149 -214 -190 -49 -40 -105 -92 -124 -116 -18 -23 -59 -58 -90
--77 -210 -133 -265 -176 -345 -277 -25 -31 -58 -57 -90 -72 -58 -27 -270 -178
--348 -249 -29 -26 -82 -62 -118 -80 -36 -18 -92 -58 -125 -87 -108 -98 -249
--202 -326 -242 -42 -21 -106 -64 -141 -96 -35 -32 -98 -79 -139 -104 -40 -25
--95 -62 -121 -83 -220 -179 -334 -260 -433 -311 -33 -16 -105 -65 -160 -109
--55 -43 -138 -103 -185 -133 -47 -30 -118 -85 -158 -122 -40 -38 -77 -68 -82
--68 -6 0 -34 -22 -64 -49 -30 -27 -79 -65 -108 -84 -78 -49 -124 -92 -163
--151 -19 -28 -94 -110 -167 -181 -75 -73 -174 -183 -225 -250 -50 -66 -112
--145 -137 -175 -25 -30 -67 -84 -93 -119 -27 -36 -76 -95 -110 -131 -34 -37
--71 -87 -83 -111 -12 -24 -37 -62 -54 -84 -18 -22 -67 -98 -108 -170 -54 -91
--86 -160 -108 -230 -68 -219 -114 -351 -141 -409 -16 -34 -29 -68 -29 -76 0
--8 -15 -59 -34 -115 -19 -55 -40 -136 -46 -180 -6 -44 -20 -120 -30 -170 -36
--168 -92 -667 -110 -980 -13 -212 -20 -232 -128 -365 -58 -72 -89 -99 -213
--183 -79 -54 -165 -109 -190 -122 -25 -13 -69 -49 -97 -79 -38 -43 -53 -68
--62 -108 -9 -39 -13 -302 -16 -968 -2 -503 -4 -922 -5 -930 -5 -41 5 -64 44
--104 51 -51 105 -71 227 -87 69 -8 106 -7 200 6 203 30 261 44 297 71 63 48
-63 45 73 487 14 597 37 901 77 997 7 19 18 55 24 80 16 74 81 168 194 285 220
-225 322 410 350 630 3 28 14 91 25 140 27 134 40 217 40 266 0 53 15 170 40
-304 10 55 23 132 29 170 25 168 74 387 108 480 20 55 59 156 86 225 28 69 60
-152 72 185 12 33 45 100 73 148 29 48 59 103 67 122 8 20 29 59 48 88 19 28
-61 101 93 160 74 136 203 321 255 366 22 18 46 46 54 61 19 37 185 206 240
-245 51 36 159 123 270 219 101 87 201 162 290 216 38 23 111 81 162 128 51 47
-115 99 142 116 27 17 82 54 122 82 41 28 102 65 135 82 89 45 208 133 299 221
-84 81 107 98 264 188 53 31 117 74 142 97 146 132 270 217 374 256 17 6 42 28
-58 49 15 23 47 49 75 62 68 33 163 104 362 269 96 80 205 169 241 198 37 28
-69 58 72 66 8 20 188 147 272 191 57 30 76 35 104 30 19 -4 48 -17 63 -30 24
--21 103 -45 144 -45 27 0 194 -91 243 -132 171 -144 214 -182 295 -258 50 -47
-127 -110 171 -140 43 -30 103 -72 134 -93 30 -21 82 -64 117 -96 40 -38 80
--65 114 -77 51 -18 104 -58 225 -169 97 -88 165 -144 240 -195 108 -73 284
--215 322 -259 18 -22 58 -51 87 -64 72 -33 156 -96 185 -139 31 -44 75 -74
-126 -83 51 -9 104 -36 135 -70 14 -15 43 -36 65 -47 22 -11 63 -42 90 -68 28
--27 64 -51 82 -55 17 -3 75 -32 130 -64 70 -42 121 -82 178 -141 44 -45 105
--101 135 -123 127 -95 336 -292 398 -377 15 -19 56 -67 93 -106 104 -112 142
--169 208 -313 33 -74 78 -162 100 -195 56 -89 137 -244 165 -317 13 -35 50
--125 81 -199 81 -192 112 -292 135 -436 11 -70 22 -130 25 -133 8 -13 75 -360
-75 -388 0 -16 9 -64 19 -108 11 -45 27 -132 36 -195 9 -63 23 -135 32 -160 11
--32 18 -99 22 -230 6 -186 6 -186 50 -260 77 -131 93 -150 232 -284 144 -139
-227 -247 249 -326 22 -82 48 -286 71 -560 6 -74 15 -180 19 -235 5 -55 9 -143
-10 -195 1 -139 14 -170 176 -415 18 -28 54 -74 79 -103 25 -30 45 -60 45 -68
-0 -7 -12 -21 -26 -30 -25 -17 -25 -18 -19 -118 5 -79 3 -110 -9 -145 -21 -57
--20 -119 4 -275 21 -134 24 -286 11 -436 -5 -47 -4 -382 2 -746 9 -527 8 -695
--2 -835 -14 -188 -33 -338 -51 -408 -9 -36 -8 -53 5 -89 22 -65 19 -99 -7
--116 -29 -18 -144 -51 -228 -66 -43 -8 -160 -11 -340 -9 -347 4 -610 -10 -701
--40 -103 -33 -131 -76 -149 -227 -14 -126 -21 -1117 -8 -1158 20 -60 82 -109
-173 -135 34 -10 105 -24 243 -48 18 -3 57 2 85 10 77 23 468 42 652 32 83 -5
-238 -7 346 -6 188 2 199 1 273 -23 106 -36 203 -36 312 0 81 27 81 27 174 -11
-81 -32 99 -36 139 -30 25 4 75 8 111 10 36 1 75 7 87 13 12 7 42 36 68 66 29
-34 61 60 88 71 61 24 114 63 137 100 27 44 46 180 40 285 -7 123 -6 243 8
-1940 7 844 17 1567 22 1605 12 92 11 581 -1 668 -18 132 -61 177 -172 177 -67
-0 -96 20 -125 88 -11 26 -31 57 -43 67 -12 11 -46 50 -76 88 -36 45 -70 75
--103 92 -27 14 -62 41 -77 61 -15 20 -45 57 -66 82 -21 25 -52 69 -69 99 -17
-30 -59 85 -93 122 -35 38 -67 84 -73 102 -29 89 -62 337 -72 534 -14 283 -26
-418 -49 571 -11 71 -23 150 -26 177 -8 61 -54 122 -123 162 -28 17 -95 55
--148 85 -143 81 -212 145 -291 268 -44 70 -72 126 -84 171 -10 36 -25 83 -34
-104 -15 37 -62 253 -90 412 -18 103 -32 224 -50 407 -7 81 -17 152 -20 158 -4
-6 -12 72 -20 148 -8 90 -23 174 -44 247 -69 238 -95 322 -116 365 -28 56 -69
-183 -90 274 -10 45 -28 86 -49 116 -49 68 -61 94 -106 231 -43 130 -52 148
--111 219 -21 25 -67 92 -102 150 -35 58 -82 134 -104 170 -22 36 -65 112 -95
-169 -74 139 -98 167 -172 201 -34 15 -75 42 -91 61 -17 18 -53 56 -82 84 -36
-36 -55 65 -63 96 -21 76 -28 88 -65 104 -20 8 -57 29 -83 46 -25 17 -71 42
--101 55 -30 14 -69 35 -85 48 -17 12 -69 42 -115 67 -88 47 -159 101 -288 222
--64 60 -91 78 -135 91 -98 28 -267 161 -309 242 -12 23 -30 36 -65 49 -27 9
--76 30 -109 45 -33 16 -73 31 -90 35 -18 4 -50 28 -80 59 -27 29 -77 68 -110
-86 -70 38 -122 76 -185 136 -61 57 -191 144 -266 177 -34 15 -65 27 -70 27 -5
-0 -43 23 -86 52 -47 32 -86 67 -103 93 -14 23 -36 47 -48 52 -12 6 -50 31 -83
-57 -34 25 -90 60 -125 77 -35 18 -85 49 -110 70 -25 21 -80 54 -123 73 -76 35
--220 142 -296 221 -19 20 -63 50 -97 66 -80 38 -279 230 -316 305 -14 28 -42
-63 -64 79 -21 15 -54 45 -74 67 -25 26 -46 38 -65 39 -31 1 -36 1 -114 18 -68
-15 -92 13 -177 -9z M16108 10333 c-49 -19 -88 -39 -88 -44 0 -16 51 -22 88 -11 38 12
-102 63 102 81 0 15 -2 14 -102 -26z M14545 10325 c-11 -2 -47 -7 -80 -11 -60 -8 -60 -8 -10 -15 62 -9
-516 -9 605 0 48 5 8 8 -155 14 -121 4 -247 9 -280 11 -33 3 -69 3 -80 1z M12654 10309 c-7 -12 13 -29 36 -29 23 0 43 17 36 29 -4 6 -20 11
--36 11 -16 0 -32 -5 -36 -11z M15710 10301 c0 -10 144 -20 168 -12 11 3 11 5 0 12 -18 12 -168 11
--168 0z M10956 9594 c-39 -21 -19 -34 54 -34 56 0 106 22 95 41 -10 15 -117
-10 -149 -7z M10575 9518 c-21 -12 -35 -28 -35 -40 0 -12 91 -8 130 5 19 7 36 20
-38 30 3 15 -5 17 -55 17 -32 0 -67 -6 -78 -12z M6087 9440 c-28 -29 -37 -44 -30 -51 14 -14 43 1 77 42 52 62 14 69
--47 9z M5434 8821 c-34 -16 -64 -33 -68 -39 -10 -17 29 -33 63 -26 32 7 81
-55 81 80 0 19 -5 18 -76 -15z M4673 8705 c-19 -8 -33 -21 -33 -31 0 -13 7 -15 43 -10 23 3 86 10
-140 15 108 11 147 24 105 34 -47 12 -222 6 -255 -8z M4351 8647 c-17 -31 -11 -56 16 -74 22 -15 22 -14 16 24 -3 21 -9 46
--12 56 -6 16 -8 16 -20 -6z M10050 8470 c-19 -6 -231 -12 -470 -15 -239 -3 -460 -10 -490 -15
--62 -11 -97 -33 -122 -76 -16 -27 -18 -83 -23 -554 -12 -1152 -15 -3855 -5
--3960 13 -124 36 -181 89 -215 20 -14 61 -29 90 -35 44 -8 61 -18 91 -50 43
--46 51 -47 205 -25 128 19 205 18 280 0 162 -41 379 -55 491 -31 38 8 132 17
-209 21 262 11 400 23 432 36 26 11 55 10 175 -4 79 -10 160 -17 180 -17 38 0
-88 -17 100 -34 15 -22 358 -5 381 19 41 41 104 43 137 4 18 -20 18 -20 105 1
-77 19 114 21 348 19 144 0 282 4 307 9 28 6 545 9 1405 7 1188 -3 1371 -5
-1445 -19 47 -9 132 -16 190 -16 65 -1 120 -6 145 -15 22 -8 43 -15 47 -15 3 0
-20 12 38 26 31 26 31 26 383 25 333 -2 355 -1 416 19 35 12 95 25 135 30 88
-10 200 37 236 55 37 19 86 77 99 118 6 18 11 76 10 128 0 52 0 155 1 229 2
-136 -11 631 -30 1140 -6 151 -15 392 -20 535 -10 257 -30 462 -52 527 -28 83
--134 200 -235 260 -43 26 -99 64 -124 85 -65 57 -85 67 -194 102 -65 21 -137
-35 -205 42 -58 5 -420 14 -805 19 -1192 17 -1740 30 -2015 47 -337 20 -350 20
--440 -2 -99 -24 -125 -38 -157 -86 -26 -40 -28 -50 -40 -248 -6 -113 -12 -260
--13 -326 0 -66 -7 -176 -15 -245 -20 -166 -19 -331 1 -399 11 -40 29 -67 70
--108 48 -49 54 -60 52 -91 -5 -59 16 -64 217 -58 133 5 188 2 250 -10 67 -13
-129 -14 380 -9 165 4 318 11 340 17 23 6 143 10 286 9 163 -1 255 2 275 9 39
-16 137 13 204 -5 32 -9 99 -15 160 -15 89 0 115 4 173 26 68 26 68 26 136 5
-36 -11 70 -21 75 -21 20 0 125 -53 130 -66 9 -23 -49 -51 -132 -63 -83 -13
--1644 -34 -2414 -33 -380 1 -431 2 -463 18 -20 9 -40 25 -45 35 -6 10 -9 55
--9 101 1 46 -3 232 -9 413 -6 182 -14 488 -17 680 -6 306 -9 355 -24 390 -32
-70 -37 72 -226 80 -304 14 -744 14 -933 0 -163 -11 -186 -15 -217 -36 -19 -13
--41 -38 -49 -54 -28 -57 -60 -282 -59 -400 1 -60 -2 -279 -8 -485 -7 -273 -14
--393 -26 -442 -9 -41 -13 -86 -9 -113 3 -25 9 -64 12 -88 8 -58 -13 -75 -108
--90 -104 -17 -166 -14 -220 11 -64 28 -71 57 -33 128 16 29 28 65 28 81 0 15
--8 91 -17 168 -28 240 -35 325 -41 480 -7 217 -7 1424 1 1528 4 50 2 144 -5
-221 -10 103 -10 161 -1 261 8 97 8 150 -1 220 -14 111 -38 160 -94 189 -34 18
--60 21 -175 23 -74 1 -151 -2 -170 -7z m1723 -3351 c165 -42 245 -99 341 -243
-56 -84 43 -105 -17 -29 -35 44 -74 78 -139 119 -120 76 -160 87 -306 82 -116
--4 -118 -4 -212 -51 -66 -32 -114 -65 -158 -107 -88 -84 -103 -82 -52 6 29 51
-160 176 197 188 10 4 47 17 83 30 83 30 161 31 263 5z m142 -175 c25 -10 36
--19 88 -70 58 -57 68 -71 99 -133 22 -46 26 -66 23 -116 -5 -71 -32 -203 -34
--162 -2 52 -42 212 -66 265 -32 69 -114 150 -193 189 -62 31 -62 32 -30 36 42
-5 87 1 113 -9z m-467 -50 c-30 -22 -110 -127 -153 -203 -12 -22 -44 -199 -46
--256 -1 -49 -1 -50 -10 -15 -19 78 -31 175 -25 214 5 30 19 56 46 87 22 24 40
-49 40 55 0 6 10 19 23 30 12 11 31 32 43 46 23 29 80 66 104 67 8 1 -2 -11
--22 -25z m556 -726 c-13 -43 -47 -77 -98 -97 -38 -15 -45 -16 -26 -4 14 9 48
-40 75 69 28 29 51 53 53 53 2 1 0 -9 -4 -21z M18085 8459 c-16 -5 -61 -14 -100 -20 -88 -14 -198 -53 -251 -90 -65
--44 -105 -151 -119 -319 -13 -148 -27 -171 -136 -221 -117 -54 -151 -113 -153
--260 -1 -64 2 -81 19 -99 33 -36 71 -50 163 -61 48 -5 141 -23 207 -39 92 -22
-155 -31 270 -36 90 -4 164 -12 184 -20 51 -21 83 -17 128 16 23 17 64 37 92
-46 61 18 105 53 133 108 16 30 23 65 26 134 5 104 -11 166 -50 192 -13 8 -59
-17 -104 20 -69 5 -88 10 -118 34 -27 20 -36 34 -36 56 0 23 9 35 43 59 24 16
-70 37 103 46 77 23 108 45 133 98 17 35 21 62 21 140 0 156 -29 197 -139 197
--33 0 -70 4 -83 9 -36 13 -200 20 -233 10z M18155 7150 c-22 -5 -98 -12 -170 -16 -165 -9 -332 -42 -384 -77 -23
--16 -47 -44 -61 -72 -23 -47 -23 -47 -7 -194 13 -114 15 -198 10 -389 -4 -147
--1 -355 7 -530 16 -371 18 -375 156 -420 89 -29 116 -46 165 -100 49 -54 54
--57 151 -77 62 -13 74 -13 111 1 23 9 69 23 102 32 33 8 83 26 110 39 61 30
-158 130 190 198 24 50 24 50 20 385 -2 184 -7 502 -13 705 -7 312 -11 376 -26
-410 -20 47 -42 72 -76 90 -31 15 -230 26 -285 15z M7455 6884 c-22 -9 -79 -19 -127 -23 -158 -14 -177 -46 -179 -297 -1
--93 3 -288 10 -434 10 -196 10 -333 3 -524 -6 -158 -7 -269 -1 -283 5 -13 9
--42 9 -63 0 -51 -11 -57 -170 -105 -110 -34 -137 -38 -225 -37 -55 0 -124 6
--154 11 -67 14 -312 14 -366 1 -22 -6 -96 -13 -165 -16 -117 -6 -130 -5 -215
-21 -49 15 -101 38 -114 50 -28 28 -26 -18 -35 740 -8 711 -12 815 -31 861 -27
-64 -41 74 -109 74 -34 0 -81 7 -106 16 -40 15 -70 15 -286 4 -195 -10 -278
--10 -430 0 -171 11 -195 11 -254 -4 -36 -9 -91 -19 -122 -23 -65 -7 -109 -29
--135 -70 -15 -23 -17 -43 -14 -123 2 -52 3 -111 3 -130 -5 -209 -20 -1700 -21
--2085 -1 -525 3 -672 21 -718 16 -42 70 -83 142 -107 35 -11 77 -31 92 -43 25
--19 42 -22 163 -24 74 -1 168 -7 208 -13 41 -5 95 -10 121 -10 52 0 107 -17
-182 -55 58 -29 103 -32 128 -7 38 38 76 62 113 72 21 6 128 12 236 14 150 3
-223 9 299 25 62 13 136 20 195 20 53 0 122 6 159 15 81 20 133 20 188 1 34
--12 84 -14 255 -11 168 4 221 2 257 -10 31 -10 123 -17 290 -23 245 -8 245 -8
-320 -41 86 -38 108 -39 295 -21 72 7 175 16 230 20 67 5 113 14 140 27 22 11
-80 36 128 55 102 39 160 83 179 137 10 30 13 201 11 872 -3 883 -18 1863 -33
-2043 -13 166 -53 218 -165 215 -60 -2 -644 11 -770 17 -86 4 -119 1 -150 -11z
-m-820 -1910 c84 -47 151 -111 213 -201 36 -51 26 -48 -37 10 -48 44 -77 61
--148 87 -216 78 -309 77 -492 -1 -63 -27 -116 -47 -119 -44 -3 2 7 22 22 44
-18 25 52 53 94 76 37 20 85 48 107 61 38 24 46 25 157 21 117 -4 117 -4 203
--53z m-145 -100 c14 -12 87 -42 108 -44 16 -2 58 -12 72 -17 8 -4 17 -7 20 -8
-3 -1 21 -10 42 -20 39 -19 58 -50 58 -93 0 -15 7 -52 16 -82 25 -91 26 -97 4
--53 -12 23 -47 73 -79 110 -47 56 -70 74 -134 105 -72 35 -85 38 -175 39 -92
-2 -101 0 -174 -34 -46 -21 -94 -53 -118 -77 -23 -23 -44 -40 -47 -37 -15 16
-86 137 113 137 7 0 14 4 16 9 2 6 16 12 32 15 16 3 52 16 80 29 84 41 100 45
-126 40 14 -3 32 -12 40 -19z m-84 -291 c11 -29 32 -64 47 -77 25 -23 27 -31
-27 -111 0 -69 -3 -85 -15 -85 -19 0 -52 52 -66 105 -6 22 -25 60 -42 85 -48
-68 -41 147 13 137 8 -1 24 -26 36 -54z m-12 -356 c8 -13 7 -21 -6 -33 -14 -14
--20 -15 -32 -4 -19 15 -20 26 -3 45 14 17 27 15 41 -8z m-261 -163 c14 -10 33
--25 43 -31 16 -11 15 -11 -8 -3 -60 21 -96 56 -113 110 -5 19 0 15 23 -16 16
--22 41 -49 55 -60z M4400 2610 c0 -31 42 -67 118 -103 67 -31 67 -31 1102 -33 805 -2
-1072 1 1203 12 127 10 186 11 245 3 53 -8 843 -10 2577 -10 1375 1 2516 1
-2535 0 19 0 1096 -2 2393 -5 1900 -3 2376 -2 2450 9 68 9 146 11 297 5 142 -5
-220 -4 255 4 46 10 48 12 25 21 -29 11 -413 17 -1175 17 -297 0 -666 0 -819 0
--154 0 -320 5 -370 10 -59 7 -283 8 -651 3 -308 -4 -630 -6 -715 -3 -85 2
--492 3 -905 1 -412 -1 -862 0 -1000 1 -366 4 -509 4 -1253 -5 -572 -6 -682 -5
--730 7 -46 12 -160 15 -587 15 -302 0 -560 -4 -600 -9 -40 -6 -442 -13 -925
--15 -470 -3 -882 -6 -915 -6 -33 0 -157 5 -275 11 -328 18 -725 23 -805 11
--123 -18 -461 -25 -550 -11 -103 17 -296 17 -405 2 -59 -9 -125 -10 -216 -4
--131 8 -131 8 -193 50 -70 47 -111 55 -111 22z M22448 2553 c-47 -46 -47 -46 -163 -23 -105 20 -135 22 -308 17 -197
--5 -896 -19 -1092 -21 -60 0 -203 8 -317 18 -185 17 -225 18 -360 7 -104 -8
--463 -13 -1118 -15 -956 -3 -1030 -6 -1030 -36 0 -4 19 -11 43 -14 74 -13
-2385 -16 2520 -4 211 19 342 20 440 5 115 -18 802 -27 1374 -18 83 2 94 4 104
-23 19 35 -5 108 -35 108 -6 0 -32 -21 -58 -47z M17693 2513 c-35 -14 -4 -23 77 -23 89 0 119 12 59 24 -36 7 -118 7
--136 -1z M22619 2438 c-35 -51 -158 -74 -230 -44 -46 19 -191 36 -231 27 -52
--12 -108 -34 -108 -43 0 -4 -9 -8 -20 -8 -11 0 -20 5 -20 10 0 15 -71 1 -88
--17 -8 -8 -12 -16 -9 -19 3 -3 153 -1 334 6 355 12 358 13 388 70 17 34 5 49
--16 18z M20325 2433 c-16 -9 -32 -19 -35 -22 -3 -4 -24 -13 -47 -21 -60 -19
--55 -34 10 -26 28 3 103 6 165 6 101 0 112 2 98 15 -8 8 -19 15 -24 15 -5 0
--17 11 -26 25 -14 21 -24 25 -64 25 -26 -1 -60 -8 -77 -17z M6275 2418 c-11 -6 -22 -15 -25 -19 -3 -4 -25 -13 -50 -20 -44 -14
--41 -14 88 -17 73 -1 190 -1 259 0 137 3 138 6 18 45 -36 12 -70 17 -85 13
--14 -4 -38 -3 -55 2 -42 11 -126 9 -150 -4z M10579 2381 c-24 -20 -24 -20 96 -20 109 0 117 2 85 13 -19 7 -62 16
--96 20 -52 6 -64 4 -85 -13z M15855 2378 c-15 -23 -15 -23 167 -30 162 -7 986 9 997 18 20 18 -87
-20 -524 9 -176 -4 -342 -7 -370 -7 -79 2 -169 13 -179 23 -6 5 -25 9 -42 9
--23 0 -38 -7 -49 -22z M21490 2380 c0 -6 -7 -10 -15 -10 -8 0 -15 -4 -15 -8 0 -4 40 -8 90
--7 49 0 90 1 90 3 0 2 -6 9 -12 16 -15 14 -138 19 -138 6z M11480 2369 c-14 -4 70 -7 185 -8 116 0 204 3 197 8 -16 10 -348 11
--382 0z M14995 2367 c-26 -12 8 -14 250 -15 223 -1 276 1 260 11 -30 18 -470
-21 -510 4z M17462 2371 c-18 -11 33 -21 102 -21 51 1 51 1 11 15 -45 16 -93 19
--113 6z M18512 2370 c-18 -4 -35 -9 -37 -11 -2 -2 59 -4 136 -4 114 0 136 2
-122 13 -19 13 -166 15 -221 2z M5408 2363 c34 -2 90 -2 125 0 34 2 6 3 -63 3 -69 0 -97 -1 -62 -3z M8070 2358 c-14 -5 -56 -8 -95 -6 -38 3 -83 1 -100 -3 -16 -4 48 -6
-143 -6 145 2 169 4 145 14 -34 15 -60 15 -93 1z M17730 2360 c-15 -5 48 -8 153 -9 112 -1 177 3 177 9 0 12 -293 12
--330 0z M19210 2360 c-10 -7 7 -10 58 -10 46 0 71 4 67 10 -8 13 -105 13
--125 0z M10523 1889 c-24 -11 -91 -27 -150 -35 -60 -9 -119 -21 -133 -28 -27
--12 -41 -36 -76 -131 -12 -33 -31 -82 -42 -110 -13 -30 -24 -92 -29 -156 -9
--103 -11 -110 -71 -230 -51 -100 -67 -144 -84 -229 -14 -69 -33 -131 -58 -180
--36 -73 -91 -228 -105 -300 -12 -63 -56 -204 -71 -227 -7 -12 -41 -36 -74 -54
--101 -54 -111 -105 -36 -179 34 -32 34 -32 162 -27 135 6 222 17 264 34 30 13
-65 50 74 79 9 30 -27 71 -75 84 -46 13 -83 45 -75 66 3 8 8 52 12 97 8 102 39
-212 68 242 19 19 38 24 119 30 143 10 240 -7 308 -56 38 -27 49 -55 59 -147 6
--57 14 -82 37 -115 16 -23 33 -50 36 -60 8 -23 -21 -53 -61 -61 -40 -9 -72
--41 -72 -73 0 -15 15 -48 33 -75 32 -47 32 -47 318 -48 227 0 289 3 298 13 18
-22 86 40 124 33 19 -4 46 -16 60 -27 25 -19 37 -19 369 -15 189 3 363 5 388 5
-25 1 121 -2 214 -5 169 -5 169 -5 208 33 22 21 46 50 53 64 9 17 15 86 19 227
-4 139 10 218 21 255 18 61 12 88 -31 144 -33 43 -74 45 -102 6 -25 -36 -57
--108 -92 -208 -85 -238 -94 -259 -127 -281 -74 -50 -255 -70 -323 -36 -35 17
--35 17 -45 117 -12 130 -8 1066 6 1170 16 120 17 124 47 148 54 44 102 98 108
-122 10 40 -4 73 -37 91 -25 12 -49 14 -127 9 -54 -4 -213 -10 -356 -14 -254
--6 -259 -7 -277 -30 -39 -48 -12 -105 73 -157 36 -22 60 -44 62 -57 15 -69 18
--163 22 -566 3 -376 1 -461 -13 -541 -13 -81 -14 -107 -3 -173 11 -70 11 -80
--4 -96 -27 -30 -99 -44 -162 -31 -81 17 -100 37 -108 114 -4 39 -33 142 -76
-266 -39 111 -78 234 -86 274 -9 39 -27 101 -40 138 -24 64 -48 161 -98 393
--13 61 -34 144 -45 185 -16 56 -20 89 -15 131 5 48 2 63 -21 110 -51 103 -79
-116 -162 78z m-234 -654 c7 -15 16 -64 20 -109 6 -70 12 -90 47 -151 51 -88
-56 -102 44 -125 -31 -57 -270 -46 -293 14 -3 8 9 34 27 58 55 72 69 108 73
-188 6 98 30 166 57 157 6 -2 17 -16 25 -32z M6795 1870 c-33 -11 -94 -24 -135 -30 -41 -6 -94 -20 -117 -31 -36
--17 -48 -32 -78 -91 -19 -39 -35 -85 -35 -103 0 -48 -18 -141 -47 -235 -14
--47 -34 -114 -43 -150 -10 -36 -27 -87 -38 -115 -31 -78 -72 -217 -72 -246 0
--14 -19 -54 -41 -87 -26 -39 -50 -93 -65 -145 -34 -121 -123 -378 -135 -394
--7 -7 -40 -27 -75 -44 -48 -22 -65 -36 -70 -56 -10 -40 16 -74 82 -108 58 -29
-63 -30 230 -33 171 -3 171 -3 218 48 28 32 46 62 46 77 0 33 -47 78 -99 94
--23 7 -47 22 -53 32 -15 28 -4 188 17 256 32 104 80 125 280 119 109 -2 136
--6 165 -24 48 -28 76 -73 94 -153 9 -37 30 -98 47 -134 17 -37 28 -74 25 -83
--3 -8 -27 -24 -53 -35 -83 -35 -93 -42 -100 -68 -5 -22 2 -33 53 -78 59 -53
-59 -53 331 -53 249 0 275 2 305 19 18 10 48 22 67 26 37 8 115 -10 132 -31 9
--11 64 -14 283 -14 271 1 271 1 319 56 48 56 58 92 33 113 -7 6 -37 18 -65 27
--31 9 -56 23 -64 37 -9 16 -12 81 -12 237 1 199 2 218 22 260 12 25 24 57 28
-72 4 23 11 28 34 28 15 0 35 -8 43 -17 39 -46 99 -300 97 -408 -3 -122 -1
--130 31 -207 24 -57 45 -89 86 -128 30 -29 54 -56 54 -61 0 -5 78 -9 175 -9
-171 0 175 0 186 22 7 13 27 40 46 61 45 50 63 96 98 240 29 125 30 178 0 223
--9 14 -27 30 -41 36 -22 10 -33 8 -70 -11 -24 -13 -50 -21 -58 -18 -18 7 -51
-95 -66 177 -6 36 -13 75 -16 87 -2 12 -20 39 -40 59 -24 26 -34 45 -31 59 15
-62 58 157 90 199 43 56 72 131 87 218 13 85 13 254 -2 281 -25 49 -101 136
--126 145 -15 6 -63 13 -107 15 -44 3 -125 18 -180 33 -100 28 -100 28 -510 25
--441 -3 -464 -6 -486 -55 -19 -41 4 -81 70 -121 86 -51 87 -55 101 -345 6
--107 13 -242 16 -300 4 -63 2 -149 -6 -216 -10 -88 -10 -150 -1 -310 19 -306
-21 -274 -19 -302 -29 -20 -44 -23 -92 -20 -41 3 -65 11 -91 31 -36 27 -42 41
--92 212 -10 33 -31 86 -47 119 -16 32 -38 98 -49 146 -28 131 -46 196 -78 290
--88 257 -149 483 -167 619 -17 134 -52 229 -96 266 -35 30 -44 30 -123 5z
-m1533 -237 c30 -19 74 -118 73 -163 0 -19 -2 -89 -3 -156 -3 -115 -4 -122 -31
--157 -45 -60 -69 -71 -133 -63 -31 3 -65 11 -76 17 -19 10 -20 17 -13 78 10
-89 10 85 -3 174 -16 104 -6 241 19 263 38 34 119 38 167 7z m-1729 -402 c5
--20 13 -72 16 -116 8 -91 20 -124 64 -185 64 -88 31 -120 -124 -120 -100 0
--146 13 -159 46 -4 10 5 38 23 68 16 28 41 96 55 151 41 153 56 194 74 204 23
-13 40 -3 51 -48z M14067 1860 c-157 -34 -181 -44 -214 -87 -40 -52 -158 -403 -188
--557 -8 -43 -24 -93 -34 -110 -23 -37 -67 -154 -92 -246 -29 -106 -74 -218
--133 -333 -56 -107 -56 -108 -56 -196 0 -101 -6 -111 -83 -137 -48 -16 -77
--45 -77 -75 0 -29 42 -71 94 -95 45 -21 66 -24 171 -24 105 0 126 3 170 24 64
-30 105 69 105 99 0 28 -14 42 -79 77 -66 36 -72 54 -56 181 23 186 39 219 113
-239 24 6 112 9 217 7 164 -3 178 -5 197 -25 24 -23 36 -89 37 -202 1 -53 6
--73 27 -103 38 -57 30 -78 -36 -99 -56 -18 -90 -47 -90 -76 0 -9 12 -40 27
--69 26 -53 26 -53 319 -53 269 0 295 2 335 20 57 25 103 26 129 0 19 -19 33
--20 333 -20 312 0 312 0 354 53 41 50 51 79 35 103 -4 6 -31 26 -60 44 -53 32
--62 49 -60 105 1 17 -4 77 -12 135 -12 94 -11 116 3 197 10 50 17 116 17 147
-0 76 23 99 112 115 35 6 77 11 92 11 46 0 94 -26 112 -62 36 -68 56 -317 34
--414 -7 -31 -6 -57 5 -98 25 -94 22 -104 -32 -128 -60 -26 -93 -55 -93 -83 0
--11 17 -44 38 -73 37 -51 37 -51 328 -52 291 0 291 0 352 58 34 31 62 63 62
-71 0 16 -45 56 -96 85 -39 22 -39 22 -48 156 -15 204 -12 1220 3 1248 10 20
-148 92 175 92 6 0 46 -20 89 -45 52 -31 78 -53 81 -68 3 -12 12 -52 21 -89 17
--74 22 -313 18 -878 -2 -168 -2 -327 0 -355 2 -50 2 -50 -59 -80 -71 -34 -94
--52 -94 -70 0 -8 21 -38 48 -69 47 -55 47 -55 482 -56 250 0 440 4 445 9 6 5
-70 28 142 51 142 44 234 95 277 153 12 18 35 61 51 96 25 58 27 72 22 140 -18
-219 -27 293 -40 323 -26 61 -109 160 -164 195 -30 19 -56 40 -59 48 -3 7 26
-53 66 102 96 119 119 168 136 299 16 120 10 161 -33 225 -42 64 -162 130 -260
-143 -29 3 -92 20 -140 35 -138 46 -221 54 -418 39 -189 -14 -244 -14 -455 -2
--205 11 -283 10 -380 -8 -68 -12 -123 -13 -270 -8 -115 5 -218 3 -272 -3 -84
--10 -89 -10 -112 12 -34 32 -76 35 -211 16 -73 -10 -202 -17 -326 -19 -177 -2
--210 -5 -233 -20 -65 -42 -52 -108 34 -163 29 -20 51 -42 54 -55 26 -138 30
--258 40 -1217 1 -164 -3 -176 -69 -191 -136 -32 -201 14 -235 165 -6 28 -31
-91 -55 140 -37 74 -48 109 -60 195 -19 135 -46 222 -102 339 -34 70 -48 114
--56 170 -9 75 -47 243 -87 390 -11 41 -20 95 -20 120 0 75 -11 119 -36 146
--29 32 -52 31 -217 -5z m1644 -142 c26 -24 64 -57 83 -74 36 -31 36 -31 36
--133 0 -60 -7 -128 -16 -165 -16 -62 -15 -64 10 -128 14 -35 26 -71 26 -80 0
--41 -91 -78 -191 -78 -88 0 -163 16 -184 40 -15 16 -16 28 -9 67 5 27 9 120 9
-208 2 225 4 235 73 290 32 24 68 55 81 69 13 15 26 26 29 26 2 0 26 -19 53
--42z m1688 -84 c35 -14 43 -23 65 -80 30 -75 50 -190 44 -253 -3 -26 -17 -72
--32 -104 -44 -92 -103 -108 -188 -52 -31 21 -38 31 -38 58 0 17 -9 64 -20 102
--24 85 -25 140 -4 214 26 91 32 101 67 116 42 18 58 18 106 -1z m-3453 -448
-c13 -29 29 -80 35 -112 6 -32 24 -81 40 -107 35 -57 46 -101 30 -121 -6 -8
--32 -19 -57 -25 -36 -9 -62 -8 -132 5 -48 8 -98 22 -110 31 -29 18 -25 41 19
-112 21 33 33 69 38 108 7 58 17 85 53 136 31 43 55 35 84 -27z m3475 -304 c54
--21 111 -131 115 -222 1 -36 10 -89 19 -118 12 -36 15 -66 11 -95 -4 -23 -11
--73 -15 -112 -11 -82 -31 -106 -116 -130 -57 -17 -108 -13 -157 12 -31 15 -32
-20 -18 57 7 19 2 44 -20 108 -28 78 -30 92 -29 233 0 141 15 255 36 276 19 18
-115 13 174 -9z M18980 1864 c-30 -7 -95 -16 -145 -20 -49 -4 -98 -11 -107 -15 -38
--20 -103 -209 -123 -362 -17 -131 -73 -315 -117 -387 -21 -33 -31 -68 -39
--130 -8 -63 -22 -107 -51 -169 -22 -46 -49 -121 -60 -165 -11 -45 -42 -137
--68 -206 -26 -69 -52 -138 -57 -155 -7 -26 -17 -33 -68 -49 -85 -26 -109 -39
--113 -59 -5 -24 20 -60 63 -93 43 -33 110 -43 320 -51 150 -5 150 -5 183 40
-42 59 42 97 1 131 -17 14 -43 29 -57 32 -49 10 -80 26 -86 41 -4 8 0 50 8 92
-8 42 19 107 26 145 20 126 36 139 185 150 56 5 107 2 170 -10 157 -29 161 -33
-195 -164 12 -46 32 -105 46 -132 15 -29 24 -62 22 -80 -3 -26 -13 -36 -68 -67
--85 -48 -88 -67 -24 -132 48 -49 48 -49 559 -48 510 0 510 0 548 52 20 28 37
-58 37 65 0 27 -22 52 -61 72 -72 37 -79 50 -79 144 0 93 22 216 44 248 34 48
-65 58 178 58 108 0 231 -19 268 -42 11 -7 28 -33 39 -58 40 -95 101 -288 96
--302 -4 -9 -33 -27 -65 -41 -64 -28 -95 -63 -84 -93 4 -10 21 -38 37 -61 30
--43 30 -43 321 -43 264 0 294 2 321 18 17 10 43 22 58 26 35 8 106 -10 114
--30 4 -12 68 -14 429 -14 333 0 432 3 457 13 18 8 68 22 112 32 133 29 177 50
-234 110 29 30 66 85 84 122 38 81 43 143 29 345 -8 119 -13 142 -35 180 -33
-56 -121 141 -175 168 -23 12 -45 26 -48 31 -3 5 15 30 39 56 80 86 136 173
-157 240 25 80 26 187 4 286 -14 63 -22 78 -63 117 -25 25 -67 55 -93 68 -25
-12 -128 41 -229 63 -184 41 -184 41 -339 35 -85 -4 -238 -9 -340 -12 -102 -3
--202 -9 -224 -15 -43 -12 -86 -49 -86 -76 0 -28 36 -81 67 -96 49 -26 59 -47
-72 -152 16 -122 31 -1251 18 -1278 -5 -10 -24 -25 -42 -33 -79 -33 -184 -3
--211 61 -7 18 -23 69 -35 112 -12 43 -39 114 -61 157 -28 56 -56 141 -93 285
--29 113 -76 283 -105 376 -63 209 -117 417 -126 487 -9 64 -34 126 -62 152
--42 37 -126 36 -331 -5 -107 -22 -148 -110 -197 -424 -20 -131 -33 -174 -82
--270 -22 -44 -57 -136 -77 -205 -20 -69 -45 -147 -56 -175 -12 -27 -30 -78
--40 -113 -11 -34 -43 -107 -70 -162 -28 -55 -57 -124 -65 -153 -22 -74 -38
--95 -79 -103 -57 -10 -81 12 -87 84 -4 39 -20 91 -46 148 -22 49 -56 143 -76
-209 -20 66 -66 206 -101 310 -116 347 -141 442 -152 585 -3 49 -13 100 -23
-120 -10 19 -23 55 -29 80 -17 67 -30 87 -66 105 -38 18 -51 17 -125 -1z m3089
--243 c10 -6 35 -38 57 -73 39 -63 39 -63 42 -183 3 -115 2 -122 -25 -175 -22
--44 -35 -57 -61 -64 -28 -8 -38 -5 -75 21 -33 25 -43 39 -49 71 -4 22 -14 55
--23 72 -9 17 -21 58 -26 89 -7 47 -5 72 11 137 13 49 29 86 42 97 22 18 79 23
-107 8z m-1741 -481 c-3 -88 -3 -88 80 -174 54 -54 82 -92 80 -103 -6 -32 -48
--43 -170 -43 -126 0 -161 8 -178 39 -9 17 -3 28 39 75 34 37 52 67 57 93 4 21
-14 54 24 73 10 19 21 53 25 75 8 44 22 68 36 59 5 -3 8 -45 7 -94z m-1522 55
-c9 -14 25 -63 36 -108 12 -53 33 -105 59 -148 44 -73 43 -91 -4 -115 -35 -19
--174 -21 -237 -4 -37 10 -70 33 -70 49 0 4 15 28 34 52 32 40 73 125 113 234
-26 71 43 80 69 40z m3267 -314 c47 -11 84 -44 105 -91 17 -39 30 -159 38 -363
-7 -158 0 -185 -55 -219 -29 -19 -50 -23 -113 -23 -63 0 -82 4 -105 21 -21 16
--27 29 -25 50 6 72 4 108 -12 239 -18 142 -16 217 6 308 20 79 64 100 161 78z M4669 1858 c-24 -4 -97 -11 -161 -16 -131 -10 -158 -22 -158 -75 0
--29 18 -50 98 -117 26 -23 31 -35 38 -95 4 -39 7 -293 8 -565 0 -644 -2 -740
--16 -758 -7 -8 -36 -29 -65 -48 -43 -28 -53 -39 -53 -62 0 -29 23 -55 87 -100
-31 -22 39 -22 319 -22 248 0 290 2 305 16 12 10 50 18 116 24 134 12 277 45
-327 75 167 103 158 95 209 190 89 166 114 232 141 380 39 213 43 342 16 500
--28 172 -35 196 -81 289 -24 49 -39 93 -39 116 0 42 -20 65 -65 75 -37 8 -164
-59 -226 90 -25 13 -74 29 -110 35 -35 6 -91 22 -124 35 -33 13 -71 27 -85 31
--33 9 -424 11 -481 2z m486 -209 c22 -6 48 -18 57 -26 33 -29 110 -174 133
--248 39 -125 59 -309 51 -475 -10 -240 -24 -393 -40 -435 -8 -22 -15 -66 -16
--97 0 -46 -5 -62 -26 -87 -14 -17 -47 -44 -73 -59 -40 -24 -56 -27 -132 -27
--72 0 -91 3 -108 19 -19 17 -20 26 -15 80 4 38 0 100 -10 164 -23 144 -22 872
-1 1037 8 61 20 116 27 124 14 18 65 40 91 41 11 0 38 -5 60 -11z M12837 913 c-131 -14 -171 -27 -197 -62 -18 -27 -45 -148 -43 -199 1
--30 48 -80 90 -98 24 -11 88 -14 253 -14 234 0 266 5 290 49 15 30 13 226 -4
-264 -31 71 -32 72 -163 72 -66 0 -167 -5 -226 -12z"/></g>
-</symbol></svg>
-
-<canvas id="cosmos"></canvas>
-<div class="nebula" aria-hidden="true"><div class="neb a"></div><div class="neb b"></div><div class="neb c"></div></div>
-
-<!-- curving scroll thread (spans full document height) -->
-<svg id="thread" aria-hidden="true">
-  <defs>
-    <linearGradient id="threadGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#F0D68C"/><stop offset="1" stop-color="#D4A93E"/>
-    </linearGradient>
-    <radialGradient id="cometGrad"><stop offset="0" stop-color="#FFF6DE"/><stop offset="1" stop-color="#E3C265"/></radialGradient>
-  </defs>
-  <path class="thread-base" id="threadPathBase"></path>
-  <path class="thread-glow" id="threadPathGlow"></path>
-  <circle class="comet-halo" id="cometHalo" r="18"></circle>
-  <circle class="comet" id="comet" r="6"></circle>
-</svg>
-
-<header id="hdr">
-  <div class="nav-inner"></div>
-  <nav class="nav">
-    <a href="#top" class="brand" aria-label="Darul Ahbaab home">
-      <svg class="navlogo" viewBox="0 0 2672 2352" role="img" aria-label="Dar Al-Ahbaab logo"><use href="#daLogo"/></svg>
-      <span>Darul Ahbaab<small>Columbus · OH</small></span>
-    </a>
-    <div class="navlinks">
-      <a href="https://www.darulahbaab.com/#about">About</a><a href="https://www.darulahbaab.com/#programs">Programs</a><a href="live.html">Qasidah</a><a href="https://www.darulahbaab.com/#expect">Community</a><a href="https://www.darulahbaab.com/#schedule">Schedule</a>
-      <a href="https://www.darulahbaab.com/#contact" class="nav-cta">Visit us</a>
-    </div>
-    <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
-  </nav>
-  <div class="mobile-menu" id="mobileMenu">
-    <button class="close" id="closeBtn" aria-label="Close menu">&times;</button>
-    <a href="https://www.darulahbaab.com/#about">About</a>
-    <a href="https://www.darulahbaab.com/#programs">Programs</a>
-    <a href="live.html">Qasidah</a>
-    <a href="https://www.darulahbaab.com/#expect">Community</a>
-    <a href="https://www.darulahbaab.com/#schedule">Schedule</a>
-    <a href="https://www.darulahbaab.com/#contact" class="nav-cta">Visit us</a>
+<body>
+<div class="container">
+  <div class="waiting-screen show" id="waitingScreen">
+    <h1>Qasidah Display</h1>
+    <p>Awaiting content...</p>
   </div>
-</header>
-
-<main>
-<!-- HERO -->
-<section class="hero">
-  <div class="wrap">
-    <div class="hero-logo"><svg class="da-logo" viewBox="0 0 2672 2352" role="img" aria-label="Dar Al-Ahbaab logo"><use href="#daLogo"/></svg></div>
-    <p class="arabic-greet arabic">أَهْلاً وَسَهْلاً</p>
-    <h1><span class="ln">A path to knowledge,</span><span class="ln">and a path made easy.</span></h1>
-    <p class="lead">A community-centered Islamic learning center in Columbus, teaching the Quran and the Prophetic Sunnah under experienced scholars — a warm, welcoming place where every student can flourish.</p>
-    <div class="hero-actions">
-      <a href="#programs" class="btn btn-gold">Explore our programs
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <a href="#contact" class="btn btn-ghost">Plan a visit</a>
-    </div>
-  </div>
-</section>
-
-<!-- VERSE -->
-<section class="verse">
-  <div class="wrap">
-    <div class="qmark" aria-hidden="true">&ldquo;</div>
-    <blockquote class="reveal">Whoever takes a path upon which to seek knowledge, Allah makes easy for him a path to Paradise.</blockquote>
-    <cite class="reveal d1">— The Messenger of Allah ﷺ</cite>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="band" id="about">
-  <div class="wrap about-grid">
-    <div class="about-copy">
-      <span class="eyebrow reveal">About us</span>
-      <h2 class="reveal d1">Rooted in the Sunnah, built for our community.</h2>
-      <p class="reveal d2">Darul Ahbaab is committed to sharing the Prophetic Sunnah of Prophet Muhammad ﷺ — through both study and the living example of his revered way of life.</p>
-      <p class="reveal d3">We recognize the obligation every believer carries to seek Islamic knowledge. With a nurturing, inclusive community and a sincere passion for Islam, we work together — with the help of Allah — to support the ummah in fulfilling that trust.</p>
-    </div>
-    <div class="about-visual reveal d2">
-      <div class="about-card glass">
-        <p class="arabic">دار الأحباب</p><div class="divider"></div>
-        <h3>Our mission &amp; values</h3>
-        <p>To foster a welcoming and nurturing environment in which everyone — young and old — can grow in faith, character, and understanding.</p>
-        <div class="stat-row">
-          <div class="stat"><b>5</b><span>Core disciplines</span></div>
-          <div class="stat"><b>All</b><span>Ages welcome</span></div>
-        </div>
+  <div class="qasidah-display" id="qasidahDisplay">
+    <div class="qasidah-header">
+      <div class="qasidah-title" id="qasidahTitle"></div>
+      <div class="qasidah-subtitle" id="qasidahSubtitle"></div>
+      <div class="toggles-row">
+        <button class="toggle-switch active" id="transToggle" data-layer="transliteration">Transliterate</button>
+        <button class="toggle-switch active" id="translationToggle" data-layer="translation">Translation</button>
       </div>
     </div>
+    <div class="couplets-container" id="coupletsContainer"></div>
   </div>
-</section>
+</div>
 
-<!-- PROGRAMS -->
-<section class="band" id="programs">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow reveal">What we teach</span>
-      <h2 class="reveal d1">Five disciplines, one way of life.</h2>
-      <p class="reveal d2">Each program is guided by knowledgeable, experienced scholars — building understanding step by step, from recitation to refinement of the heart.</p>
-    </div>
-    <div class="prog-grid">
-      <div class="prog glass reveal"><span class="num">01</span>
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5a2 2 0 012-2h5v16H6a2 2 0 00-2 2V5zM20 5a2 2 0 00-2-2h-5v16h5a2 2 0 012 2V5z"/></svg></div>
-        <h3>Quran</h3><p class="ar">القرآن</p><p>Study and memorize the Quran under the guidance of knowledgeable and experienced scholars.</p></div>
-      <div class="prog glass reveal d1"><span class="num">02</span>
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v18M5 7h14M6 11h12M7 15h10"/></svg></div>
-        <h3>Hadith</h3><p class="ar">الحديث</p><p>Learn and practice the Sunnah of our beloved Prophet Muhammad ﷺ — his words, actions, and guidance.</p></div>
-      <div class="prog glass reveal d2"><span class="num">03</span>
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 19s2-8 8-8 8 8 8 8M9 7a3 3 0 106 0 3 3 0 00-6 0z"/></svg></div>
-        <h3>Arabic</h3><p class="ar">العربية</p><p>Explore Arabic grammar and the related disciplines that open the door to the Quran and its sciences.</p></div>
-      <div class="prog glass reveal d3"><span class="num">04</span>
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/></svg></div>
-        <h3>Fiqh</h3><p class="ar">الفقه</p><p>Learn the proper methods of prayer and fasting, and how to practice Islam by the Quran and Sunnah.</p></div>
-      <div class="prog wide glass reveal">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-4.5-7-10a4 4 0 017-2.6A4 4 0 0119 11c0 5.5-7 10-7 10z"/></svg></div>
-        <div class="body"><span class="num">05</span><h3>Suluk <span class="ar" style="font-size:1.4rem;color:var(--gold-400)">السلوك</span></h3>
-        <p>Purify the heart by distancing yourself from what displeases Allah, and draw closer to Him by refining both your character and your heart.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
+<script type="module">
+const firebaseConfig = {
+  apiKey: "AIzaSyCFYefcLGmUtU65hofHSR1LP_Vp3yOG7Mc",
+  authDomain: "darul-ahbaab.firebaseapp.com",
+  databaseURL: "https://darul-ahbaab-default-rtdb.firebaseio.com",
+  projectId: "darul-ahbaab",
+  storageBucket: "darul-ahbaab.firebasestorage.app",
+  messagingSenderId: "316363661915",
+  appId: "1:316363661915:web:7c9b7802642a5e4e15157e",
+  measurementId: "G-45CEKYFWFL"
+};
 
-<!-- EXPECT -->
-<section class="band" id="expect">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow reveal">What to expect</span>
-      <h2 class="reveal d1">A place that feels like home.</h2>
-      <p class="reveal d2">More than a classroom — a safe, supportive community built around care for one another.</p>
-    </div>
-    <div class="exp-grid">
-      <div class="exp glass reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 11h16M6 11V7a2 2 0 012-2h8a2 2 0 012 2v4M5 11v6a2 2 0 002 2h10a2 2 0 002-2v-6"/></svg></div><h4>Food available</h4><p>Meals provided so students can focus on learning.</p></div>
-      <div class="exp glass reveal d1"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg></div><h4>Safe &amp; loving</h4><p>A nurturing environment where everyone belongs.</p></div>
-      <div class="exp glass reveal d2"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 14a4 4 0 100-8 4 4 0 000 8zM6 20a6 6 0 0112 0"/></svg></div><h4>Experienced teachers</h4><p>Learn from knowledgeable, qualified scholars.</p></div>
-      <div class="exp glass reveal d3"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M17 20a5 5 0 00-10 0M9 9a3 3 0 106 0 3 3 0 00-6 0zM3 20a4 4 0 015-3.9M21 20a4 4 0 00-5-3.9"/></svg></div><h4>Supportive peers</h4><p>Grow alongside a community that lifts you up.</p></div>
-    </div>
-  </div>
-</section>
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js';
+import { getDatabase, ref, onValue } from 'https://www.gstatic.com/firebasejs/10.7.0/firebase-database.js';
 
-<!-- SCHEDULE -->
-<section class="band" id="schedule">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow reveal">Lessons &amp; gatherings</span>
-      <h2 class="reveal d1">Our weekly rhythm.</h2>
-      <p class="reveal d2">Classes and community gatherings run from Asr until Maghrib — a natural, unhurried part of the day.</p>
-    </div>
-    <div class="sched-grid">
-      <div class="sched glass reveal"><span class="tag">Lessons</span><div class="days">Saturday — Tuesday</div>
-        <div class="time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>From Asr until Maghrib</div></div>
-      <div class="sched glass reveal d1"><span class="tag">Community gatherings</span><div class="days">Wednesday — Friday</div>
-        <div class="time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>From Asr until Maghrib</div></div>
-    </div>
-  </div>
-</section>
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
 
-<!-- CONTACT -->
-<section class="band contact" id="contact">
-  <div class="wrap contact-grid">
-    <div class="contact-info">
-      <span class="eyebrow reveal">Connect with us</span>
-      <h2 class="reveal d1">Come learn with us.</h2>
-      <p class="lead reveal d2">Reach out for more information, or stop by — you're always welcome at Darul Ahbaab.</p>
-      <div class="contact-list reveal d3">
-        <div class="cline"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.6A2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.6a2 2 0 01-.5 2.1L8 9.9a16 16 0 006 6l1.5-1.2a2 2 0 012.1-.5c.8.3 1.7.5 2.6.6a2 2 0 011.7 2z"/></svg></div><div><div class="lbl">Call us</div><a class="val" href="tel:+16146017834">614-601-7834</a></div></div>
-        <div class="cline"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v16H4zM4 6l8 6 8-6"/></svg></div><div><div class="lbl">Email</div><a class="val" href="mailto:Axbaabta1@gmail.com">Axbaabta1@gmail.com</a></div></div>
-        <div class="cline"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div><div><div class="lbl">Visit</div><span class="val">5075 Westerville Road, Columbus, OH 43231</span></div></div>
-        <div class="cline"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></div><div><div class="lbl">Instagram</div><a class="val" href="https://www.instagram.com/darul_ahbaab/" target="_blank" rel="noopener noreferrer">@darul_ahbaab</a></div></div>
-      </div>
-    </div>
-    <div class="contact-card glass reveal d2">
-      <h3>Send us a message</h3>
-      <p>Questions about enrollment, classes, or visiting? We'll get back to you.</p>
-      <div class="field"><label for="name">Your name</label><input id="name" type="text" placeholder="Full name"></div>
-      <div class="field"><label for="email">Email or phone</label><input id="email" type="text" placeholder="How can we reach you?"></div>
-      <div class="field"><label for="msg">Message</label><textarea id="msg" placeholder="Tell us what you'd like to know…"></textarea></div>
-      <button class="btn btn-gold" id="sendBtn" type="button">Send message
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></button>
-      <p class="form-note" id="formNote">Prefer to talk? Call 614-601-7834.</p>
-    </div>
-  </div>
-</section>
-</main>
-
-<footer>
-  <div class="wrap">
-    <div class="foot-grid">
-      <div class="foot-brand">
-        <a href="#top" class="brand"><svg class="navlogo" viewBox="0 0 2672 2352" role="img" aria-label="Dar Al-Ahbaab logo"><use href="#daLogo"/></svg><span>Darul Ahbaab<small>Columbus · OH</small></span></a>
-        <p>An Islamic learning center disseminating the Prophetic Sunnah through education and example.</p>
-      </div>
-      <div class="foot-cols">
-        <div class="foot-col"><h5>Explore</h5><a href="#about">About us</a><a href="#programs">Programs</a><a href="#expect">Community</a><a href="#schedule">Schedule</a></div>
-        <div class="foot-col"><h5>Visit</h5><a href="tel:+16146017834">614-601-7834</a><a href="mailto:Axbaabta1@gmail.com">Email us</a><a href="#contact">5075 Westerville Rd</a><a href="https://www.instagram.com/darul_ahbaab/" target="_blank" rel="noopener noreferrer">@darul_ahbaab</a></div>
-      </div>
-    </div>
-    <div class="foot-bottom"><span>© <span id="yr"></span> Darul Ahbaab. All rights reserved.</span><span class="arabic">دار الأحباب</span></div>
-  </div>
-</footer>
-
-<script>
-document.getElementById('yr').textContent=new Date().getFullYear();
-const hdr=document.getElementById('hdr');
-const onScroll=()=>hdr.classList.toggle('scrolled',window.scrollY>40);
-onScroll();window.addEventListener('scroll',onScroll,{passive:true});
-const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-/* reveal */
-const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.16,rootMargin:'0px 0px -8% 0px'});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-
-/* ---------- COSMOS canvas ---------- */
-const cv=document.getElementById('cosmos'),cx=cv.getContext('2d');
-let stars=[],shooting=[],W,H,DPR;
-function resize(){DPR=Math.min(devicePixelRatio||1,2);W=cv.width=innerWidth*DPR;H=cv.height=innerHeight*DPR;cv.style.width=innerWidth+'px';cv.style.height=innerHeight+'px';buildStars();}
-function buildStars(){
-  const n=Math.round(innerWidth*innerHeight/5200);
-  stars=[];
-  for(let i=0;i<n;i++){
-    stars.push({x:Math.random()*W,y:Math.random()*H,r:(Math.random()*1.5+.3)*DPR,
-      base:Math.random()*.5+.3,tw:Math.random()*Math.PI*2,sp:Math.random()*.02+.006,
-      vx:(Math.random()-.5)*.06*DPR,vy:(Math.random()*.05+.02)*DPR,
-      gold:Math.random()<.16});
+// Data: array of qasidahs with couplets
+const qasidahs = [
+  {
+    "title": "قَمَرٌ",
+    "englishTitle": "Moon",
+    "couplets": [
+      {
+        "arabic": [
+          "قَمَرٌ قَمَرٌ قَمَرٌ سِيدْنَا النَّبِي قَمَرٌ",
+          "وَجَمِيلْ وَجَمِيلْ وَجَمِيلْ سِيدْنَا النَّبِي وَجَمِيلْ"
+        ],
+        "transliteration": [
+          "qamarun qamarun qamarun sīdnan nabī qamarun",
+          "wajamīl wajamīl wajamīl sīdnan nabī wajamīl"
+        ],
+        "translation": [
+          "The Moon, The likeness of our Prophet is like the moon",
+          "Beautiful, Our master is truly beautiful"
+        ],
+        "isRefrain": true
+      },
+      {
+        "arabic": [
+          "وَأَجْمَلُ مِنْكَ لَمْ تَرَ قَطُّ عَيْنٍ [ الله الله ]",
+          "وَأَطْيَبُ مِنْكَ لَمْ تَلِدِ النِّسَآءُ [ الله الله ]"
+        ],
+        "transliteration": [
+          "wa ajmalu minka lam tara qaṭṭu ʿaynin Allah Allah",
+          "wa aṭyabu minka lam talidin nisaā’u Allah Allah"
+        ],
+        "translation": [
+          "More beautiful than you no eye has ever seen",
+          "And purer than you no woman ever givi birth to"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "خُلِقْتَ مُبَرَّأً مِنْ كُلِّ عَيْبٍ",
+          "كَأَنْكَ قَدْ خُلِقْتَ كَمَا تَشَآءُ"
+        ],
+        "transliteration": [
+          "khuliqta mubarra’an min kulli ʿaybin",
+          "ka anka qad khuliqta kamā tashaā’u"
+        ],
+        "translation": [
+          "You were created free from any flaw whatsoever",
+          "As if you were created just the way you wanted"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "قَمَرٌ قَمَرٌ قَمَرٌ سِيدْنَا النَّبِي قَمَرٌ",
+          "وَجَمِيلْ وَجَمِيلْ وَجَمِيلْ سِيدْنَا النَّبِي وَجَمِيلْ"
+        ],
+        "transliteration": [
+          "qamarun qamarun qamarun sīdnan nabī qamarun",
+          "wajamīl wajamīl wajamīl sīdnan nabī wajamīl"
+        ],
+        "translation": [
+          "The Moon, The likeness of our Prophet is like the moon",
+          "Beautiful, Our master is truly beautiful"
+        ],
+        "isRefrain": true
+      },
+      {
+        "arabic": [
+          "وَكَفُّ الْمُصْطَفَى كَالْوَرْدِ نَادِي [ الله الله ]",
+          "وَعِطْرُهَا يَبْقَى اِذَا مَسَّتْ أَيَادِي [ الله الله ]"
+        ],
+        "transliteration": [
+          "wakafful muṣṭafā kal wardi nādī Allah Allah",
+          "waʿiṭruhā yabqā idhā massat ayādī Allah Allah"
+        ],
+        "translation": [
+          "The palm of the Chosen One is like a rose-petal, silken and dewy",
+          "Its fragrant scent lingers upon the hands' brushing touch"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَعَمَّ نَوَالُهَا كُلَّ العِبَادِ",
+          "حَبِيبُ اللهِ يَا خَيْرَ البَرَايَا"
+        ],
+        "transliteration": [
+          "waʿamma nawāluhā kullal ʿibādi",
+          "ḥabību Allahi yā khayral barāyā"
+        ],
+        "translation": [
+          "Its great favor has encompassed all of humanity, and is widespread.",
+          "[Such is] the beloved of Allah. O very best of creation!"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "قَمَرٌ قَمَرٌ قَمَرٌ سِيدْنَا النَّبِي قَمَرٌ",
+          "وَجَمِيلْ وَجَمِيلْ وَجَمِيلْ سِيدْنَا النَّبِي وَجَمِيلْ"
+        ],
+        "transliteration": [
+          "qamarun qamarun qamarun sīdnan nabī qamarun",
+          "wajamīl wajamīl wajamīl sīdnan nabī wajamīl"
+        ],
+        "translation": [
+          "The Moon, The likeness of our Prophet is like the moon",
+          "Beautiful, Our master is truly beautiful"
+        ],
+        "isRefrain": true
+      },
+      {
+        "arabic": [
+          "كَحِيلُ الطَّرْفِ حَبِيبِي لَوْ تَرَاهُ [ الله الله ]",
+          "ضَحُوكُ السِّنَّ لِلْعَاشِقْ رَمَاهُ [ الله الله ]"
+        ],
+        "transliteration": [
+          "kaḥīluṭ ṭarfi ḥabībī law tarāhu Allah Allah",
+          "ḍaḥūkus sinna lilʿāshiq ramāhu Allah Allah"
+        ],
+        "translation": [
+          "Kohl-eyed is my beloved, were you to see him",
+          "Cheerful and smiling, leaving his admirers utterly love-struck"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "بَهِيُّ الطَّلْعَةْ فَالْمَوْلَى اصْطَفَاهُ",
+          "وَكُلُّ الخَلْقِ مِن أَنْوَارِ طَهَ"
+        ],
+        "transliteration": [
+          "bahiyyuṭ ṭalʿah fal mawlāṣ ṭafāhu",
+          "wakullul khalqi min anwāri ṭaha"
+        ],
+        "translation": [
+          "Magnificent of appearance, for the Lord did choose him",
+          "While all of creation is lit up from the light of Ta-Ha"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "قَمَرٌ قَمَرٌ قَمَرٌ سِيدْنَا النَّبِي قَمَرٌ",
+          "وَجَمِيلْ وَجَمِيلْ وَجَمِيلْ سِيدْنَا النَّبِي وَجَمِيلْ"
+        ],
+        "transliteration": [
+          "qamarun qamarun qamarun sīdnan nabī qamarun",
+          "wajamīl wajamīl wajamīl sīdnan nabī wajamīl"
+        ],
+        "translation": [
+          "The Moon, The likeness of our Prophet is like the moon",
+          "Beautiful, Our master is truly beautiful"
+        ],
+        "isRefrain": true
+      },
+      {
+        "arabic": [
+          "وَلَا ظِلُّ لَهُ بَلْ كَانَ نُورَا [ الله الله ]",
+          "تَنَالُ الشَّمْسَ مِنْهُ وَالْبُدُورَا [ الله الله ]"
+        ],
+        "transliteration": [
+          "walā ẓillu lahu bal kāna nūrā Allah Allah",
+          "tanālush shamsa minhu wal budūrā Allah Allah"
+        ],
+        "translation": [
+          "He had no taint of shadow, rather he was light",
+          "The moon and sun both benefited from him"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَلَمْ يَكُنِ الْهُدَى لَوْلَا ظُهُورَهْ",
+          "وَكُلُّ الْكَوْنِ أَنَارَ بِنُورِ طَهَ"
+        ],
+        "transliteration": [
+          "walam yakunil hudā lawlā ẓuhūrah",
+          "wakullul kawni anāra binūri ṭaha"
+        ],
+        "translation": [
+          "There would have been no guidance without his appearance",
+          "The whole universe became illuminated through the light of Ta-Ha"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "قَمَرٌ قَمَرٌ قَمَرٌ سِيدْنَا النَّبِي قَمَرٌ",
+          "وَجَمِيلْ وَجَمِيلْ وَجَمِيلْ سِيدْنَا النَّبِي وَجَمِيلْ"
+        ],
+        "transliteration": [
+          "qamarun qamarun qamarun sīdnan nabī qamarun",
+          "wajamīl wajamīl wajamīl sīdnan nabī wajamīl"
+        ],
+        "translation": [
+          "The Moon, The likeness of our Prophet is like the moon",
+          "Beautiful, Our master is truly beautiful"
+        ],
+        "isRefrain": true
+      },
+      {
+        "arabic": [
+          "وَرِيقُ المُصْطَفَى يَشْفِي العَلِيلَ [ الله الله ]",
+          "وَعَيْنُ قَتَادَةَ خُذْهَا دَلِيلَا [ الله الله ]"
+        ],
+        "transliteration": [
+          "warīqul muṣṭafā yashfīl ʿalīla Allah Allah",
+          "waʿaynu qatādata khudhhā dalīlā Allah Allah"
+        ],
+        "translation": [
+          "The saliva of the Chosen One heals the ailing, the sick.",
+          "Take the eye of Qatada as evidence [of this]"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "تَفَلْ فِي الْبِئْرِ أَضْحَتْ سَلْسَبِيلًا",
+          "وَصَارَ لِصَحْبِهِ شَهْدًا مُدَامَا"
+        ],
+        "transliteration": [
+          "tafal fīl bi’ri aḍḥat salsabīlan",
+          "waṣāra liṣaḥbihi shahdan mudāmā"
+        ],
+        "translation": [
+          "He spat in the well and it became a flowing spring",
+          "And it became like honey for his companions."
+        ],
+        "isRefrain": false
+      }
+    ]
+  },
+  {
+    "title": "Diya'ul Lami: Introduction",
+    "englishTitle": "Introduction",
+    "couplets": [
+      {
+        "arabic": [
+          "يَارَبِّ صَلِّ عَلَى مُحَمَّدْ",
+          "يَارَبِّ صَلِّ عَلَيْهِ وَسَلِّمْ"
+        ],
+        "transliteration": [
+          "yārabbi ṣalli ʿalā muḥammad",
+          "yārabbi ṣalli ʿalayhi wasallim"
+        ],
+        "translation": [
+          "O Lord, send Your mercy upon Muhammad",
+          "O Lord, send Your mercy and peace upon Muhammad."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "يَارَبِّ صَلِّ عَلَى مُحَمَّدْ",
+          "حَبِيبِكَ الشَّافِعِ المُشَفَّعْ"
+        ],
+        "transliteration": [
+          "yārabbi ṣalli ʿalā muḥammad",
+          "ḥabībikash shāfiʿil mushaffaʿ"
+        ],
+        "translation": [
+          "O Lord, send Your mercy upon Muhammad",
+          "Your Beloved One, the Intercessor, whose intercession is accepted"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "يَارَبِّ صَلِّ عَلَى مُحَمَّدْ",
+          "أَعْلَى الوَرَى رُتْبَةً وَ أَرْفَعْ"
+        ],
+        "transliteration": [
+          "yārabbi ṣalli ʿalā muḥammad",
+          "aʿlal warā rutbatan wa arfaʿ"
+        ],
+        "translation": [
+          "O Lord, send Your mercy upon Muhammad",
+          "Most lofty of mankind in station and most exalted"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "يَارَبِّ صَلِّ عَلَى مُحَمَّدْ",
+          "أَسْمَى البَرَايَا جَاهَاً وَ أَوْسَعْ"
+        ],
+        "transliteration": [
+          "yārabbi ṣalli ʿalā muḥammad",
+          "asmal barāyā jāhāan wa awsaʿ"
+        ],
+        "translation": [
+          "O Lord, send Your mercy upon Muhammad",
+          "Highest and most vast of creation in rank"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "يَارَبِّ صَلِّ عَلَى مُحَمَّدْ",
+          "وَ اسْلُكْ بِنَا رَبِّ خَيْرَ مَهْيَعْ"
+        ],
+        "transliteration": [
+          "yārabbi ṣalli ʿalā muḥammad",
+          "was luk binā rabbi khayra mahyaʿ"
+        ],
+        "translation": [
+          "O Lord, send Your mercy upon Muhammad",
+          "Lead us, my Lord, upon the most virtuous of paths"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "يَارَبِّ صَلِّ عَلَى مُحَمَّدْ",
+          "وَ عَافِنَا وَ اشْفِ كُلَّ مُوجَعْ"
+        ],
+        "transliteration": [
+          "yārabbi ṣalli ʿalā muḥammad",
+          "wa ʿāfinā wash fi kulla mūjaʿ"
+        ],
+        "translation": [
+          "O Lord, send Your mercy upon Muhammad",
+          "Give us us well-being and cure every suffering one"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "يَارَبِّ صَلِّ عَلَى مُحَمَّدْ",
+          "وَ أَصلِحِ القَلْبَ وَ اعْفُ وَ انْفَعْ"
+        ],
+        "transliteration": [
+          "yārabbi ṣalli ʿalā muḥammad",
+          "wa aṣliḥil qalba waʿ fu wan faʿ"
+        ],
+        "translation": [
+          "O Lord, send Your mercy upon Muhammad",
+          "Rectify hearts, pardon us and benefit us"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "يَارَبِّ صَلِّ عَلَى مُحَمَّدْ",
+          "وَ اكْفِ المُعَادِي وَ اصْرِفْهُ وَ ارْدَعْ"
+        ],
+        "transliteration": [
+          "yārabbi ṣalli ʿalā muḥammad",
+          "wak fil muʿādī waṣ rifhu war daʿ"
+        ],
+        "translation": [
+          "O Lord, send Your mercy upon Muhammad",
+          "Restrain, divert and deter every aggressor"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "يَارَبِّ صَلِّ عَلَى مُحَمَّدْ",
+          "نَحِلُّ فِي حِصْنِكَ المُمَنَّعْ"
+        ],
+        "transliteration": [
+          "yārabbi ṣalli ʿalā muḥammad",
+          "naḥillu fī ḥiṣnikal mumannaʿ"
+        ],
+        "translation": [
+          "O Lord, send Your mercy upon Muhammad",
+          "Allow us to dwell in Your impenetrable fortress"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "يَارَبِّ صَلِّ عَلَى مُحَمَّدْ",
+          "رَبِّ ارْضَ عَنَّا رِضَاكَ الأَرْفَعْ"
+        ],
+        "transliteration": [
+          "yārabbi ṣalli ʿalā muḥammad",
+          "rabbir ḍa ʿannā riḍākal arfaʿ"
+        ],
+        "translation": [
+          "O Lord, send Your mercy upon Muhammad",
+          "Lord, be pleased with us with Your Most Exalted Pleasure"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "يَارَبِّ صَلِّ عَلَى مُحَمَّدْ",
+          "وَ اجْعَلْ لَنَا فِي الجِنَانِ مَجْمَعْ"
+        ],
+        "transliteration": [
+          "yārabbi ṣalli ʿalā muḥammad",
+          "waj ʿal lanā fīl jināni majmaʿ"
+        ],
+        "translation": [
+          "O Lord, send Your mercy upon Muhammad",
+          "And make the Gardens of Paradise our place of gathering"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "يَارَبِّ صَلِّ عَلَى مُحَمَّدْ",
+          "رَافِقْ بِنَا خَيْرَ خَلْقِكَ اجْمَعْ"
+        ],
+        "transliteration": [
+          "yārabbi ṣalli ʿalā muḥammad",
+          "rāfiq binā khayra khalqikaj maʿ"
+        ],
+        "translation": [
+          "O Lord, send Your mercy upon Muhammad",
+          "Grant us all the company of the best of Your creation"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "يَارَبِّ صَلِّ عَلَى مُحَمَّدْ",
+          "يَارَبِّ صَلِّ عَلَيْهِ وَسَلِّم"
+        ],
+        "transliteration": [
+          "yārabbi ṣalli ʿalā muḥammad",
+          "yārabbi ṣalli ʿalayhi wasallim"
+        ],
+        "translation": [
+          "O Lord, send Your mercy upon Muhammad",
+          "Oh Allah, send Your mercy, peace and blessings upon him and his Family"
+        ],
+        "isRefrain": false
+      }
+    ]
+  },
+  {
+    "title": "Diya'ul Lami: Chapter 1",
+    "englishTitle": "Chapter 1",
+    "couplets": [
+      {
+        "arabic": [
+          "الحَمْدُ لِلّهِ الَّذِي هَدَانَا",
+          "بِعَبْدِهِ المُخْتَارِ مَن دَعَانَا"
+        ],
+        "transliteration": [
+          "alḥamdu lillāhil ladhī hadānā",
+          "biʿabdihil mukhtāri man daʿānā"
+        ],
+        "translation": [
+          "Praise be to the One who guided us",
+          "Through His chosen slave, who summoned us"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "إِلَيْهِ بِالإِذْنِ وَ قَدْ نَادَانَا",
+          "لَبَّيْكَ يَا مَنْ دَلَّنَا وَحَدَانَا"
+        ],
+        "transliteration": [
+          "ilayhi bil idhni wa qad nādānā",
+          "labbayka yā man dallanā waḥadānā"
+        ],
+        "translation": [
+          "To HIm, by (His) permission, indeed he invited us",
+          "At your service [O Prophet], O one who guided and urged us forward"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "صَلَّى عَلَيْكَ اللهُ بَارِئُكَ الَّذِي",
+          "بِكَ يَا مُشَفَّعُ خَصَّنَا وَ حَبَانَا"
+        ],
+        "transliteration": [
+          "ṣallā ʿalayka Allahu bāri’ukal ladhī",
+          "bika yā mushaffaʿu khaṣṣanā wa ḥabānā"
+        ],
+        "translation": [
+          "Allāh - your creator - has sent mercy upon you",
+          "Through you, O Possessor of Intercession, He distinguished and favoured us"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "مَعَ آلِكَ الأَطْهَارِ مَعْدِنِ سِرِّكَ الــ",
+          "أَسْمَى فَهُمْ سُفُنُ النَّجَاةِ حِمَانَا"
+        ],
+        "transliteration": [
+          "maʿa ālikal aṭhāri maʿdini sirrikal",
+          "asmā fahum sufunun najāti ḥimānā"
+        ],
+        "translation": [
+          "Together with your pure Family, the treasure trove of your highest secret,",
+          "For they are the ships of salvation, our sanctuary"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ عَلَى صَحَابَتِكَ الكِرَامِ حُمَاةِ دِينِكَ",
+          "أَصْبَحُوا لِوَلَائِهِ عُنْوَانَا"
+        ],
+        "transliteration": [
+          "wa ʿalā ṣaḥābatikal kirāmi ḥumāti dīnika",
+          "aṣbaḥū liwalā’ihi ʿunwānā"
+        ],
+        "translation": [
+          "And upon your noble Companions, the defenders of your religion",
+          "They are models of loyalty to him"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ التَّابِعِينَ لَهُمْ بِصِدْقٍ مَا حَدَا",
+          "حَادِي المَوَدَّةِ هَيَّجَ الأَشْجَانَا"
+        ],
+        "transliteration": [
+          "wat tābiʿīna lahum biṣidqin mā ḥadā",
+          "ḥādīl mawaddati hayyajal ashjānā"
+        ],
+        "translation": [
+          "And upon those who follow them with truthfulness, as long as",
+          "The camel singer urges on the caravan of love, igniting the fires of yearning"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ اللهِ مَا ذُكِرَ الحَبِيبُ لَدَى المُحِبّ",
+          "إِلَّا وَ أَضْحَى وَالِهَاً نَشْوَانَا"
+        ],
+        "transliteration": [
+          "wa Allahi mā dhukiral ḥabību ladal muḥibb",
+          "illā wa aḍḥā wālihāan nashwānā"
+        ],
+        "translation": [
+          "By Allāh, never is the Beloved mentioned in the presence of the lover",
+          "Except that he becomes passionately overwhelmed with joy"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "أَيْنَ المُحِبُّونَ الَّذِينَ عَلَيْهِمُ",
+          "بَذْلُ النُّفُوسِ مَعَ النَّفَائِسِ هَانَا؟"
+        ],
+        "transliteration": [
+          "aynal muḥibbūnal ladhīna ʿalayhimu",
+          "badhlun nufūsi maʿan nafā’isi hānā"
+        ],
+        "translation": [
+          "Where are the lovers who find ease",
+          "In sacrificing their souls and every precious thing [for their beloved]?"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "لَا يَسْمَعُونَ بِذِكْرِ طَهَ المُصْطَفَى",
+          "إِلَّا بِهِ انْتَعَشُوا وَ أَذْهَبَ رَانَا"
+        ],
+        "transliteration": [
+          "lā yasmaʿūna bidhikri ṭahal muṣṭafā",
+          "illā bihin taʿashū wa adhhaba rānā"
+        ],
+        "translation": [
+          "Never do they hear a mention of Ṭaha, the Chosen one,",
+          "Except that by it they are revived and the rust [upon their heart] vanishes"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "فَاهْتَاجَتِ الأَرْوَاحُ تَشْتَاقُ اللِّقَا",
+          "وَ تَحِنُّ تَسأَلُ رَبَّهَا الرِّضْوَانَا"
+        ],
+        "transliteration": [
+          "fah tājatil arwāḥu tashtāqul liqā",
+          "wa taḥinnu tasalu rabbahar riḍwānā"
+        ],
+        "translation": [
+          "Their souls have become aroused, yearning for the encounter,",
+          "Longing and asking their Lord for His Good Pleasure"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "حَالُ المُحِبِّينَ كَذَا فَاسْمَعْ إِلى",
+          "سِيَرِ المُشَفَّعِ وَ ارْهِفِ الآذَانَا"
+        ],
+        "transliteration": [
+          "ḥālul muḥibbīna kadhā fas maʿ ilā",
+          "siyaril mushaffaʿi war hifil ādhānā"
+        ],
+        "translation": [
+          "This is the state of the lovers, so listen closely",
+          "To the life story of the one whose intercession is accepted"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ انْصِتْ إِلَى أَوْصَافِ طَهَ المُجْتَبَى",
+          "وَ احْضِرْ لِقَلْبِكَ يَمْتَلِئْ وِجْدَانَا"
+        ],
+        "transliteration": [
+          "wan ṣit ilā awṣāfi ṭahal mujtabā",
+          "waḥ ḍir liqalbika yamtali’ wijdānā"
+        ],
+        "translation": [
+          "And lend an ear to the description of Ṭaha, the Elected One,",
+          "Make your heart present, and it will be filled with ecstasy"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "يَارَبَّنَا صَلِّ وَ سَلِّم دَائِماً",
+          "عَلَى حَبِيبِكَ مَن إِلَيكَ دَعَانَا"
+        ],
+        "transliteration": [
+          "yārabbanā ṣalli wa sallim dā’iman",
+          "ʿalā ḥabībika man ilaīka daʿānā"
+        ],
+        "translation": [
+          "Our Lord, send Your mercy and peace perpetually",
+          "Upon Your Beloved, the one who invited us to You,"
+        ],
+        "isRefrain": false
+      }
+    ]
+  },
+  {
+    "title": "Diya'ul Lami: Chapter 2",
+    "englishTitle": "Chapter 2",
+    "couplets": [
+      {
+        "arabic": [
+          "نَبَّأَنَا اللهُ فَقَالَ \"جَاءَكُمْ",
+          "نُورٌ\" فَسُبْحَانَ الَّذِي أَنْبَانَا"
+        ],
+        "transliteration": [
+          "nabba’ana Allahu faqāla jā’akum",
+          "nūrun fasubḥānal ladhī anbānā"
+        ],
+        "translation": [
+          "Allāh has announced to us [in the Qur'an], saying, 'Indeed, there has come to you...",
+          "A light'. So glory be to the One who informed us!"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ النُّورُ طَهَ عَبْدُهُ مَنَّ بِهِ",
+          "فِي ذِكْرِهِ, أَعْظِمْ بِهِ مَنَّانَا"
+        ],
+        "transliteration": [
+          "wan nūru ṭaha ʿabduhu manna bihi",
+          "fī dhikrihi aʿẓim bihi mannānā"
+        ],
+        "translation": [
+          "And the light is Ṭaha, His servant, He has bestowed [great] favor through him",
+          "As mentioned in His reminder, so declare the magnificence of the Bestower of Gifts!"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "هُوَ رَحْمَةُ المَولَى تَأَمَّلْ قَوْلَهُ",
+          "فَلْيَفْرَحُوا، وَ اغْدُ بِهِ فَرْحَانَا"
+        ],
+        "transliteration": [
+          "huwa raḥmatul mawlā ta’ammal qawlahu",
+          "falyafraḥūā wagh du bihi farḥānā"
+        ],
+        "translation": [
+          "He is the mercy of our Master. Reflect upon His words:",
+          "'Rejoice' and through him go forth in utter happiness"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "مُسْتَمْسِكَاً بِالعُرْوَةِ الوُثْقَى",
+          "وَ مُعْتَصِمَاً بِحَبْلِ اللهِ مَنْ أَنْشَانَا"
+        ],
+        "transliteration": [
+          "mustamsikāan bil ʿurwatil wuthqā",
+          "wa muʿtaṣimāan biḥablillāhi man anshānā"
+        ],
+        "translation": [
+          "While taking hold of the firmest handhold,",
+          "And clinging to the rope of Allāh, our Originator"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ اسْتَشْعِرَنْ أَنْوَارَ مَنْ قِيلَ : مَتَى",
+          "كُنْتَ نَبِيَّاً؟ قَالَ : آدَمُ كَانَا"
+        ],
+        "transliteration": [
+          "was tashʿiran anwāra man qīla matā",
+          "kunta nabiyyāan qāla ādamu kānā"
+        ],
+        "translation": [
+          "Experience the lights of the one, who when asked,",
+          "'When were you a prophet?' replied, 'When Adam was..."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "بَيْنَ التُّرَابِ وَ بَيْنَ مَاءٍ فَاسْتَفِقْ",
+          "مِنْ غَفْلَةٍ عَنْ ذَا وَ كُنْ يَقْظَانَا"
+        ],
+        "transliteration": [
+          "baynat turābi wa bayna mā’in fas tafiq",
+          "min ghaflatin ʿan dhā wa kun yaqẓānā"
+        ],
+        "translation": [
+          "...between earth and water! So awaken",
+          "From your heedlessness concerning this and become enlightened!"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ اعْبُرْ إِلَى أَسْرَارِ رَبِّي لَمْ يَزَلْ",
+          "يَنْقُلُنِي بَيْنَ الخِيَارِ مُصَانَا"
+        ],
+        "transliteration": [
+          "waʿ bur ilā asrāri rabbī lam yazal",
+          "yanqulunī baynal khiyāri muṣānā"
+        ],
+        "translation": [
+          "Contemplate the secrets of 'My Lord continued",
+          "To transport me safely through the best [of loins]."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "لَمْ تَفْتَرِقْ مِن شُعْبَتَيِنِ إِلَّا أَنَا",
+          "فِي خَيْرِهَا حَتَّى بُرُوزِيَ آنَا"
+        ],
+        "transliteration": [
+          "lam taftariq min shuʿbatayini illā anā",
+          "fī khayrihā ḥattā burūziya ānā"
+        ],
+        "translation": [
+          "'Never did two lineages branch out except that I was",
+          "in the better half until the time came for my emergence,"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "فَأَنَا خِيَارٌ مِنْ خِيَارٍ قَدْ خَرَجْتُ",
+          "مِنْ نِكَاحٍ لِي إِلَهِيَ صَانَا"
+        ],
+        "transliteration": [
+          "fa anā khiyārun min khiyārin qad kharajtu",
+          "min nikāḥin lī ilahiya ṣānā"
+        ],
+        "translation": [
+          "'For I am the best of the best, I have come into existence",
+          "Through pure unions [alone]; my Lord has protected this for me'."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "طَهَّرَهُ اللهُ حَمَاهُ اخْتَارَهُ",
+          "وَمَا بَرَى كَمِثْلِهِ إِنْسَانَا"
+        ],
+        "transliteration": [
+          "ṭahharahu Allahu ḥamāhukh tārahu",
+          "wamā barā kamithlihi insānā"
+        ],
+        "translation": [
+          "Allāh has purified him, protected him and chosen him,",
+          "Never has any human being been created like him!"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ بِحُبِّهِ وَ بِذِكْرِهِ وَ النَّصْرِ وَ التَّوْقِيرِ",
+          "رَبُّ العَرْشِ قَدْ أَوْصَانَا"
+        ],
+        "transliteration": [
+          "wa biḥubbihi wa bidhikrihi wan naṣri wat tawqīri",
+          "rabbul ʿarshi qad awṣānā"
+        ],
+        "translation": [
+          "To love him, to mention him, to give him victory and to respect him,",
+          "Thus we are directed by the Lord of the Throne"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "يَا رَبَّنَا صَلِّ وَ سَلِّمْ دَائِماً",
+          "عَلَى حَبِيبِكَ مَنْ إِلَيْكَ دَعَانَا"
+        ],
+        "transliteration": [
+          "yā rabbanā ṣalli wa sallim dā’iman",
+          "ʿalā ḥabībika man ilayka daʿānā"
+        ],
+        "translation": [
+          "Our Lord, send Your Mercy and Peace perpetually",
+          "Upon Your Beloved, the one who invited us to You."
+        ],
+        "isRefrain": false
+      }
+    ]
+  },
+  {
+    "title": "Diya'ul Lami: Chapter 3",
+    "englishTitle": "Chapter 3",
+    "couplets": [
+      {
+        "arabic": [
+          "هَذَا وَ قَدْ نَشَرَ الإِلَهُ نُعُوتَهُ",
+          "فِي الكُتْبِ بَيَّنَهَا لَنَا تِبْيَانَا"
+        ],
+        "transliteration": [
+          "hadhā wa qad nasharal ilahu nuʿūtahu",
+          "fīl kutbi bayyanahā lanā tibyānā"
+        ],
+        "translation": [
+          "So indeed the Divine has spread mention of His attributes",
+          "In the revealed books, announcing them to us clearly"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "أَخَذَ مِيثَاقَ النَّبِيِّينَ لَمَا",
+          "آتيْتُكُمْ مِنْ حِكْمَةٍ إِحْسَانَا"
+        ],
+        "transliteration": [
+          "akhadha mīthāqan nabiyyīna lamā",
+          "ātytukum min ḥikmatin iḥsānā"
+        ],
+        "translation": [
+          "He took the covenant from the Prophets",
+          "When [He said] 'I have given you of wisdom, the most excellent,"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ جَاءَكُمْ رَسُولُنَا لَتُؤْمِنُنَّ",
+          "وَ تَنْصُرُونَ وَ تُصْبِحُونَ أَعْوَانَا"
+        ],
+        "transliteration": [
+          "wa jā’akum rasūlunā latu’minunna",
+          "wa tanṣurūna wa tuṣbiḥūna aʿwānā"
+        ],
+        "translation": [
+          "'And [when] Our Messenger comes to you, Then you must believe in him,",
+          "give victory to him, And become his helpers.'"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "قَدْ بَشَّرُوا أَقْوَامَهُمْ بِالمُصْطَفَى",
+          "أَعْظِمْ بِذَلِكَ رُتْبَةً وَ مَكَانَا"
+        ],
+        "transliteration": [
+          "qad bashsharū aqwāmahum bil muṣṭafā",
+          "aʿẓim bidhalika rutbatan wa makānā"
+        ],
+        "translation": [
+          "They gave their people the good news of the coming of the Chosen One,",
+          "Oh how great is that station and rank!"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "فَهُوَ وَ إِنْ جَاءَ الأَخِيرُ مُقَدَّمٌ",
+          "يَمْشُونَ تَحْتَ لِوَاءِ مَن نَادَانَا"
+        ],
+        "transliteration": [
+          "fahuwa wa in jā’al akhīru muqaddamun",
+          "yamshūna taḥta liwā’i man nādānā"
+        ],
+        "translation": [
+          "Although he was the last to be sent, he will be the foremost,",
+          "[All the Prophets] will walk under the banner of the one who called us."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "يَا أُمَّةَ الإِسْلَامِ أَوَّلُ شَافِعٍ",
+          "وَ مُشَفَّعٍ أَنَا قَطُّ لَا أَتَوَانَى"
+        ],
+        "transliteration": [
+          "yā ummatal islāmi awwalu shāfiʿin",
+          "wa mushaffaʿin anā qaṭṭu lā atawānā"
+        ],
+        "translation": [
+          "'O Ummah of Islam! I am the first intercessor",
+          "and my intercession will be accepted, I will not hold back in any way whatsoever"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "حَتَّى أُنَادَى ارْفَعْ وَ سَلْ تُعْطَ وَ قُلْ",
+          "يُسْمَعْ لِقَوْلِكَ نَجْمُ فَخْرِكَ بَانَا"
+        ],
+        "transliteration": [
+          "ḥattā unādār faʿ wa sal tuʿṭa wa qul",
+          "yusmaʿ liqawlika najmu fakhrika bānā"
+        ],
+        "translation": [
+          "'Until it will be said, “Rise [from prostration]; ask and you will be given;",
+          "speak and you will be heard, for the star of your glory has become manifest.\""
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ لِوَاءُ حَمْدِ اللهِ جَلَّ بِيَدِي",
+          "وَ لَأَوَّلاً آتِي أَنَا الجِنَانَا"
+        ],
+        "transliteration": [
+          "wa liwā’u ḥamdillāhi jalla biyadī",
+          "wa la’awwalan ātī anal jinānā"
+        ],
+        "translation": [
+          "\"The banner of the praise of Allāh Most High will be in my hand,",
+          "And indeed I will be the first to enter Paradise!"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ أَكْرَمُ الخَلْقِ عَلَى اللهِ أَنَا",
+          "فَلَقَدْ حَبَاكَ اللهُ مِنْهُ حَنَانَا"
+        ],
+        "transliteration": [
+          "wa akramul khalqi ʿala Allahi anā",
+          "falaqad ḥabāka Allahu minhu ḥanānā"
+        ],
+        "translation": [
+          "'I am the most honorable of creation with Allāh.'",
+          "Indeed Allāh has granted you compassion from himself"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ لَسَوْفَ يُعْطِيكَ فَتَرضَى، جَلَّ مِنْ",
+          "مُعْطٍ تَقَاصَرَ عَن عَطَاهُ نُهَانَا"
+        ],
+        "transliteration": [
+          "wa lasawfa yuʿṭīka fatarḍā jalla min",
+          "muʿṭin taqāṣara ʿan ʿaṭāhu nuhānā"
+        ],
+        "translation": [
+          "'And [your Lord] will give to you so that you are pleased' - Exalted is the Giver!",
+          "Our intellects are incapable of grasping His bounty!"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "بِاللّهِ كَرِّرْ ذِكْرَ وَصْفِ مُحَمَّدٍ",
+          "كَيْمَا تُزِيحَ عَنِ القُلُوبِ الرَّانَا"
+        ],
+        "transliteration": [
+          "billāhi karrir dhikra waṣfi muḥammadin",
+          "kaymā tuzīḥa ʿanil qulūbir rānā"
+        ],
+        "translation": [
+          "By Allāh, mention the attributes of Muḥammad time and time again",
+          "In order to remove the rust from [our] hearts."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "يَا رَبَّنَا صَلِّ وَ سَلِّمْ دَائِماً",
+          "عَلَى حَبِيبِكَ مَنْ إِلَيْكَ دَعَانَا"
+        ],
+        "transliteration": [
+          "yā rabbanā ṣalli wa sallim dā’iman",
+          "ʿalā ḥabībika man ilayka daʿānā"
+        ],
+        "translation": [
+          "Our Lord, send Your Mercy and Peace perpetually",
+          "Upon Your Beloved, the one who invited us to You."
+        ],
+        "isRefrain": false
+      }
+    ]
+  },
+  {
+    "title": "Diya'ul Lami: Chapter 4",
+    "englishTitle": "Chapter 4",
+    "couplets": [
+      {
+        "arabic": [
+          "لَمَّا دَنَا وَقْتُ البُرُوزِ لأَحْمَدٍ",
+          "عَنْ إِذْنِ مَنْ مَا شَاءَهُ قَدْ كَانَا"
+        ],
+        "transliteration": [
+          "lammā danā waqtul burūzi laḥmadin",
+          "ʿan idhni man mā shā’ahu qad kānā"
+        ],
+        "translation": [
+          "When the time drew near for the emergence of Aḥmad",
+          "He came into being by the permission of the One who willed it so."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "حَمَلَتْ بِهِ الأُمُّ الأَمِينَةُ بِنْتُ وَهْبٍ",
+          "مَن لَهَا أَعْلَى الإِلَهُ مَكَانَا"
+        ],
+        "transliteration": [
+          "ḥamalat bihil ummul amīnatu bintu wahbin",
+          "man lahā aʿlal ilahu makānā"
+        ],
+        "translation": [
+          "The trustworthy mother, the daughter of Wahb,",
+          "She whose station had been elevated by God, became pregnant with him,"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "مِن وَالِدِ المُخْتَارِ عَبْدِ اللهِ بِنْ",
+          "عَبْدٍ لِمُطَّلِبٍ رَأَى البُرْهَانَا"
+        ],
+        "transliteration": [
+          "min wālidil mukhtāri ʿabdillāhi bin",
+          "ʿabdin limuṭṭalibin ra’al burhānā"
+        ],
+        "translation": [
+          "From the chosen father 'Abd-Allāh, the son of 'Abd al-Muttalib",
+          "who saw the evident proof"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "قَدْ كَانَ يَغْمُرُ نُورُ طَهَ وَجْهَهُ",
+          "وَ سَرَى إِلَى الإِبْنِ المَصُونِ عِيَانَا"
+        ],
+        "transliteration": [
+          "qad kāna yaghmuru nūru ṭaha wajhahu",
+          "wa sarā ilal ibnil maṣūni ʿiyānā"
+        ],
+        "translation": [
+          "His face overflowed with the light of Ṭaha",
+          "Then it was transferred to the protected son ['Abd-Allāh] for all to see"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ هُوَ ابْنُ هَاشِمٍ الكَرِيمِ الشَّهْمِ بِنْ",
+          "عَبْدِ مَنَافٍ ابْنِ قُصَيٍّ كَانَا"
+        ],
+        "transliteration": [
+          "wa huwab nu hāshiminal karīmish shahmi bin",
+          "ʿabdi manāfinb ni quṣayyin kānā"
+        ],
+        "translation": [
+          "And he ['Abd al-Muttalib] was the son of Hāshim, the generous and noble [Who] was",
+          "The son of 'Abdu Manāf, the son of Qusayy"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَالِدُهُ يُدْعَى حَكِيمًا شَأْنُهُ",
+          "قَدِ اعْتَلَى أَعْزِزْ بِذَلِكَ شَانَا"
+        ],
+        "transliteration": [
+          "wāliduhu yudʿā ḥakīman sha’nuhu",
+          "qadiʿ talā aʿziz bidhalika shānā"
+        ],
+        "translation": [
+          "And [Qusayy's] father was named 'The Wise', his status has been elevated,",
+          "Indeed by them the lineage was strengthened"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَاحْفَظْ أُصُولَ المُصْطَفَى حَتَّى تَرَى",
+          "فِي سِلْسِلَاتِ أُصُولِهِ عَدْنَانَا"
+        ],
+        "transliteration": [
+          "waḥ faẓ uṣūlal muṣṭafā ḥattā tarā",
+          "fī silsilāti uṣūlihi ʿadnānā"
+        ],
+        "translation": [
+          "Commit to memory the lineage of the Chosen One",
+          "Until you see ʿAdnān in the line of his ancestors"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "فَهُنَاكَ قِفْ وَ اعْلَمْ بِرَفْعِهِ إِلَى اسْمَاعِيلَ",
+          "كَانَ لِلأَبِ مِعْوَانَا"
+        ],
+        "transliteration": [
+          "fahunāka qif waʿ lam birafʿihi ilās māʿīla",
+          "kāna lilabi miʿwānā"
+        ],
+        "translation": [
+          "At that point, stop and realize that the lineage is traced back to Ismaīl,",
+          "who was a loyal helper to his father"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ حِينَمَا حَمَلَتْ بِهِ آمِنَةٌ",
+          "لَمْ تَشْكُ شَيْئاً يَأْخُذُ النِّسْوَانَا"
+        ],
+        "transliteration": [
+          "wa ḥīnamā ḥamalat bihi āminatun",
+          "lam tashku shay’an ya’khudhun niswānā"
+        ],
+        "translation": [
+          "And while Āmina was carrying him,",
+          "She did not complain of anything that befalls [pregnant] women"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ بِهَا أَحَاطَ اللُّطْفُ مِنْ رَبِّ السَّمَا",
+          "أَقْصَى الأَذَى وَ الهَمَّ وَ الأَحْزَانَا"
+        ],
+        "transliteration": [
+          "wa bihā aḥāṭal luṭfu min rabbis samā",
+          "aqṣal adhā wal hamma wal aḥzānā"
+        ],
+        "translation": [
+          "Gentleness from the Lord of Heaven encompassed her",
+          "And drove away from her all harm, worry and sadness"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ رَأَتْ كَمَا قَدْ جَاءَ مَا عَلِمَتْ بِهِ",
+          "أَنَّ المُهَيْمِنَ شَرَّفَ الأَكْوَانَا"
+        ],
+        "transliteration": [
+          "wa ra’at kamā qad jā’a mā ʿalimat bihi",
+          "annal muhaymina sharrafal akwānā"
+        ],
+        "translation": [
+          "And she saw [in a vision], as is narrated what she had come to know",
+          "That the Guardian (Allāh) had honored the universe"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "بِالطُّهْرِ مَنْ فِي بَطْنِهَا فَاسْتَبْشَرَتْ",
+          "وَ دَنَا المَخَاضُ فَأُتْرِعَتْ رِضْوَانَا"
+        ],
+        "transliteration": [
+          "biṭ ṭuhri man fī baṭnihā fas tabsharat",
+          "wa danal makhāḍu fa utriʿat riḍwānā"
+        ],
+        "translation": [
+          "Through the pure one who was in her womb, so she rejoiced,",
+          "As the time for labour drew near, she was filled with happiness"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ تَجَلَّتِ الأَنْوَارُ مِنْ كُلِّ الجِهَاتِ",
+          "فَوَقْتُ مِيلَادِ المُشَفَّعِ حَانَا"
+        ],
+        "transliteration": [
+          "wa tajallatil anwāru min kullil jihāti",
+          "fawaqtu mīlādil mushaffaʿi ḥānā"
+        ],
+        "translation": [
+          "The lights emanated from all directions",
+          "For the moment of birth of the one given intercession had come"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ قُبَيْلَ فَجْرٍ أَبْرَزَتْ شَمْسَ الهُدَى",
+          "ظَهَرَ الحَبِيبُ مُكَرَّماً وَ مُصَانَا"
+        ],
+        "transliteration": [
+          "wa qubayla fajrin abrazat shamsal hudā",
+          "ẓaharal ḥabību mukarraman wa muṣānā"
+        ],
+        "translation": [
+          "And shortly before dawn, the Sun of Guidance was made manifest,",
+          "The Beloved appeared, honored and protected"
+        ],
+        "isRefrain": false
+      }
+    ]
+  },
+  {
+    "title": "Diya'ul Lami: Place of Standing",
+    "englishTitle": "Place of Standing",
+    "couplets": [
+      {
+        "arabic": [
+          "صَلَّى الله عَلَى مُحَمَّدْ",
+          "صَلَّى الله عَلَيْهِ وَ سَلَّمْ"
+        ],
+        "transliteration": [
+          "ṣalla Allah ʿalā muḥammad",
+          "ṣalla Allah ʿalayhi wa sallam"
+        ],
+        "translation": [
+          "O Allāh, send Your Mercy upon Muḥammad",
+          "O Allāh, send your Mercy and Peace upon him"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "يَا نَبِيّ سَلَامْ عَلَيْكَ",
+          "يَا رَسُولْ سَلَامْ عَلَيْكَ"
+        ],
+        "transliteration": [
+          "yā nabiyy salām ʿalayka",
+          "yā rasūl salām ʿalayka"
+        ],
+        "translation": [
+          "O Prophet, peace be upon you",
+          "O Messenger, peace be upon you."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "يَا حَبِيبْ سَلَامْ عَلَيْكَ",
+          "صَلَوَاتُ اللهْ عَلَيْكَ"
+        ],
+        "transliteration": [
+          "yā ḥabīb salām ʿalayka",
+          "ṣalawātu Allah ʿalayka"
+        ],
+        "translation": [
+          "O Beloved, peace be upon you (O Messenger of Allāh)",
+          "The blessings of Allāh be upon you"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "أَبْرَزَ اللهُ المُشَفَّعْ",
+          "صَاحِبَ القَدْرِ المُرَفَّعْ"
+        ],
+        "transliteration": [
+          "abraza Allahul mushaffaʿ",
+          "ṣāḥibal qadril muraffaʿ"
+        ],
+        "translation": [
+          "Allāh has manifested the Intercessor",
+          "Possessor of the elevated station"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "فَمَلَا النُّورُ النَّوَاحِي",
+          "عَمَّ كُلَّ الكَوْنِ أَجْمَعْ"
+        ],
+        "transliteration": [
+          "famalan nūrun nawāḥī",
+          "ʿamma kullal kawni ajmaʿ"
+        ],
+        "translation": [
+          "And his light has filled the horizons (by the virtue of the Messenger of Allāh)",
+          "It has encompassed the entire universe"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "نُكِسَتْ أَصْنَامُ شِرْكٍ",
+          "وَ بِنَا الشِّرْكِ تَصَدَّعْ"
+        ],
+        "transliteration": [
+          "nukisat aṣnāmu shirkin",
+          "wa binash shirki taṣaddaʿ"
+        ],
+        "translation": [
+          "Torn down are the icons of idolatry",
+          "The edifice of idolatry has crumbled"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ دَنَا وَقْتُ الهِدَايَةْ",
+          "وَ حِمَى الكُفْرِ تَزَعْزَعْ"
+        ],
+        "transliteration": [
+          "wa danā waqtul hidāyah",
+          "wa ḥimal kufri tazaʿzaʿ"
+        ],
+        "translation": [
+          "The time of guidance has drawn near (by the virtue of the Messenger of Allāh)",
+          "And the fortress of disbelief has been shaken"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "مَرْحَباً أَهْلاً وَ سَهْلاً",
+          "بِكَ يَا ذَا القَدْرِ الأَرْفَعْ"
+        ],
+        "transliteration": [
+          "marḥaban ahlan wa sahlan",
+          "bika yā dhal qadril arfaʿ"
+        ],
+        "translation": [
+          "Greetings and welcome",
+          "To you, O possessor of the lofty rank"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "يَا إِمَامَ أَهْلِ الرِّسَالَةْ",
+          "مَنْ بِهِ الآفَاتُ تُدْفَعْ"
+        ],
+        "transliteration": [
+          "yā imāma ahlir risālah",
+          "man bihil āfātu tudfaʿ"
+        ],
+        "translation": [
+          "O Master of the people of revelation (O Messenger of Allāh)",
+          "By whom evil is repelled"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "أَنْتَ فِي الحَشْرِ مَلَاذٌ",
+          "لَكَ كُلُّ الخَلْقِ تَفْزَعْ"
+        ],
+        "transliteration": [
+          "anta fīl ḥashri malādhun",
+          "laka kullul khalqi tafzaʿ"
+        ],
+        "translation": [
+          "You will be a refuge on the Day of Gathering",
+          "All of creation will flee to you"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "ويُنَادُونَ تَرَى مَا",
+          "قَدْ دَهَا مِنْ هَوْلٍ أَفْظَعْ"
+        ],
+        "transliteration": [
+          "wyunādūna tarā mā",
+          "qad dahā min hawlin afẓaʿ"
+        ],
+        "translation": [
+          "And they will cry out, saying, 'Look (O Messenger of Allāh)",
+          "What dreadful terrors have afflicted us!'"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "مَرْحَبًا مَرْحَبًا يا نُورَ عَينِي",
+          "مَرْحَبًا مَرْحَبًا جَدَّ الحُسَيْنِي"
+        ],
+        "transliteration": [
+          "marḥaban marḥaban īā nūra ʿaīnī",
+          "marḥaban marḥaban jaddal ḥusaynī"
+        ],
+        "translation": [
+          "Welcome, a warm and joyful welcome to the Messenger! (Welcome, O welcome!)",
+          "Welcome to nearness unto him and to his arrival ﷺ (Welcome, O welcome!)"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "فَلَهَا أَنْتَ فَتَسْجُد (مَرْحَبًا)",
+          "وَتُنَادَى اشْفَعْ تُشَفَّعْ (مَرْحَبًا)"
+        ],
+        "transliteration": [
+          "falahā anta fatasjud marḥaban",
+          "watunādāsh faʿ tushaffaʿ marḥaban"
+        ],
+        "translation": [
+          "And for (the intercession) you will prostrate (Welcome!)",
+          "And be addressed, 'Intercede, for your intercession is accepted', (Welcome!)"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "فَعَلَيْكَ اللهُ صَلَّى (مَرْحَبًا)",
+          "مَا بَدَا النُّورُ وَ شَعْشَعْ (مَرْحَبًا)"
+        ],
+        "transliteration": [
+          "faʿalayka Allahu ṣallā marḥaban",
+          "mā badan nūru wa shaʿshaʿ marḥaban"
+        ],
+        "translation": [
+          "For Allāh has sent mercy upon you (Welcome!)",
+          "As long as the light shines and radiates (Welcome!)"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ بِكَ الرَّحْمَنَ نَسْأَلْ (يا الله)",
+          "وَ إِلَهُ العَرْشِ يَسْمَعْ (يا الله)"
+        ],
+        "transliteration": [
+          "wa bikar raḥmana nasal īa Allah",
+          "wa ilahul ʿarshi yasmaʿ īa Allah"
+        ],
+        "translation": [
+          "By you, we ask the Most Merciful (O Allāh)",
+          "and the Lord of the Throne hears (O Allāh)"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "يَا عَظِيمَ المَنِّ يَا رَبّ \"يَا الله\"",
+          "شَمْلَنَا بِالمُصْطَفَى اجْمَعْ \"يَا الله\""
+        ],
+        "transliteration": [
+          "yā ʿaẓīmal manni yā rabb ya Allah",
+          "shamlanā bil muṣṭafāj maʿ ya Allah"
+        ],
+        "translation": [
+          "O Bestower of Great Bounties, O Lord! (O Allāh)",
+          "Gather us all with the Chosen One (O Allāh)"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ بِهِ فَانْظُرْ إِلَيْنَا \"يَا الله\"",
+          "وَ اعْطِنَا بِهْ كُلَّ مَطْمَعْ \"يَا الله\""
+        ],
+        "transliteration": [
+          "wa bihi fan ẓur ilaynā ya Allah",
+          "waʿ ṭinā bih kulla maṭmaʿ ya Allah"
+        ],
+        "translation": [
+          "And by him, gaze upon us (O Allāh)",
+          "And by him, grant us all we long for (O Allāh)"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ اكْفِنَا كُلَّ البَلَايَا \"يَا الله\"",
+          "وَ ادْفَعِ الآفَاتِ وَ ارْفَع \"يَا الله\""
+        ],
+        "transliteration": [
+          "wak finā kullal balāyā ya Allah",
+          "wad faʿil āfāti war faʿ ya Allah"
+        ],
+        "translation": [
+          "Protect us from all calamities (O Allāh)",
+          "Divert and lift all afflictions (O Allāh)"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ اسْقِنَا يَا رَبّ أَغِثْنَا",
+          "بِحَياً هَطَّالِ يَهْمَعْ"
+        ],
+        "transliteration": [
+          "was qinā yā rabb aghithnā",
+          "biḥaīan haṭṭāli yahmaʿ"
+        ],
+        "translation": [
+          "Give us to drink, O Lord! And come to our aid",
+          "With a life-giving rain pouring down"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ اخْتِمِ العُمْرَ بِحُسْنَى",
+          "وَ احْسِنِ العُقْبَى وَ مَرْجَعْ"
+        ],
+        "transliteration": [
+          "wakh timil ʿumra biḥusnā",
+          "waḥ sinil ʿuqbā wa marjaʿ"
+        ],
+        "translation": [
+          "Seal our lives with excellence",
+          "Make beautiful our final end and our return"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ صَلاةُ اللهِ تَغْشَى",
+          "مَن لَهُ الحُسْنُ تَجَمَّعْ"
+        ],
+        "transliteration": [
+          "wa ṣalātu Allahi taghshā",
+          "man lahul ḥusnu tajammaʿ"
+        ],
+        "translation": [
+          "And may the mercy of Allāh envelop",
+          "The one in whom all beauty has gathered"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "أَحْمَدَ الطُّهْرَ وَ آلِهْ",
+          "وَ الصَّحَابَةْ مَا السَّنَا شَعْ"
+        ],
+        "transliteration": [
+          "aḥmadaṭ ṭuhra wa ālih",
+          "waṣ ṣaḥābah mas sanā shaʿ"
+        ],
+        "translation": [
+          "Aḥmad the Pure, and his Family",
+          "And the Companions, as long as light shines"
+        ],
+        "isRefrain": false
+      }
+    ]
+  },
+  {
+    "title": "Diya'ul Lami: Supplication",
+    "englishTitle": "Supplication",
+    "couplets": [
+      {
+        "arabic": [
+          "وَ لَقَدْ أَشَرْتُ لِنَعْتِ مَنْ أَوْصَافُهُ",
+          "تُحْيِي القُلُوبَ تُهَيِّجُ الأَشْجَانَا"
+        ],
+        "transliteration": [
+          "wa laqad ashartu linaʿti man awṣāfuhu",
+          "tuḥyīl qulūba tuhayyijul ashjānā"
+        ],
+        "translation": [
+          "Indeed I have drawn attention to the attributes of the one",
+          "Whose qualities revive the heart, and ignite the fires of yearning"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ اللهُ قَدْ أَثْنَى عَلَيْهِ فَمَا يُسَاوِي",
+          "القَوْلُ مِنَّا أَو يَكُونُ ثَنَانَا"
+        ],
+        "transliteration": [
+          "wa Allahu qad athnā ʿalayhi famā yusāwī",
+          "alqawlu minnā aw yakūnu thanāna"
+        ],
+        "translation": [
+          "Allāh Himself has praised him, so how can our words compare",
+          "Or even be considered praise?"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "لَكِنَّ حُبّاً فِي السَّرَائِرِ قَدْ دَعَا",
+          "لِمَدِيحِ صَفْوَةِ رَبِّنَا وَ حَدَانَا"
+        ],
+        "transliteration": [
+          "lakinna ḥubban fīs sarā’iri qad daʿā",
+          "limadīḥi ṣafwati rabbinā wa ḥadānā"
+        ],
+        "translation": [
+          "However it is a love established deep in the heart, which called to us and urged us",
+          "To praise the purest of our Lord's (creation)"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ إِذِ امْتَزَجْنَا بِالمَوَدَّةِ هٰهُنَا",
+          "نَرْفَعُ أَيْدِي فَقْرِنَا وَ رَجَانَا"
+        ],
+        "transliteration": [
+          "wa idhim tazajnā bil mawaddati hāhunā",
+          "narfaʿu aydī faqrinā wa rajānā"
+        ],
+        "translation": [
+          "And now that we have become infused with the love [of Muhammad] here,",
+          "we raise the hands of our poverty and hope"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "لِلوَاحِدِ الأَحَدِ العَلِيِّ إِلَهِنَا",
+          "مُتَوَسِّلِينَ بِمَنْ إِلَيْهِ دَعَانَا"
+        ],
+        "transliteration": [
+          "lilwāḥidil aḥadil ʿaliyyi ilahinā",
+          "mutawassilīna biman ilayhi daʿānā"
+        ],
+        "translation": [
+          "To our Lord, the One, the Unique, the Most High,",
+          "Interceding by the one who called us to Him"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "مُخْتَارِهِ وَ حَبِيبِهِ وَ صَفِيِّهِ",
+          "زَيْنِ الوُجُودِ بِهِ الإِلَهُ حَبَانَا"
+        ],
+        "transliteration": [
+          "mukhtārihi wa ḥabībihi wa ṣafiyyihi",
+          "zaynil wujūdi bihil ilahu ḥabānā"
+        ],
+        "translation": [
+          "His Chosen one, His Beloved, His Purest,",
+          "The beauty of existence, by him the Lord has favored us"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "يَا رَبَّنَا يَا رَبَّنَا يَا رَبَّنَا",
+          "بِالمُصْطَفَى اقْبَلْنَا أَجِبْ دَعْوَانَا"
+        ],
+        "transliteration": [
+          "yā rabbanā yā rabbanā yā rabbanā",
+          "bil muṣṭafāq balnā ajib daʿwānā"
+        ],
+        "translation": [
+          "Our Lord! Our Lord! Our Lord!",
+          "By the Chosen one, accept us and answer our supplications"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "أَنْتَ لَنَا أَنْتَ لَنَا يَا ذُخْرَنَا",
+          "فِي هَذِهِ الدُّنيَا وَ فِي أُخْرَانَا"
+        ],
+        "transliteration": [
+          "anta lanā anta lanā yā dhukhranā",
+          "fī hadhihid dunyā wa fī ukhrānā"
+        ],
+        "translation": [
+          "You are sufficient for us! You are sufficient for us!",
+          "You are our security in this world and in the hereafter"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "أَصْلِحْ لَنَا الأَحْوَالَ وَ اغْفِرْ ذَنْبَنَا",
+          "وَ لَا تُؤَاخِذْ رَبِّي إِنْ أَخْطَانَا"
+        ],
+        "transliteration": [
+          "aṣliḥ lanal aḥwāla wagh fir dhanbanā",
+          "wa lā tuākhidh rabbī in akhṭānā"
+        ],
+        "translation": [
+          "Rectify our states for us and forgive us our sins",
+          "And do not hold us accountable, O Lord, if we err"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ اسْلُكْ بِنَا فِي نَهْجِ طَهَ المُصطَفَى",
+          "ثَبِّتْ عَلَى قَدَمِ الحَبِيبِ خُطَانَا"
+        ],
+        "transliteration": [
+          "was luk binā fī nahji ṭahal muṣṭafā",
+          "thabbit ʿalā qadamil ḥabībi khuṭānā"
+        ],
+        "translation": [
+          "Lead us down the path of Ṭaha, the Chosen one,",
+          "And make firm our footsteps in the steps of the Beloved"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "أَرِنَا بِفَضْلٍ مِنْكَ طَلْعَةَ أَحْمَدٍ",
+          "فِي بَهْجَةٍ عَيْنُ الرِّضَا تَرْعَانَا"
+        ],
+        "transliteration": [
+          "arinā bifaḍlin minka ṭalʿata aḥmadin",
+          "fī bahjatin ʿaynur riḍā tarʿānā"
+        ],
+        "translation": [
+          "Show us, through Your grace, the manifestation of Aḥmad, in his splendor,",
+          "As the eye of Your good pleasure watches over us"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ ارْبُطْ بِهِ فِي كُلِّ حَالٍ حَبْلَنَا",
+          "وَ حِبَالَ مَنْ وَدَّ وَ مَنْ وَالَانَا"
+        ],
+        "transliteration": [
+          "war buṭ bihi fī kulli ḥālin ḥablanā",
+          "wa ḥibāla man wadda wa man wālānā"
+        ],
+        "translation": [
+          "Strengthen our bond with him (Muhammad) in every state",
+          "And the bond of those who love and support us"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ المُحْسِنِينَ وَ مَنْ أَجَابَ نِدَاءَنَا",
+          "وَ ذَوِي الحُقُوقِ وَ طَالِبَاً أَوْصَانَا"
+        ],
+        "transliteration": [
+          "wal muḥsinīna wa man ajāba nidā’anā",
+          "wa dhawīl ḥuqūqi wa ṭālibāan awṣānā"
+        ],
+        "translation": [
+          "And those who do good and those answered our call,",
+          "Those who have rights [over us] and those who have requested our prayers"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ الحَاضِرِينَ وَ سَاعِيَاً فِي جَمْعِنَا",
+          "هَا نَحْنُ بَيْنَ يَدَيْكَ أَنْتَ تَرَانَا"
+        ],
+        "transliteration": [
+          "wal ḥāḍirīna wa sāʿiyāan fī jamʿinā",
+          "hā naḥnu bayna yadayka anta tarānā"
+        ],
+        "translation": [
+          "Those who are present and those who assist in our gatherings",
+          "Here we are, before You (O Allāh), truly You see us"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ لَقَدْ رَجَوْنَاكَ فَحَقِّقْ سُؤْلَنَا",
+          "وَ اسْمَعْ بِفَضْلِكَ يَا سَمِيعُ دُعَانَا"
+        ],
+        "transliteration": [
+          "wa laqad rajawnāka faḥaqqiq su’lanā",
+          "was maʿ bifaḍlika yā samīʿu duʿānā"
+        ],
+        "translation": [
+          "Indeed we have placed our hopes in You, that You might answer our request",
+          "Hear us, by Your grace, O Hearer of our prayer"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ انْصُرْ بِنَا سُنَّةَ طَهَ فِي بِقَاعِ",
+          "الأَرْضِ وَ اقْمَعْ كُلَّ مَنْ عَادَانَا"
+        ],
+        "transliteration": [
+          "wan ṣur binā sunnata ṭaha fī biqāʿi",
+          "alarḍi waq maʿ kulla man ʿādāna"
+        ],
+        "translation": [
+          "By means of us, give victory to the sunnah of Taha, throughout the earth,",
+          "Throughout the earth, and restrain all those who show enmity to us"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ انْظُرْ إِلَيْنَا وَ اسْقِنَا كَأْسَ الهَنَا",
+          "وَ اشْفِ وَ عَافِ عَاجِلاً مَرْضَانَا"
+        ],
+        "transliteration": [
+          "wan ẓur ilaynā was qinā ka sal hanā",
+          "wash fi wa ʿāfi ʿājilan marḍānā"
+        ],
+        "translation": [
+          "Gaze upon us, give us to drink from a cup of felicity",
+          "Nd swiftly cure and gran good health to our sick ones"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَ اقْضِ لَنَا الحَاجَاتِ وَ احْسِنْ خَتْمَنَا",
+          "عِنْدَ المَمَاتِ وَ أَصْلِحَنْ عُقْبَانَا"
+        ],
+        "transliteration": [
+          "waq ḍi lanal ḥājāti waḥ sin khatmanā",
+          "ʿindal mamāti wa aṣliḥan ʿuqbānā"
+        ],
+        "translation": [
+          "Take care of our affairs and beautify our last moments",
+          "At the time of death, and make good our final end"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "يَا رَبِّ وَ اجْمَعْنَا وَ أَحْبَاباً لَنَا",
+          "فِي دَارِكَ الفِرْدَوْسِ يَا رَجْوَانَا"
+        ],
+        "transliteration": [
+          "yā rabbi waj maʿnā wa aḥbāban lanā",
+          "fī dārikal firdawsi yā rajwānā"
+        ],
+        "translation": [
+          "O Lord, gather us and those beloved to us",
+          "In Your abode of Firdaus, O our [only] Hope,"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "بِالمُصْطَفَى صَلِّ عَلَيْهِ وَ آلِهِ",
+          "مَا حَرَّكَتْ رِيحُ الصَّبَا أَغْصَانَا"
+        ],
+        "transliteration": [
+          "bil muṣṭafā ṣalli ʿalayhi wa ālihi",
+          "mā ḥarrakat rīḥuṣ ṣabā aghṣānā"
+        ],
+        "translation": [
+          "Through the Chosen One, and send Your mercy upon him and his Family",
+          "So long as the easterly breezes sway the branches"
+        ],
+        "isRefrain": false
+      }
+    ]
+  },
+  {
+    "title": "صلاة ربّي مدّ الزّمانِ",
+    "englishTitle": "Prayer of the Lord Extended Through Time",
+    "couplets": [
+      {
+        "arabic": [
+          "صلاة ربّي مدّ الزّمانِ",
+          "على النّبيّ طاهرِ الجنانِ"
+        ],
+        "transliteration": [
+          "Ṣalātu rabbī madda z-zamānī",
+          "ʿala n-nabiyyi ṭāhiri l-janānī"
+        ],
+        "translation": [
+          "May my Lord's blessing, for all the length of time,",
+          "be upon the Prophet, pure of heart"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "مَا لاحَ برقٌ وسحَّ رعدٌ",
+          "ودامَ ذكرُكَ باللّسانِ"
+        ],
+        "transliteration": [
+          "Mā lāḥa barqun wa saḥḥa raʿdun",
+          "wa dāma dhikruka bi-l-lisānī"
+        ],
+        "translation": [
+          "as long as lightning gleams and thunder pours,",
+          "and as long as your remembrance lives on the tongue."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "نسيمُ نجدٍ سرى سُحَيرًا",
+          "فجدَّدَ الشوقَ والمَبانِي"
+        ],
+        "transliteration": [
+          "Nasīmu najdin sarā suḥayrā",
+          "fa-jaddada sh-shawqa wa-l-mabānī"
+        ],
+        "translation": [
+          "The breeze of Najd travelled in the last dark of night",
+          "and made longing — and its old dwellings — new again."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وهبَّ ريحُ الصَّبا بِرَوحٍ",
+          "مُخبِرًا عن عُرَيبِ بانِ"
+        ],
+        "transliteration": [
+          "Wa habba rīḥu ṣ-ṣabā bi-rawḥin",
+          "mukhbiran ʿan ʿuraybi bānī"
+        ],
+        "translation": [
+          "The east wind blew with sweet relief,",
+          "bearing news of the dear Arab folk who have gone."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "يا أهلَ نجدٍ حياةَ روحي",
+          "رعاكمُ اللهُ بالأمانِ"
+        ],
+        "transliteration": [
+          "Yā ahla najdin ḥayāta rūḥī",
+          "raʿākumu llāhu bi-l-amānī"
+        ],
+        "translation": [
+          "O people of Najd, O life of my soul,",
+          "may God keep you in safety."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "أخذتمُ العقلَ بل فؤادي",
+          "جمالُكم سادتي سبانِي"
+        ],
+        "transliteration": [
+          "Akhadhtumu l-ʿaqla bal fuʾādī",
+          "jamālukum sādatī sabānī"
+        ],
+        "translation": [
+          "You took my reason, my heart as well;",
+          "your beauty, my masters, has taken me captive."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وعاذلي رامَ لي سُلُوًّا",
+          "فكيف ذا والهوى رمانِي"
+        ],
+        "transliteration": [
+          "Wa ʿādhilī rāma lī sulūwan",
+          "fa-kayfa dhā wa-l-hawā ramānī"
+        ],
+        "translation": [
+          "My reproacher wished forgetfulness for me",
+          "how could that be, when love has already struck me down?"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وحبُّكم في الحشا مقيمٌ",
+          "وزدتُ شوقًا وصرتُ فانِي"
+        ],
+        "transliteration": [
+          "Wa ḥubbukum fi l-ḥashā muqīmun",
+          "wa zidtu shawqan wa ṣirtu fānī"
+        ],
+        "translation": [
+          "Your love dwells settled in my depths;",
+          "my longing only grew, until I passed away in it."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وفي رُباكم حبيبُ قلبي",
+          "جميلُ ذاتٍ جليلُ شانِي"
+        ],
+        "transliteration": [
+          "Wa fī rubākum ḥabību qalbī",
+          "jamīlu dhātin jalīlu shānī"
+        ],
+        "translation": [
+          "In your hills is the beloved of my heart,",
+          "beautiful in essence, exalted in rank."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "من حازَ حُسنَ الصّفاتِ طُرًّا",
+          "وسادَ في سائرِ المعانِي"
+        ],
+        "transliteration": [
+          "Man ḥāza ḥusna ṣ-ṣifāti ṭurran",
+          "wa sāda fī sāʾiri l-maʿānī"
+        ],
+        "translation": [
+          "He who gathered every excellent quality without exception,",
+          "and surpassed all others in every respect."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وفاقَ ظبيًا كحيلَ عينٍ",
+          "وخصَّهُ اللهُ بالمَثانِي"
+        ],
+        "transliteration": [
+          "Wa fāqa ẓabyan kaḥīla ʿaynin",
+          "wa khaṣṣahu llāhu bi-l-mathānī"
+        ],
+        "translation": [
+          "He outshone the kohl-eyed gazelle,",
+          "and God singled him out with al-Mathānī (the oft-repeated verses)."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وعمَّ كلَّ الأنامِ جودًا",
+          "ونالَ ما لم ينلْهُ ثانِي"
+        ],
+        "transliteration": [
+          "Wa ʿamma kulla l-anāmi jūdan",
+          "wa nāla mā lam yanalhu thānī"
+        ],
+        "translation": [
+          "His generosity encompassed all mankind,",
+          "and he attained what no second soul has attained."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "أثنى عليه الإلهُ مدحًا",
+          "فما ثنائي وما بيانِي"
+        ],
+        "transliteration": [
+          "Athnā ʿalayhi l-ilāhu madḥan",
+          "fa-mā thanāʾī wa mā bayānī"
+        ],
+        "translation": [
+          "God Himself has praised him,",
+          "so what is my praise worth, what is my eloquence?"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وذكرُهُ في الكتابِ يُتلى",
+          "فأعجزَ العَدَّ بالبَنانِ"
+        ],
+        "transliteration": [
+          "Wa dhikruhu fi l-kitābi yutlā",
+          "fa-aʿjaza l-ʿadda bi-l-banānī"
+        ],
+        "translation": [
+          "His mention is recited in the Book,",
+          "past all counting on the fingers."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "طوبى لمن قد رآكَ حقًّا",
+          "ليتي رأيتُكَ في المنامِ"
+        ],
+        "transliteration": [
+          "Ṭūbā li-man qad raʾāka ḥaqqan",
+          "laytī raʾaytuka fi l-manāmī"
+        ],
+        "translation": [
+          "Blessed is the one who has truly seen you,",
+          "would that I might see you in a dream."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وفي مديحِكَ لستُ أهلًا",
+          "لكن صبانِي ذوو الغرامِ"
+        ],
+        "transliteration": [
+          "Wa fī madīḥika lastu ahlan",
+          "lākin ṣabānī dhawu l-gharāmī"
+        ],
+        "translation": [
+          "I am no fit man to praise you,",
+          "yet the passionate lovers have drawn me to it."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وعندما سفرٌ طويلٌ",
+          "أرجوكَ يا منتهى المرامِ"
+        ],
+        "transliteration": [
+          "Wa ʿindamā safarun ṭawīlun",
+          "arjūka yā muntaha l-marāmī"
+        ],
+        "translation": [
+          "And when the long journey comes,",
+          "it is you I hope in, O utmost goal of every desire."
+        ],
+        "isRefrain": false
+      }
+    ]
+  },
+  {
+    "title": "مُحَمَّدٌ بَشَرٌ لَا كَالبَشَرْ",
+    "englishTitle": "Muhammad: A Man, But Not Like Other Men",
+    "couplets": [
+      {
+        "arabic": [
+          "مُحَمَّدٌ بَشَرٌ لَا كَالبَشَرْ",
+          "بَلْ هُوَ يَاقُوتٌ بَيْنَ الحَجَرْ"
+        ],
+        "transliteration": [
+          "Muḥammadun basharun lā ka-l-bashar",
+          "bal huwa yāqūtun bayna l-ḥajar"
+        ],
+        "translation": [
+          "Muhammad is a man, but not like other men,",
+          "rather he is a ruby among ordinary stones."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "مُحَمَّدٌ مِفْتَاحُهُ بِسْمِ اللهِ",
+          "وَيَحْمَدُ اللهَ مَعَ الخَبَرْ"
+        ],
+        "transliteration": [
+          "Muḥammadun miftāḥuhu bismi llāhi",
+          "wa yaḥmadu llāha maʿa l-khabar"
+        ],
+        "translation": [
+          "Muhammad — his opening key is Bismillāh,",
+          "and he praises God along with the tidings he brings."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "مُحَمَّدٌ رَسُولٌ لِرَبِّ العُلَى",
+          "لِكَافَّةِ الخَلْقِ بِلَا نُكُرْ"
+        ],
+        "transliteration": [
+          "Muḥammadun rasūlun li-rabbi l-ʿulā",
+          "li-kāffati l-khalqi bi-lā nukur"
+        ],
+        "translation": [
+          "Muhammad is the Messenger of the Lord of the heights,",
+          "sent to all creation without exception."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "مُحَمَّدٌ بَعْثُهُ عَامَّةً",
+          "عَلَى العَالَمِينَ حَتَّى الشَّجَرْ"
+        ],
+        "transliteration": [
+          "Muḥammadun baʿthuhu ʿāmmatan",
+          "ʿala l-ʿālamīna ḥatta sh-shajar"
+        ],
+        "translation": [
+          "Muhammad's mission is universal,",
+          "over all the worlds — even the trees."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "مُحَمَّدٌ مَوْلِدُهُ مَكَّةُ",
+          "وَهِجْرَتُهُ طَيْبَةُ الغُرَرْ"
+        ],
+        "transliteration": [
+          "Muḥammadun mawliduhu makkatu",
+          "wa hijratuhu ṭaybatu l-ghurar"
+        ],
+        "translation": [
+          "Muhammad — his birthplace is Makkah,",
+          "and his emigration was to radiant Ṭaybah."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "مُحَمَّدٌ أَسْرَى مِنْ حَرَمٍ",
+          "إِلَى الأَيْلِيَاءِ مَأْوَى الحَرَرْ"
+        ],
+        "transliteration": [
+          "Muḥammadun asrā min ḥaramin",
+          "ila l-ayliyāʾi maʾwa l-ḥarar"
+        ],
+        "translation": [
+          "Muhammad journeyed by night from the Sanctuary",
+          "to Īliyāʾ, refuge of the noble and free."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "مُحَمَّدٌ مِعْرَاجُهُ ثَابِتٌ",
+          "بِنَصِّ الحَدِيثِ مَعَ العِبَرْ"
+        ],
+        "transliteration": [
+          "Muḥammadun miʿrājuhu thābitun",
+          "bi-naṣṣi l-ḥadīthi maʿa l-ʿibar"
+        ],
+        "translation": [
+          "Muhammad's ascension is firmly established",
+          "by the text of ḥadīth, along with its lessons."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "مُحَمَّدٌ فَاقَ جَمِيعَ الوَرَى",
+          "حَتَّى المُرْسَلِينَ ذَوِي الفَخَرْ"
+        ],
+        "transliteration": [
+          "Muḥammadun fāqa jamīʿa l-warā",
+          "ḥatta l-mursalīna dhawi l-fakhar"
+        ],
+        "translation": [
+          "Muhammad surpassed all creation,",
+          "even the messengers, possessors of glory."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "مُحَمَّدٌ مِنْ آدَمَ دُونَهُ",
+          "وَمَنْ بَعْدَهُ فَاعْجَبْ لِلْخَبَرْ"
+        ],
+        "transliteration": [
+          "Muḥammadun min ādama dūnahu",
+          "wa man baʿdahu fa-ʿjab li-l-khabar"
+        ],
+        "translation": [
+          "Muhammad — from Adam onward, all are beneath him,",
+          "and all who came after: marvel at this report."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "مُحَمَّدٌ أُمَّتُهُ خِيَرَةٌ",
+          "لِكُلِّ القُرُونِ مَعَ الزُّمَرْ"
+        ],
+        "transliteration": [
+          "Muḥammadun ummatuhu khiyaratun",
+          "li-kulli l-qurūni maʿa z-zumar"
+        ],
+        "translation": [
+          "Muhammad — his community is the chosen best",
+          "of all ages and all throngs."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "فَمِنْهُمْ شُمُوسٌ كَأَصْحَابِهِ",
+          "وَكَالغَوْثِ الجِيلِيِّ عَبْدِ القَادِرْ"
+        ],
+        "transliteration": [
+          "Fa-minhum shumūsun ka-aṣḥābihi",
+          "wa ka-l-ghawthi l-jīliyyi ʿabdi l-qādir"
+        ],
+        "translation": [
+          "Among them are suns like his Companions,",
+          "and like the Ghawth al-Jīlī, ʿAbd al-Qādir."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "مُحَمَّدٌ عِصْمَتُهُ مُحَتَّمٌ",
+          "صَغِيرًا كَبِيرًا بِلَا نُكُرْ"
+        ],
+        "transliteration": [
+          "Muḥammadun ʿiṣmatuhu muḥattamun",
+          "ṣaghīran kabīran bi-lā nukur"
+        ],
+        "translation": [
+          "Muhammad's protection from sin is certain,",
+          "in youth and in age, beyond all denial."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "مُحَمَّدٌ مَحَبَّتُهُ وَاجِبٌ",
+          "مِنَ المُؤْمِنِينَ عَلَى البَشَرْ"
+        ],
+        "transliteration": [
+          "Muḥammadun maḥabbatuhu wājibun",
+          "mina l-muʾminīna ʿala l-bashar"
+        ],
+        "translation": [
+          "Muhammad — love of him is an obligation binding",
+          "on the believers among mankind."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "مُحَمَّدٌ بَاغِضُهُ كَافِرٌ",
+          "يُعَذَّبُ دَوْمًا عَلَى الجَمَرْ"
+        ],
+        "transliteration": [
+          "Muḥammadun bāghiḍuhu kāfirun",
+          "yuʿadhdhabu dawman ʿala l-jamar"
+        ],
+        "translation": [
+          "Muhammad — whoever hates him is a disbeliever,",
+          "punished forever upon the embers."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "مُحَمَّدٌ قَاسِمٌ خَيْرُ المَلَا",
+          "وَمُعْطِي الحَقِيقَةِ ذُو الكِبَرْ"
+        ],
+        "transliteration": [
+          "Muḥammadun qāsimun khayru l-malā",
+          "wa muʿṭi l-ḥaqīqati dhu l-kibar"
+        ],
+        "translation": [
+          "Muhammad is the distributor, the best of the assembly,",
+          "while the true Giver is the One of Greatness."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "مُحَمَّدٌ وَاصِفُهُ رَبُّهُ",
+          "فَمَا لِضَعِيفٍ مِنَ الغُمَرْ"
+        ],
+        "transliteration": [
+          "Muḥammadun wāṣifuhu rabbuhu",
+          "fa-mā li-ḍaʿīfin mina l-ghumar"
+        ],
+        "translation": [
+          "Muhammad — his describer is his own Lord;",
+          "so what has a weak nobody of the common crowd to add?"
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "مِقْدَارُ مَا مِثْلُ ذَرٍّ",
+          "صِفَةُ عَرْشِ رَبِّي أَعْلَى الكِبَرْ"
+        ],
+        "transliteration": [
+          "Miqdāru mā mithlu dharrin",
+          "ṣifatu ʿarshi rabbī aʿla l-kibar"
+        ],
+        "translation": [
+          "Whatever measure I could give is like a mote",
+          "beside the description of my Lord's Throne, highest in greatness."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "مُحَمَّدٌ رَأَى رَبَّهُ جَهْرَةً",
+          "بِيَقْظَةٍ مَعَ جِسْمِهِ الأَنْوَرْ"
+        ],
+        "transliteration": [
+          "Muḥammadun raʾā rabbahu jahratan",
+          "bi-yaqẓatin maʿa jismihi l-anwar"
+        ],
+        "translation": [
+          "Muhammad saw his Lord openly,",
+          "while awake, together with his luminous body."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "مُحَمَّدٌ يَجْزِي إِلَهُ الوَرَى",
+          "لِعَبْدٍ صَلَّى مَرَّةً عَشَرْ"
+        ],
+        "transliteration": [
+          "Muḥammadun yajzī ilāhu l-warā",
+          "li-ʿabdin ṣallā marratan ʿashar"
+        ],
+        "translation": [
+          "Muhammad — the God of creation rewards the servant",
+          "who sends blessings once with tenfold."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "كَعَبْدٍ صَلَّى عَشَرَةً مِائَةً",
+          "إِلَى أَلْفِ أَلْفٍ مَعَ الحُرَرْ"
+        ],
+        "transliteration": [
+          "Ka-ʿabdin ṣallā ʿasharatan miʾatan",
+          "ilā alfi alfin maʿa l-ḥurar"
+        ],
+        "translation": [
+          "And the servant who sends ten receives a hundred,",
+          "on up to a thousand thousand, together with noble gifts."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَمَنْ حَبَّهُ نَالَ مَا رَامَهُ",
+          "وَبُحْبُوحَ فِرْدَوْسٍ كَالدُّرَرْ"
+        ],
+        "transliteration": [
+          "Wa man ḥabbahu nāla mā rāmahu",
+          "wa buḥbūḥa firdawsin ka-d-durar"
+        ],
+        "translation": [
+          "Whoever loves him attains what he sought,",
+          "and the very heart of Firdaws, gleaming like pearls."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "اللَّهُمَّ صَلِّ عَلَى الهَاشِمِيِّ",
+          "بِأَلْفِ أُلُوفٍ بِلَا حَصَرْ"
+        ],
+        "transliteration": [
+          "Allāhumma ṣalli ʿala l-hāshimiyy",
+          "bi-alfi ulūfin bi-lā ḥaṣar"
+        ],
+        "translation": [
+          "O God, bless the Hāshimī,",
+          "by a thousand thousands, beyond all counting."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "اللَّهُمَّ صَلِّ عَلَى المُصْطَفَى",
+          "بِعَدِّ النُّجُومِ مَعَ الشَّجَرْ"
+        ],
+        "transliteration": [
+          "Allāhumma ṣalli ʿala l-muṣṭafā",
+          "bi-ʿaddi n-nujūmi maʿa sh-shajar"
+        ],
+        "translation": [
+          "O God, bless the Chosen One,",
+          "by the number of the stars and the trees."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "اللَّهُمَّ صَلِّ عَلَى الكَامِلِ",
+          "بِعَدِّ النِّسَاءِ مَعَ الذَّكَرْ"
+        ],
+        "transliteration": [
+          "Allāhumma ṣalli ʿala l-kāmil",
+          "bi-ʿaddi n-nisāʾi maʿa dh-dhakar"
+        ],
+        "translation": [
+          "O God, bless the Perfect One,",
+          "by the number of all women and men."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "اللَّهُمَّ صَلِّ عَلَى الأَنْوَرِ",
+          "بِعَدِّ رِضَاكَ مَعَ القَدَرْ"
+        ],
+        "transliteration": [
+          "Allāhumma ṣalli ʿala l-anwar",
+          "bi-ʿaddi riḍāka maʿa l-qadar"
+        ],
+        "translation": [
+          "O God, bless the Most Radiant,",
+          "by the measure of Your good pleasure and Your decree."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "اللَّهُمَّ صَلِّ عَلَى الأَمْجَدِ",
+          "بِعَدِّ الحَصَاةِ مَعَ المَدَرْ"
+        ],
+        "transliteration": [
+          "Allāhumma ṣalli ʿala l-amjad",
+          "bi-ʿaddi l-ḥaṣāti maʿa l-madar"
+        ],
+        "translation": [
+          "O God, bless the Most Glorious,",
+          "by the number of the pebbles and the clods of earth."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "اللَّهُمَّ صَلِّ عَلَى العَاقِبِ",
+          "بِعَدِّ مَعْلُومَاتِكَ الغُرَرْ"
+        ],
+        "transliteration": [
+          "Allāhumma ṣalli ʿala l-ʿāqib",
+          "bi-ʿaddi maʿlūmātika l-ghurar"
+        ],
+        "translation": [
+          "O God, bless the Last-Coming One,",
+          "by the number of all the shining things You know."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "اللَّهُمَّ صَلِّ عَلَى الحَاشِرِ",
+          "بِأَنْفَاسِ خَلْقِكَ مَعَ نَظَرْ"
+        ],
+        "transliteration": [
+          "Allāhumma ṣalli ʿala l-ḥāshir",
+          "bi-anfāsi khalqika maʿa naẓar"
+        ],
+        "translation": [
+          "O God, bless the Gatherer,",
+          "by the breaths of Your creation and every glance of their eyes."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "اللَّهُمَّ صَلِّ عَلَى الشَّافِعِ",
+          "بِعَدِّ العُصَاةِ مَعَ البَرَرْ"
+        ],
+        "transliteration": [
+          "Allāhumma ṣalli ʿala sh-shāfiʿ",
+          "bi-ʿaddi l-ʿuṣāti maʿa l-barar"
+        ],
+        "translation": [
+          "O God, bless the Intercessor,",
+          "by the number of the sinful and the righteous alike."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "اللَّهُمَّ صَلِّ عَلَى الخَاتِمِ",
+          "بِعَدِّ مَلَائِكَةٍ الغُرَرْ"
+        ],
+        "transliteration": [
+          "Allāhumma ṣalli ʿala l-khātim",
+          "bi-ʿaddi malāʾikatin l-ghurar"
+        ],
+        "translation": [
+          "O God, bless the Seal,",
+          "by the number of the resplendent angels."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَسَلِّمْ بِأَضْعَافِ مَا قَدْ مَضَى",
+          "مَتَى حُبُّهُ ضَاءَ كَالقَمَرْ"
+        ],
+        "transliteration": [
+          "Wa sallim bi-aḍʿāfi mā qad maḍā",
+          "matā ḥubbuhu ḍāʾa ka-l-qamar"
+        ],
+        "translation": [
+          "And grant peace many times over all that has passed,",
+          "so long as love of him shines like the moon."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَآلٍ وَصَحْبٍ وَأَتْبَاعِهِ",
+          "إِلَى يَوْمِ يُحْشَرُ لِلْبَشَرْ"
+        ],
+        "transliteration": [
+          "Wa ālin wa ṣaḥbin wa atbāʿihi",
+          "ilā yawmi yuḥsharu li-l-bashar"
+        ],
+        "translation": [
+          "And upon his family, his companions, and his followers,",
+          "until the Day when mankind is gathered."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَارْضَ عَنْ أَبِي بَكْرٍ مَعَ عُمَرْ",
+          "وَعُثْمَانَ مَعَ عَلِيٍّ المُضَرْ"
+        ],
+        "transliteration": [
+          "Wa-rḍa ʿan abī bakrin maʿa ʿumar",
+          "wa ʿuthmāna maʿa ʿaliyyin il-muḍar"
+        ],
+        "translation": [
+          "And be pleased with Abū Bakr and ʿUmar,",
+          "and ʿUthmān and ʿAlī of Muḍar."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَارْحَمْ يَا إِلَهِي لِنَاظِمِهَا",
+          "كَذَا المُنْشِدِينَ مَعَ الحُضَرْ"
+        ],
+        "transliteration": [
+          "Wa-rḥam yā ilāhī li-nāẓimihā",
+          "kadha l-munshidīna maʿa l-ḥuḍar"
+        ],
+        "translation": [
+          "And have mercy, O my God, on the one who composed it,",
+          "likewise on those who chant it and those present."
+        ],
+        "isRefrain": false
+      }
+    ]
+  },
+  {
+    "title": "صَلِّ يَا رَبِّ عَلَى عَالِي ذُرَى",
+    "englishTitle": "Bless, O Lord, the One at the Summit of Heights",
+    "couplets": [
+      {
+        "arabic": [
+          "صَلِّ يَا رَبِّ عَلَى عَالِي ذُرَى",
+          "سُودَدِ أَفْضَلِ مَنْ دَاسَ الثَّرَى"
+        ],
+        "transliteration": [
+          "Ṣalli yā rabbi ʿalā ʿālī dhurā",
+          "sūdadi afḍali man dāsa th-tharā"
+        ],
+        "translation": [
+          "Bless, O my Lord, the one who stands atop the heights of sovereignty,",
+          "the best of all who ever trod the earth."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "يَا حَبِيبَ اللهِ يَا خَيْرَ الوَرَى",
+          "يَا رَفِيعَ القَدْرِ أَسْمَى مَنْ سَرَى"
+        ],
+        "transliteration": [
+          "Yā ḥabība llāhi yā khayra l-warā",
+          "yā rafīʿa l-qadri asmā man sarā"
+        ],
+        "translation": [
+          "O Beloved of God, O best of creation,",
+          "O you of lofty worth, highest of all who journeyed by night."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "فِيكَ قَدْ عَزَّ وَضِيعُ القَدْرِ يَا",
+          "سَيِّدَ السَّادَاتِ يَا ذُخْرَ الوَرَى"
+        ],
+        "transliteration": [
+          "Fīka qad ʿazza waḍīʿu l-qadri yā",
+          "sayyida s-sādāti yā dhukhra l-warā"
+        ],
+        "translation": [
+          "Through you the man of lowly standing is made honourable,",
+          "O master of masters, O treasure of creation."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَاعْتَلَا ذِرْوَةَ مَجْدٍ وَارْتَقَى",
+          "مُرْتَقَى مَنْ كَانَ ذَا رُشْدٍ دَرَى"
+        ],
+        "transliteration": [
+          "Wa-ʿtalā dhirwata majdin wa-rtaqā",
+          "murtaqā man kāna dhā rushdin darā"
+        ],
+        "translation": [
+          "He climbed to the summit of glory and ascended",
+          "the ascent of one rightly guided and knowing."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَاكْتَسَى فِي ظَاهِرٍ ثَوْبَ العُلَا",
+          "مِثْلَ وَالٍ وَأَمِيرٍ أُمِّرَا"
+        ],
+        "transliteration": [
+          "Wa-ktasā fī ẓāhirin thawba l-ʿulā",
+          "mithla wālin wa-amīrin ummirā"
+        ],
+        "translation": [
+          "Outwardly he was clothed in the garment of eminence,",
+          "like a governor, or a prince given command."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَارْتَدَى بِالجَاهِ ثُمَّ السُّودَدِ",
+          "وَوَقَارٍ مِثْلَ مَا مِنْ عَبْقَرَا"
+        ],
+        "transliteration": [
+          "Wa-rtadā bi-l-jāhi thumma s-sūdadi",
+          "wa waqārin mithla mā min ʿabqarā"
+        ],
+        "translation": [
+          "He wrapped himself in high standing, then in mastery,",
+          "and in a gravity like something out of ʿAbqar."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "كَعَظِيمٍ أَوْ حَبِيبٍ حَبَّهُ",
+          "أَهْلُ فَضْلٍ وَاحْتِرَامٍ وَائْتَرَى"
+        ],
+        "transliteration": [
+          "Ka-ʿaẓīmin aw ḥabībin ḥabbahu",
+          "ahlu faḍlin wa-ḥtirāmin wa-ʾtarā"
+        ],
+        "translation": [
+          "Like some great one, or a beloved whom the people of virtue",
+          "and reverence have loved and chosen for themselves."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "وَبِأَصْلٍ ثُمَّ فَرْعٍ مُؤْمِنٍ",
+          "وَبِمَنْ أَوْصَى لَنَا وَالفُقَرَا"
+        ],
+        "transliteration": [
+          "Wa bi-aṣlin thumma farʿin muʾminin",
+          "wa bi-man awṣā lanā wa-l-fuqarā"
+        ],
+        "translation": [
+          "And by a believing root and branch alike,",
+          "and by the one who left his counsel to us and to the poor."
+        ],
+        "isRefrain": false
+      },
+      {
+        "arabic": [
+          "فَعَلَيْكَ اللهُ صَلَّى دَائِمًا",
+          "مَا دَجَا لَيْلٌ وَمَا سَارٌ سَرَى"
+        ],
+        "transliteration": [
+          "Fa-ʿalayka llāhu ṣallā dāʾiman",
+          "mā dajā laylun wa mā sārin sarā"
+        ],
+        "translation": [
+          "So may God bless you perpetually,",
+          "as long as night falls dark and as long as any traveller journeys on."
+        ],
+        "isRefrain": false
+      }
+    ]
   }
-}
-function spawnShoot(){
-  if(reduce)return;
-  const y=Math.random()*H*.5;
-  shooting.push({x:Math.random()*W,y:y,len:(Math.random()*80+60)*DPR,
-    vx:(Math.random()*3+4)*DPR,vy:(Math.random()*1.5+1)*DPR,life:0,max:60});
-}
-let last=0;
-function draw(t){
-  cx.clearRect(0,0,W,H);
-  for(const s of stars){
-    s.tw+=s.sp;const a=s.base+Math.sin(s.tw)*.35;
-    s.x+=s.vx;s.y+=s.vy;
-    if(s.y>H+4)s.y=-4;if(s.x>W+4)s.x=-4;if(s.x<-4)s.x=W+4;
-    cx.beginPath();cx.arc(s.x,s.y,s.r,0,7);
-    cx.fillStyle=s.gold?`rgba(240,214,140,${a})`:`rgba(255,255,255,${a})`;
-    cx.shadowBlur=s.gold?8:4;cx.shadowColor=s.gold?'rgba(240,214,140,.8)':'rgba(255,255,255,.5)';
-    cx.fill();
-  }
-  cx.shadowBlur=0;
-  for(let i=shooting.length-1;i>=0;i--){
-    const m=shooting[i];m.life++;m.x+=m.vx;m.y+=m.vy;
-    const p=1-m.life/m.max;
-    const g=cx.createLinearGradient(m.x,m.y,m.x-m.len,m.y-m.len*.4);
-    g.addColorStop(0,`rgba(240,214,140,${.9*p})`);g.addColorStop(1,'rgba(240,214,140,0)');
-    cx.strokeStyle=g;cx.lineWidth=2*DPR;cx.beginPath();cx.moveTo(m.x,m.y);cx.lineTo(m.x-m.len,m.y-m.len*.4);cx.stroke();
-    if(m.life>=m.max)shooting.splice(i,1);
-  }
-  if(t-last>2600){last=t;if(Math.random()<.7)spawnShoot();}
-  requestAnimationFrame(draw);
-}
-resize();addEventListener('resize',resize);
-if(!reduce)requestAnimationFrame(draw);else{ // static stars once
-  for(const s of stars){cx.beginPath();cx.arc(s.x,s.y,s.r,0,7);cx.fillStyle='rgba(255,255,255,.6)';cx.fill();}
+];
+
+const waitingScreen = document.getElementById('waitingScreen');
+const qasidahDisplay = document.getElementById('qasidahDisplay');
+const qasidahTitle = document.getElementById('qasidahTitle');
+const qasidahSubtitle = document.getElementById('qasidahSubtitle');
+const coupletsContainer = document.getElementById('coupletsContainer');
+const transToggle = document.getElementById('transToggle');
+const translationToggle = document.getElementById('translationToggle');
+
+let showTransliteration = true;
+let showTranslation = true;
+
+transToggle.addEventListener('click', () => {
+  showTransliteration = !showTransliteration;
+  transToggle.classList.toggle('active', showTransliteration);
+  updateLayersVisibility();
+});
+
+translationToggle.addEventListener('click', () => {
+  showTranslation = !showTranslation;
+  translationToggle.classList.toggle('active', showTranslation);
+  updateLayersVisibility();
+});
+
+function updateLayersVisibility() {
+  const transOpacity = showTransliteration ? 1 : 0;
+  const translationOpacity = showTranslation ? 1 : 0;
+
+  document.querySelectorAll('.transliteration-lines').forEach(el => {
+    el.style.opacity = transOpacity;
+    el.style.pointerEvents = showTransliteration ? 'auto' : 'none';
+  });
+
+  document.querySelectorAll('.translation-lines').forEach(el => {
+    el.style.opacity = translationOpacity;
+    el.style.pointerEvents = showTranslation ? 'auto' : 'none';
+  });
 }
 
-/* ---------- curving scroll thread (one continuous curve down the whole page) ---------- */
-const thread=document.getElementById('thread');
-const base=document.getElementById('threadPathBase');
-const glow=document.getElementById('threadPathGlow');
-const comet=document.getElementById('comet');
-const halo=document.getElementById('cometHalo');
-let pathLen=0,docH=0,vw=0;
-function buildThread(){
-  vw=innerWidth;
-  docH=document.documentElement.scrollHeight;
-  thread.setAttribute('viewBox',`0 0 ${vw} ${docH}`);
-  thread.setAttribute('width',vw);
-  thread.setAttribute('height',docH);
-  thread.style.height=docH+'px';
-  const cxx=vw*0.5;
-  const amp=Math.min(vw*0.20,190);         // horizontal swing of the curve
-  const waves=Math.max(4,Math.round(docH/620)); // one gentle S per ~620px scrolled
-  // Build a smooth continuous vertical S-curve using cubic beziers
-  let d=`M ${cxx} 0`;
-  for(let i=1;i<=waves;i++){
-    const y0=docH*(i-1)/waves, y1=docH*i/waves;
-    const dir=i%2?1:-1;
-    const c1y=y0+(y1-y0)*0.33, c2y=y0+(y1-y0)*0.66;
-    const cxOff=cxx+dir*amp;
-    d+=` C ${cxOff} ${c1y}, ${cxOff} ${c2y}, ${cxx} ${y1}`;
+function renderQasidah(qasidahIndex) {
+  if (qasidahIndex < 0 || qasidahIndex >= qasidahs.length) {
+    waitingScreen.classList.add('show');
+    qasidahDisplay.classList.remove('show');
+    return;
   }
-  base.setAttribute('d',d);glow.setAttribute('d',d);
-  pathLen=glow.getTotalLength();
-  glow.style.strokeDasharray=pathLen;
-  updateThread();
-}
-function updateThread(){
-  if(!pathLen)return;
-  const scrollable=docH-innerHeight;
-  // progress = how far the CENTER of the viewport has traveled through the doc
-  const centerY=window.scrollY+innerHeight*0.5;
-  const p=Math.max(0,Math.min(centerY/docH,1));
-  const pt=glow.getPointAtLength(pathLen*p);
-  comet.setAttribute('cx',pt.x);comet.setAttribute('cy',pt.y);
-  halo.setAttribute('cx',pt.x);halo.setAttribute('cy',pt.y);
-  // glow fills in down to the comet, faint base shows the rest of the path
-  glow.style.strokeDashoffset=pathLen*(1-p);
-}
-addEventListener('resize',buildThread);
-// rebuild after fonts/layout settle so docH is accurate
-window.addEventListener('load',()=>{setTimeout(buildThread,60);});
-buildThread();
-addEventListener('scroll',updateThread,{passive:true});
 
-/* mobile menu */
-const burger=document.getElementById('burger'),menu=document.getElementById('mobileMenu'),cm=document.getElementById('closeBtn');
-burger.addEventListener('click',()=>menu.classList.add('open'));
-cm.addEventListener('click',()=>menu.classList.remove('open'));
-menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+  const qasidah = qasidahs[qasidahIndex];
 
-/* form */
-const sb=document.getElementById('sendBtn'),note=document.getElementById('formNote');
-sb.addEventListener('click',()=>{
-  const n=document.getElementById('name').value.trim(),e=document.getElementById('email').value.trim(),m=document.getElementById('msg').value.trim();
-  if(!n||!e||!m){note.textContent='Please fill in your name, contact, and message.';note.style.color='#F0D68C';return;}
-  window.location.href='mailto:Axbaabta1@gmail.com?subject='+encodeURIComponent('Website inquiry from '+n)+'&body='+encodeURIComponent(m+'\n\nReach me at: '+e);
-  note.textContent='Opening your email app…';note.style.color='#E3C265';
+  waitingScreen.classList.remove('show');
+  qasidahDisplay.classList.add('show');
+
+  qasidahTitle.textContent = qasidah.title;
+  qasidahSubtitle.textContent = qasidah.englishTitle;
+
+  // Clear and rebuild couplets container
+  coupletsContainer.innerHTML = '';
+
+  qasidah.couplets.forEach((couplet) => {
+    const section = document.createElement('div');
+    section.className = 'couplet-section';
+
+    const arabicDiv = document.createElement('div');
+    arabicDiv.className = 'arabic-lines';
+    arabicDiv.innerHTML = couplet.arabic.map(line => `<div class="line">${line}</div>`).join('');
+
+    const translitDiv = document.createElement('div');
+    translitDiv.className = 'transliteration-lines';
+    translitDiv.innerHTML = couplet.transliteration.map(line => `<div class="line">${line}</div>`).join('');
+
+    const translationDiv = document.createElement('div');
+    translationDiv.className = 'translation-lines';
+    translationDiv.innerHTML = couplet.translation.map(line => `<div class="line">${line}</div>`).join('');
+
+    section.appendChild(arabicDiv);
+    section.appendChild(translitDiv);
+    section.appendChild(translationDiv);
+
+    coupletsContainer.appendChild(section);
+  });
+
+  // Apply current visibility settings to new content
+  updateLayersVisibility();
+
+  // Auto-scroll to top
+  window.scrollTo(0, 0);
+}
+
+// Listen for changes from Firebase (qasidahIndex only)
+onValue(ref(db, 'mawlid/qasidahIndex'), (snap) => {
+  const qasidahIndex = snap.val() ?? -1;
+  renderQasidah(qasidahIndex);
 });
 </script>
 </body>

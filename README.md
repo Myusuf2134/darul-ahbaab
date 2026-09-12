@@ -11,7 +11,7 @@ one folder (the site "root").
 - **_headers** — security headers (works on Cloudflare Pages AND Netlify)
 - **_redirects** — placeholder for future redirect rules (HTTPS is automatic)
 
-## ⚠️ Before you go live: replace the placeholder domain
+## Before you go live: replace the placeholder domain
 I used `https://darulahbaab.com/` as a placeholder. After you register your real
 domain, find-and-replace `darulahbaab.com` with your actual domain in these files:
 - index.html  (the og:url, canonical, twitter:image, structured data)
